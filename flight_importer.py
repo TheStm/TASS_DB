@@ -23,6 +23,7 @@ BATCH_SIZE = max(1, int(os.getenv("BATCH_SIZE", "4000")))
 MAX_CONNECT_ATTEMPTS = max(1, int(os.getenv("NEO4J_CONNECT_RETRIES", "15")))
 CONNECT_DELAY = float(os.getenv("NEO4J_CONNECT_DELAY", "2"))
 AIRPORTS_METADATA = Path(os.getenv("AIRPORTS_METADATA", "airports_mapping.csv"))
+CSV_POPULATION = Path(os.getenv("POPULATION_CSV", "population.csv"))
 
 AIRPORT_METADATA = {}
 MISSING_METADATA = set()
@@ -60,6 +61,10 @@ def create_schema(tx):
     tx.run("""
     CREATE CONSTRAINT city_name_country IF NOT EXISTS
     FOR (c:City) REQUIRE (c.name, c.countryName) IS UNIQUE
+    """)
+    tx.run("""
+    CREATE CONSTRAINT country_stats_unique IF NOT EXISTS
+    FOR (cs:CountryStats) REQUIRE (cs.countryName, cs.year) IS UNIQUE
     """)
 
 
@@ -106,6 +111,16 @@ def import_batch(tx, rows):
       MERGE (arr_city)-[:IN_COUNTRY]->(arr_country)
       MERGE (arr)-[:IN_CITY]->(arr_city)
     )
+    """, rows=rows)
+
+
+def import_population_batch(tx, rows):
+    tx.run("""
+    UNWIND $rows AS row
+    MERGE (c:Country {name: row.country})
+    MERGE (cs:CountryStats {countryName: row.country, year: row.year})
+      SET cs.population = row.population
+    MERGE (c)-[:HAS_STATS]->(cs)
     """, rows=rows)
 
 
@@ -201,10 +216,47 @@ def resolve_airport_metadata(code):
 def import_from_csv(session, csv_path):
     print(f"Czytam {csv_path.name}...")
     df = pd.read_csv(csv_path, compression="infer")
+
+    mapping_df = pd.DataFrame.from_dict(AIRPORT_METADATA, orient="index")
+    mapping_df.index.name = "code"
+    mapping_df = mapping_df.reset_index()
+
+    df["ADEP_norm"] = df["ADEP"].astype(str).str.strip().str.upper()
+    df["ADES_norm"] = df["ADES"].astype(str).str.strip().str.upper()
+
+    df = df.merge(
+        mapping_df.add_prefix("adep_"),
+        left_on="ADEP_norm",
+        right_on="adep_code",
+        how="left",
+    ).merge(
+        mapping_df.add_prefix("ades_"),
+        left_on="ADES_norm",
+        right_on="ades_code",
+        how="left",
+    )
+
+    missing_mask = df["adep_country"].isna() | df["ades_country"].isna()
+    if missing_mask.any():
+        missing_codes = set(df.loc[missing_mask, "ADEP_norm"]).union(
+            set(df.loc[missing_mask, "ADES_norm"])
+        )
+        missing_codes.discard(None)
+        missing_codes.discard("")
+        if missing_codes:
+            MISSING_METADATA.update(missing_codes)
+        print(
+            f"Pomijam {missing_mask.sum()} lotów – brak mapowania dla: {', '.join(sorted(missing_codes))}"
+        )
+    df = df.loc[~missing_mask].copy()
+
     total_rows = len(df)
+    if total_rows == 0:
+        print("Brak lotów do zaimportowania po odfiltrowaniu brakujących mapowań.")
+        return
     total_batches = ceil(total_rows / BATCH_SIZE)
 
-    print(f"Załadowano {total_rows:,} wierszy")
+    print(f"Załadowano {total_rows:,} wierszy (po odfiltrowaniu brakujących mapowań)")
     print(f"Batch size: {BATCH_SIZE}")
     print(f"Liczba batchy: {total_batches}")
 
@@ -219,23 +271,12 @@ def import_from_csv(session, csv_path):
             r["ACTUAL ARRIVAL TIME"], "%d-%m-%Y %H:%M:%S"
         )
 
-        adep_meta = resolve_airport_metadata(r["ADEP"])
-        ades_meta = resolve_airport_metadata(r["ADES"])
-        if not adep_meta or not ades_meta:
-            missing_codes = []
-            if not adep_meta:
-                missing_codes.append(r["ADEP"])
-            if not ades_meta:
-                missing_codes.append(r["ADES"])
-            print(f"Pomijam lot {r['ECTRL ID']} – brak mapowania dla: {', '.join(sorted(missing_codes))}")
-            continue
-
         batch.append({
             "flight_id": str(r["ECTRL ID"]),
-            "adep": r["ADEP"],
+            "adep": r["ADEP_norm"],
             "adep_lat": float(r["ADEP Latitude"]),
             "adep_lon": float(r["ADEP Longitude"]),
-            "ades": r["ADES"],
+            "ades": r["ADES_norm"],
             "ades_lat": float(r["ADES Latitude"]),
             "ades_lon": float(r["ADES Longitude"]),
             "operator": r["AC Operator"],
@@ -245,12 +286,12 @@ def import_from_csv(session, csv_path):
             "day": off_block.date().isoformat(),
             "duration_min": int((arrival - off_block).total_seconds() / 60),
             "distance_nm": int(r["Actual Distance Flown (nm)"]),
-            "adep_city": adep_meta["city"],
-            "adep_country": adep_meta["country"],
-            "adep_name": adep_meta["name"],
-            "ades_city": ades_meta["city"],
-            "ades_country": ades_meta["country"],
-            "ades_name": ades_meta["name"],
+            "adep_city": r["adep_city"],
+            "adep_country": r["adep_country"],
+            "adep_name": r["adep_name"],
+            "ades_city": r["ades_city"],
+            "ades_country": r["ades_country"],
+            "ades_name": r["ades_name"],
         })
 
         if len(batch) >= BATCH_SIZE:
@@ -262,6 +303,42 @@ def import_from_csv(session, csv_path):
     if batch:
         print(f"Import batch {batch_no}/{total_batches}")
         session.execute_write(import_batch, batch)
+
+
+def import_population(session):
+    if not CSV_POPULATION.exists():
+        print(f"Brak pliku {CSV_POPULATION}, pomijam import populacji.")
+        return
+
+    df = pd.read_csv(CSV_POPULATION, encoding="utf-8")
+    df = df[df["TIME_PERIOD"].isin([2017, 2018])]
+    df = df.rename(
+        columns={
+            "Geopolitical entity (reporting)": "country",
+            "TIME_PERIOD": "year",
+            "OBS_VALUE": "population",
+        }
+    )
+    df = df[["country", "year", "population"]]
+    df["country"] = df["country"].astype(str).str.strip()
+    df["population"] = pd.to_numeric(df["population"], errors="coerce")
+    df = df.dropna(subset=["country", "population"])
+    if df.empty:
+        print("Brak danych populacji dla lat 2017/2018.")
+        return
+
+    rows = [
+        {"country": r["country"], "year": int(r["year"]), "population": int(r["population"])}
+        for r in df.to_dict(orient="records")
+    ]
+
+    total_rows = len(rows)
+    total_batches = ceil(total_rows / BATCH_SIZE)
+
+    for batch_no, start in enumerate(range(0, total_rows, BATCH_SIZE), start=1):
+        batch = rows[start:start + BATCH_SIZE]
+        print(f"Import population batch {batch_no}/{total_batches}")
+        session.execute_write(import_population_batch, batch)
 
 
 # ============================================================
@@ -278,6 +355,8 @@ def main():
         csv_files = find_csv_sources()
         for csv_file in csv_files:
             import_from_csv(session, csv_file)
+
+        import_population(session)
 
     driver.close()
 
