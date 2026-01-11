@@ -12,6 +12,7 @@ services:
 
     environment:
       - NEO4J_AUTH=neo4j/password
+      - NEO4J_PLUGINS=["graph-data-science"]
 
       # ===== PAMIĘĆ (KLUCZOWE) =====
       - NEO4J_server_memory_heap_initial__size=2G

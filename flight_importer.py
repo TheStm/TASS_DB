@@ -187,15 +187,15 @@ AIRPORT_METADATA = load_airport_metadata()
 
 def resolve_airport_metadata(code):
     if not AIRPORT_METADATA or not code:
-        return None, None
+        return None
     normalized = code.strip().upper()
     if not normalized:
-        return None, None
+        return None
     metadata = AIRPORT_METADATA.get(normalized)
     if metadata:
-        return metadata["city"], metadata["country"], metadata["name"]
+        return metadata
     MISSING_METADATA.add(normalized)
-    return None, None, None
+    return None
 
 
 def import_from_csv(session, csv_path):
@@ -219,8 +219,16 @@ def import_from_csv(session, csv_path):
             r["ACTUAL ARRIVAL TIME"], "%d-%m-%Y %H:%M:%S"
         )
 
-        adep_city, adep_country, adep_name = resolve_airport_metadata(r["ADEP"])
-        ades_city, ades_country, ades_name = resolve_airport_metadata(r["ADES"])
+        adep_meta = resolve_airport_metadata(r["ADEP"])
+        ades_meta = resolve_airport_metadata(r["ADES"])
+        if not adep_meta or not ades_meta:
+            missing_codes = []
+            if not adep_meta:
+                missing_codes.append(r["ADEP"])
+            if not ades_meta:
+                missing_codes.append(r["ADES"])
+            print(f"Pomijam lot {r['ECTRL ID']} – brak mapowania dla: {', '.join(sorted(missing_codes))}")
+            continue
 
         batch.append({
             "flight_id": str(r["ECTRL ID"]),
@@ -237,12 +245,12 @@ def import_from_csv(session, csv_path):
             "day": off_block.date().isoformat(),
             "duration_min": int((arrival - off_block).total_seconds() / 60),
             "distance_nm": int(r["Actual Distance Flown (nm)"]),
-            "adep_city": adep_city,
-            "adep_country": adep_country,
-            "adep_name": adep_name,
-            "ades_city": ades_city,
-            "ades_country": ades_country,
-            "ades_name": ades_name,
+            "adep_city": adep_meta["city"],
+            "adep_country": adep_meta["country"],
+            "adep_name": adep_meta["name"],
+            "ades_city": ades_meta["city"],
+            "ades_country": ades_meta["country"],
+            "ades_name": ades_meta["name"],
         })
 
         if len(batch) >= BATCH_SIZE:
