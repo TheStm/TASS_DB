@@ -1,3 +1,4 @@
+import csv
 import os
 import time
 from datetime import datetime
@@ -21,6 +22,10 @@ DATA_DIR = Path(os.getenv("DATA_DIR", "data"))
 BATCH_SIZE = max(1, int(os.getenv("BATCH_SIZE", "4000")))
 MAX_CONNECT_ATTEMPTS = max(1, int(os.getenv("NEO4J_CONNECT_RETRIES", "15")))
 CONNECT_DELAY = float(os.getenv("NEO4J_CONNECT_DELAY", "2"))
+AIRPORTS_METADATA = Path(os.getenv("AIRPORTS_METADATA", "airports_mapping.csv"))
+
+AIRPORT_METADATA = {}
+MISSING_METADATA = set()
 
 
 # ============================================================
@@ -48,6 +53,14 @@ def create_schema(tx):
     CREATE CONSTRAINT day_date IF NOT EXISTS
     FOR (d:Day) REQUIRE d.date IS UNIQUE
     """)
+    tx.run("""
+    CREATE CONSTRAINT country_name IF NOT EXISTS
+    FOR (c:Country) REQUIRE c.name IS UNIQUE
+    """)
+    tx.run("""
+    CREATE CONSTRAINT city_name_country IF NOT EXISTS
+    FOR (c:City) REQUIRE (c.name, c.countryName) IS UNIQUE
+    """)
 
 
 def import_batch(tx, rows):
@@ -56,11 +69,13 @@ def import_batch(tx, rows):
 
     MERGE (dep:Airport {code: row.adep})
       ON CREATE SET dep.lat = row.adep_lat,
-                    dep.lon = row.adep_lon
+                    dep.lon = row.adep_lon,
+                    dep.name = row.adep_name
 
     MERGE (arr:Airport {code: row.ades})
       ON CREATE SET arr.lat = row.ades_lat,
-                    arr.lon = row.ades_lon
+                    arr.lon = row.ades_lon,
+                    arr.name = row.ades_name
 
     MERGE (airline:Airline {code: row.operator})
     MERGE (aircraft:AircraftType {type: row.ac_type})
@@ -77,7 +92,22 @@ def import_batch(tx, rows):
     MERGE (f)-[:OPERATED_BY]->(airline)
     MERGE (f)-[:AIRCRAFT]->(aircraft)
     MERGE (f)-[:ON_DAY]->(day)
+
+    FOREACH (_ IN CASE WHEN row.adep_city IS NOT NULL AND row.adep_country IS NOT NULL THEN [1] ELSE [] END |
+      MERGE (dep_country:Country {name: row.adep_country})
+      MERGE (dep_city:City {name: row.adep_city, countryName: row.adep_country})
+      MERGE (dep_city)-[:IN_COUNTRY]->(dep_country)
+      MERGE (dep)-[:IN_CITY]->(dep_city)
+    )
+
+    FOREACH (_ IN CASE WHEN row.ades_city IS NOT NULL AND row.ades_country IS NOT NULL THEN [1] ELSE [] END |
+      MERGE (arr_country:Country {name: row.ades_country})
+      MERGE (arr_city:City {name: row.ades_city, countryName: row.ades_country})
+      MERGE (arr_city)-[:IN_COUNTRY]->(arr_country)
+      MERGE (arr)-[:IN_CITY]->(arr_city)
+    )
     """, rows=rows)
+
 
 def connect_with_retry():
     attempts = 0
@@ -100,7 +130,6 @@ def connect_with_retry():
                 f"({attempts}/{MAX_CONNECT_ATTEMPTS})",
             )
             time.sleep(CONNECT_DELAY)
-
 
 
 # ============================================================
@@ -126,6 +155,49 @@ def find_csv_sources():
     return files
 
 
+def load_airport_metadata():
+    if not AIRPORTS_METADATA.exists():
+        print(f"Brak pliku {AIRPORTS_METADATA}, pomijam mapowanie kodów lotnisk.")
+        return {}
+
+    metadata = {}
+    with AIRPORTS_METADATA.open(newline="", encoding="utf-8") as fp:
+        reader = csv.reader(fp)
+        for row in reader:
+            if len(row) < 5:
+                continue
+            icao = row[0].strip()
+            city = row[2].strip()
+            country = row[3].strip()
+            iata = row[4].strip()
+            airport_name = row[1].strip()  # Assuming the full airport name is in the second column
+            if not city or not country:
+                continue
+            entry = {"name": airport_name, "city": city, "country": country}
+            for raw_code in (icao, iata):
+                normalized = raw_code.upper()
+                if normalized and normalized not in metadata:
+                    metadata[normalized] = entry
+    print(f"Wczytano mapowanie {len(metadata)} kodów lotnisk.")
+    return metadata
+
+
+AIRPORT_METADATA = load_airport_metadata()
+
+
+def resolve_airport_metadata(code):
+    if not AIRPORT_METADATA or not code:
+        return None, None
+    normalized = code.strip().upper()
+    if not normalized:
+        return None, None
+    metadata = AIRPORT_METADATA.get(normalized)
+    if metadata:
+        return metadata["city"], metadata["country"], metadata["name"]
+    MISSING_METADATA.add(normalized)
+    return None, None, None
+
+
 def import_from_csv(session, csv_path):
     print(f"Czytam {csv_path.name}...")
     df = pd.read_csv(csv_path, compression="infer")
@@ -147,6 +219,9 @@ def import_from_csv(session, csv_path):
             r["ACTUAL ARRIVAL TIME"], "%d-%m-%Y %H:%M:%S"
         )
 
+        adep_city, adep_country, adep_name = resolve_airport_metadata(r["ADEP"])
+        ades_city, ades_country, ades_name = resolve_airport_metadata(r["ADES"])
+
         batch.append({
             "flight_id": str(r["ECTRL ID"]),
             "adep": r["ADEP"],
@@ -161,7 +236,13 @@ def import_from_csv(session, csv_path):
             "arrival": arrival.isoformat(),
             "day": off_block.date().isoformat(),
             "duration_min": int((arrival - off_block).total_seconds() / 60),
-            "distance_nm": int(r["Actual Distance Flown (nm)"])
+            "distance_nm": int(r["Actual Distance Flown (nm)"]),
+            "adep_city": adep_city,
+            "adep_country": adep_country,
+            "adep_name": adep_name,
+            "ades_city": ades_city,
+            "ades_country": ades_country,
+            "ades_name": ades_name,
         })
 
         if len(batch) >= BATCH_SIZE:
@@ -175,6 +256,9 @@ def import_from_csv(session, csv_path):
         session.execute_write(import_batch, batch)
 
 
+# ============================================================
+# MAIN
+# ============================================================
 
 def main():
     driver = connect_with_retry()
@@ -188,9 +272,14 @@ def main():
             import_from_csv(session, csv_file)
 
     driver.close()
+
+    if MISSING_METADATA:
+        sample = ", ".join(sorted(MISSING_METADATA))
+        print(f"Nie znaleziono mapowania dla kodów: {sample}")
     print("IMPORT ZAKOŃCZONY SUKCESEM")
 
 
+# ============================================================
 
 if __name__ == "__main__":
     main()
