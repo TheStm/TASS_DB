@@ -1,0 +1,48 @@
+CALL gds.graph.drop('airportFastest', false);
+
+CALL gds.graph.project.cypher(
+  'airportFastest',
+  '
+  MATCH (a:Airport)
+  RETURN id(a) AS id
+  ',
+  '
+  MATCH (a:Airport)<-[:DEPARTS_FROM]-(f:Flight)-[:ARRIVES_TO]->(b:Airport)
+  WHERE f.durationMin IS NOT NULL AND f.durationMin > 0
+  RETURN
+    id(a) AS source,
+    id(b) AS target,
+    min(f.durationMin) AS time
+  UNION
+  MATCH (a:Airport)<-[:DEPARTS_FROM]-(f:Flight)-[:ARRIVES_TO]->(b:Airport)
+  WHERE f.durationMin IS NOT NULL AND f.durationMin > 0
+  RETURN
+    id(b) AS source,
+    id(a) AS target,
+    min(f.durationMin) AS time
+  '
+);
+
+
+MATCH (source:Airport {code:'EPWA'})
+MATCH (target:Airport {code:'LPPT'})
+
+CALL gds.shortestPath.dijkstra.stream(
+  'airportFastest',
+  {
+    sourceNode: id(source),
+    targetNode: id(target),
+    relationshipWeightProperty: 'time'
+  }
+)
+YIELD nodeIds, totalCost
+
+RETURN
+  [nid IN nodeIds |
+    {
+      code: gds.util.asNode(nid).code,
+      name: gds.util.asNode(nid).name
+    }
+  ] AS route,
+  totalCost AS totalTimeMinutes,
+  round(totalCost / 60.0, 2) AS totalTimeHours;

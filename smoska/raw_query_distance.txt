@@ -1,0 +1,48 @@
+CALL gds.graph.drop('airportDistance', false);
+
+
+
+CALL gds.graph.project.cypher(
+  'airportDistance',
+  '
+  MATCH (a:Airport)
+  RETURN id(a) AS id
+  ',
+  '
+  MATCH (a:Airport)<-[:DEPARTS_FROM]-(f:Flight)-[:ARRIVES_TO]->(b:Airport)
+  RETURN id(a) AS source, id(b) AS target, min(f.distanceNm) AS distance
+  UNION
+  MATCH (a:Airport)<-[:DEPARTS_FROM]-(f:Flight)-[:ARRIVES_TO]->(b:Airport)
+  RETURN id(b) AS source, id(a) AS target, min(f.distanceNm) AS distance
+  '
+);
+
+CALL gds.shortestPath.dijkstra.stream(
+  'airportDistance',
+  {
+    sourceNode: id(source),
+    targetNode: id(target),
+    relationshipWeightProperty: 'distance'
+  }
+)
+YIELD nodeIds, totalCost
+
+RETURN
+  [nid IN nodeIds |
+    {
+      code: gds.util.asNode(nid).code,
+      name: gds.util.asNode(nid).name
+    }
+  ] AS route,
+  totalCost AS totalDistanceNm;
+
+
+  MATCH (a:Airport {code:'EPWA'})<-[:DEPARTS_FROM]-(f:Flight)-[:ARRIVES_TO]->(b:Airport {code:'LPPT'})
+RETURN
+  a.code   AS from,
+  b.code   AS to,
+  f.distanceNm AS distanceNm,
+  f.id     AS flightId
+ORDER BY f.distanceNm
+LIMIT 5;
+
