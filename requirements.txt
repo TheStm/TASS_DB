@@ -1,5 +1,4 @@
 neo4j
 pandas
 folium
-PyQt6
-PyQt6-WebEngine
+PySide6>=6.7
