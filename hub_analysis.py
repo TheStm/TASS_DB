@@ -1,5 +1,3 @@
-"""Utilities to fetch hub airports ranking from Neo4j."""
-
 from __future__ import annotations
 
 import logging
@@ -74,7 +72,6 @@ def _connect_with_retry():
 
 
 def fetch_hubs(limit: int = 15, min_degree: int = 5000, driver=None) -> List[HubAirport]:
-    """Return ranked hub airports using the provided Cypher query."""
 
     limit = max(1, int(limit))
     min_degree = max(0, int(min_degree))

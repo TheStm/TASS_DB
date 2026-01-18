@@ -483,7 +483,6 @@ class ShortestRouteTab(QWidget):
 
 
 class HubAnalysisTab(QWidget):
-    """Module to detect hub airports using a Neo4j Cypher query."""
 
     def __init__(self, ctx: ApplicationContext, parent: Optional[QWidget] = None) -> None:
         super().__init__(parent)
@@ -626,12 +625,12 @@ class HubAnalysisTab(QWidget):
         self._map_file = tmp_file.name
         tmp_file.close()
 
-        self.map_widget.setUrl(QUrl.fromLocalFile(self._map_file))  # type: ignore[union-attr]
+        self.map_widget.setUrl(QUrl.fromLocalFile(self._map_file))
 
     def _clear_map(self) -> None:
         if QWebEngineView is None:
             return
-        self.map_widget.setHtml("<p>Brak danych do wyświetlenia.</p>")  # type: ignore[union-attr]
+        self.map_widget.setHtml("<p>Brak danych do wyświetlenia.</p>")
 
 
 def build_modules(ctx: ApplicationContext) -> List[ModuleInfo]:
