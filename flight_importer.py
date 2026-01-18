@@ -10,10 +10,6 @@ from neo4j import GraphDatabase
 from neo4j.exceptions import ServiceUnavailable
 
 
-# ============================================================
-# KONFIGURACJA
-# ============================================================
-
 NEO4J_URI = os.getenv("NEO4J_URI", "bolt://localhost:7687")
 NEO4J_USER = os.getenv("NEO4J_USER", "neo4j")
 NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD", "password")
@@ -28,10 +24,6 @@ CSV_POPULATION = Path(os.getenv("POPULATION_CSV", "population.csv"))
 AIRPORT_METADATA = {}
 MISSING_METADATA = set()
 
-
-# ============================================================
-# SCHEMA (uruchomi się tylko raz dzięki IF NOT EXISTS)
-# ============================================================
 
 def create_schema(tx):
     tx.run("""
@@ -147,9 +139,6 @@ def connect_with_retry():
             time.sleep(CONNECT_DELAY)
 
 
-# ============================================================
-# HELPERS
-# ============================================================
 
 def find_csv_sources():
     if CSV_PATH:
@@ -341,10 +330,6 @@ def import_population(session):
         session.execute_write(import_population_batch, batch)
 
 
-# ============================================================
-# MAIN
-# ============================================================
-
 def main():
     driver = connect_with_retry()
 
@@ -366,7 +351,6 @@ def main():
     print("IMPORT ZAKOŃCZONY SUKCESEM")
 
 
-# ============================================================
 
 if __name__ == "__main__":
     main()
