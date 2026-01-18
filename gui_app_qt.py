@@ -18,7 +18,6 @@ from PySide6.QtCore import Qt, QUrl, Signal
 from PySide6.QtGui import QCloseEvent, QIcon
 from PySide6.QtWidgets import (
     QApplication,
-    QCompleter,
     QFrame,
     QHBoxLayout,
     QLabel,
@@ -26,7 +25,6 @@ from PySide6.QtWidgets import (
     QMainWindow,
     QMessageBox,
     QPushButton,
-    QScrollArea,
     QSizePolicy,
     QTabWidget,
     QTextEdit,
@@ -34,6 +32,8 @@ from PySide6.QtWidgets import (
     QWidget,
     QSplitter,
     QComboBox,
+    QTableWidget,
+    QTableWidgetItem,
 )
 
 try:
@@ -44,6 +44,7 @@ except Exception:  # pragma: no cover - optional dependency for lightweight runs
     QWebEngineSettings = None  # type: ignore[assignment]
 
 from smoska import shortest_path_distance, shortest_path_time
+import hub_analysis
 
 
 @dataclass
@@ -270,11 +271,10 @@ class ShortestRouteTab(QWidget):
         if isinstance(self.map_widget, QLabel):
             self.map_widget.setAlignment(Qt.AlignCenter)
             self.map_widget.setWordWrap(True)
-        else:
+        elif QWebEngineSettings is not None:
             settings = self.map_widget.settings()
-            if QWebEngineSettings is not None:
-                settings.setAttribute(QWebEngineSettings.LocalContentCanAccessRemoteUrls, True)
-                settings.setAttribute(QWebEngineSettings.LocalContentCanAccessFileUrls, True)
+            settings.setAttribute(QWebEngineSettings.LocalContentCanAccessRemoteUrls, True)
+            settings.setAttribute(QWebEngineSettings.LocalContentCanAccessFileUrls, True)
         left_layout.addWidget(self.map_widget, stretch=1)
 
         self.result_panel = QTextEdit()
@@ -486,6 +486,156 @@ class ShortestRouteTab(QWidget):
             return
         self.map_widget.setHtml("<p>Brak danych do wyświetlenia.</p>")  # type: ignore[union-attr]
 
+
+class HubAnalysisTab(QWidget):
+
+    def __init__(self, ctx: ApplicationContext, parent: Optional[QWidget] = None) -> None:
+        super().__init__(parent)
+        self._ctx = ctx
+        self._map_file: Optional[str] = None
+        self._build_ui()
+
+    def _build_ui(self) -> None:
+        layout = QVBoxLayout(self)
+        form = QHBoxLayout()
+
+        self.limit_input = QLineEdit("15")
+        self.limit_input.setMaximumWidth(80)
+        self.degree_input = QLineEdit("5000")
+        self.degree_input.setMaximumWidth(100)
+
+        form.addWidget(QLabel("Liczba wyników:"))
+        form.addWidget(self.limit_input)
+        form.addSpacing(12)
+        form.addWidget(QLabel("Min. liczba relacji:"))
+        form.addWidget(self.degree_input)
+        form.addSpacing(12)
+
+        self.run_button = QPushButton("Uruchom zapytanie")
+        self.run_button.clicked.connect(self._run_query)
+        form.addWidget(self.run_button)
+        form.addStretch(1)
+
+        layout.addLayout(form)
+
+        self.status_label = QLabel("Gotowe")
+        layout.addWidget(self.status_label)
+
+        self.table = QTableWidget(0, 7)
+        self.table.setHorizontalHeaderLabels(
+            [
+                "Kod",
+                "Lotnisko",
+                "Kraj",
+                "Operacje",
+                "Kierunki",
+                "Hub score",
+                "Dominująca linia (%)",
+            ]
+        )
+        self.table.horizontalHeader().setStretchLastSection(True)
+        layout.addWidget(self.table, stretch=1)
+
+        self.map_widget = (
+            QWebEngineView() if QWebEngineView is not None else QLabel("Mapa wymaga modułu PySide6-QtWebEngine.")
+        )
+        if isinstance(self.map_widget, QLabel):
+            self.map_widget.setAlignment(Qt.AlignCenter)
+            self.map_widget.setWordWrap(True)
+        elif QWebEngineSettings is not None:
+            settings = self.map_widget.settings()
+            settings.setAttribute(QWebEngineSettings.LocalContentCanAccessRemoteUrls, True)
+            settings.setAttribute(QWebEngineSettings.LocalContentCanAccessFileUrls, True)
+        layout.addWidget(self.map_widget, stretch=1)
+        self._clear_map()
+
+    def _run_query(self) -> None:
+        try:
+            limit = int(self.limit_input.text())
+            min_deg = int(self.degree_input.text())
+        except ValueError:
+            QMessageBox.warning(self, "Nieprawidłowe dane", "Limit i min. relacji muszą być liczbami całkowitymi.")
+            return
+
+        self.run_button.setEnabled(False)
+        self.status_label.setText("Łączenie z Neo4j...")
+        QApplication.processEvents()
+
+        try:
+            hubs = hub_analysis.fetch_hubs(limit=limit, min_degree=min_deg)
+        except Exception as exc:
+            QMessageBox.critical(self, "Błąd zapytania", str(exc))
+            self.status_label.setText("Błąd: " + str(exc))
+            self.run_button.setEnabled(True)
+            return
+
+        self._populate_table(hubs)
+        self._render_map(hubs)
+        self.status_label.setText(f"Pobrano {len(hubs)} wyników")
+        self.run_button.setEnabled(True)
+
+    def _populate_table(self, hubs: List[hub_analysis.HubAirport]) -> None:
+        self.table.setRowCount(len(hubs))
+        for row, hub in enumerate(hubs):
+            self.table.setItem(row, 0, QTableWidgetItem(hub.code or ""))
+            self.table.setItem(row, 1, QTableWidgetItem(hub.airport or ""))
+            self.table.setItem(row, 2, QTableWidgetItem(hub.country or ""))
+            self.table.setItem(row, 3, QTableWidgetItem(str(hub.total_ops)))
+            self.table.setItem(row, 4, QTableWidgetItem(str(hub.unique_routes)))
+            self.table.setItem(row, 5, QTableWidgetItem(f"{hub.hub_score:.0f}"))
+            dom = hub.dominant_airline or ""
+            share = f" ({hub.airline_share_pct:.1f}%)" if hub.airline_share_pct is not None else ""
+            self.table.setItem(row, 6, QTableWidgetItem(dom + share))
+
+    def _render_map(self, hubs: List[hub_analysis.HubAirport]) -> None:
+        if QWebEngineView is None:
+            return
+
+        points = []
+        for hub in hubs:
+            airport = self._ctx.data.find_airport(hub.code)
+            if airport and airport.lat is not None and airport.lon is not None:
+                label = f"{hub.code} — {hub.airport or airport.name}"
+                points.append((airport.lat, airport.lon, label, hub.hub_score))
+
+        if not points:
+            self._clear_map()
+            return
+
+        center_lat, center_lon, *_ = points[0]
+        map_obj = folium.Map(location=[center_lat, center_lon], zoom_start=4, tiles="CartoDB positron")
+
+        max_score = max(p[3] for p in points) or 1.0
+        for lat, lon, label, score in points:
+            radius = max(5, min(18, (score / max_score) * 18))
+            folium.CircleMarker(
+                location=[lat, lon],
+                radius=radius,
+                popup=label,
+                tooltip=label,
+                color="#1f77b4",
+                fill=True,
+                fill_color="#1f77b4",
+                fill_opacity=0.75,
+            ).add_to(map_obj)
+
+        if self._map_file:
+            try:
+                Path(self._map_file).unlink(missing_ok=True)
+            except OSError:
+                pass
+
+        tmp_file = tempfile.NamedTemporaryFile(prefix="hubs_", suffix=".html", delete=False)
+        map_obj.save(tmp_file.name)
+        self._map_file = tmp_file.name
+        tmp_file.close()
+
+        self.map_widget.setUrl(QUrl.fromLocalFile(self._map_file))
+
+    def _clear_map(self) -> None:
+        if QWebEngineView is None:
+            return
+        self.map_widget.setHtml("<p>Brak danych do wyświetlenia.</p>")
 
 
 class PopularityStatsTab(QWidget):
@@ -795,12 +945,8 @@ def build_modules(ctx: ApplicationContext) -> List[ModuleInfo]:
         ),
         ModuleInfo(
             name="Analiza hubów",
-            description="Przyszła rozbudowa: wykrywanie najważniejszych lotnisk-hubów przy użyciu centralności.",
-            factory=lambda ctx: PlaceholderModule(
-                "Analiza hubów",
-                "Moduł w przygotowaniu. W tym miejscu pojawi się analiza stopnia centralności "
-                "oraz ranking lotnisk pełniących rolę węzłów przesiadkowych.",
-            ),
+            description="Wykrywanie najważniejszych lotnisk-hubów na podstawie zapytania Cypher.",
+            factory=lambda ctx: HubAnalysisTab(ctx),
         ),
         ModuleInfo(
             name="Statystyki popularności",
