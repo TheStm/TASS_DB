@@ -6,7 +6,7 @@ import sys
 import tempfile
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Callable, Dict, List, Optional
+from typing import Callable, Optional
 import os
 import uuid
 from typing import List, Dict
@@ -18,15 +18,12 @@ from PySide6.QtCore import Qt, QUrl, Signal
 from PySide6.QtGui import QCloseEvent, QIcon
 from PySide6.QtWidgets import (
     QApplication,
-    QCompleter,
     QFrame,
     QHBoxLayout,
     QLabel,
-    QLineEdit,
     QMainWindow,
     QMessageBox,
     QPushButton,
-    QScrollArea,
     QSizePolicy,
     QTabWidget,
     QTextEdit,
@@ -43,7 +40,8 @@ except Exception:  # pragma: no cover - optional dependency for lightweight runs
     QWebEngineView = None  # type: ignore[assignment]
     QWebEngineSettings = None  # type: ignore[assignment]
 
-from smoska import shortest_path_distance, shortest_path_time
+import shortest_path_distance
+import shortest_path_time
 
 
 @dataclass
