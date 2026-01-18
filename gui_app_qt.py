@@ -692,7 +692,7 @@ class PopularityStatsTab(QWidget):
                 m['PC'] = m['Incoming_Flights'] / m['Population']
                 top = m.sort_values('PC', ascending=False).head(7)
 
-                html += "<hr><h3>Loty / Osobę (Top 7)</h3><table width='100%' cellpadding='2'>"
+                html += "<hr><h3>Przyloty na mieszkańca (Top 7)</h3><table width='100%' cellpadding='2'>"
                 for i, r in enumerate(top.itertuples(), 1):
                     pl_country = self._translate(r.Country)
                     html += f"<tr><td>{i}. {pl_country}</td><td align='right'><b>{r.PC:.4f}</b></td></tr>"
