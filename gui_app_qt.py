@@ -7,6 +7,9 @@ import tempfile
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Callable, Dict, List, Optional
+import os
+from typing import List, Dict
+
 
 import folium
 import pandas as pd
@@ -28,6 +31,7 @@ from PySide6.QtWidgets import (
     QTextEdit,
     QVBoxLayout,
     QWidget,
+    QSplitter,
     QComboBox,
 )
 
@@ -482,6 +486,317 @@ class ShortestRouteTab(QWidget):
         self.map_widget.setHtml("<p>Brak danych do wyświetlenia.</p>")  # type: ignore[union-attr]
 
 
+try:
+    import plotly.express as px
+    import plotly.io as pio
+except ImportError:
+    px = None
+
+
+
+class PopularityStatsTab(QWidget):
+
+    def __init__(self, ctx, parent: Optional[QWidget] = None) -> None:
+        super().__init__(parent)
+        self._ctx = ctx
+
+        # Configuration of files
+        self.data_sources = {
+            "2017": "reports/report_country_connections_2017.csv",
+            "2018": "reports/report_country_connections_2018.csv"
+        }
+        self.population_file = "population.csv"  # Ensure this file exists
+
+        self.current_df: pd.DataFrame = pd.DataFrame()
+        self.population_df: pd.DataFrame = pd.DataFrame()
+
+        # Load population data once at startup
+        self._load_population_data()
+
+        self._build_ui()
+        # Load default year
+        self._load_data_for_year("2017")
+
+    def _load_population_data(self):
+        """Loads and cleans population data to be ready for merging."""
+        if not os.path.exists(self.population_file):
+            print(f"Warning: {self.population_file} not found. Normalization will not work.")
+            return
+
+        try:
+            df = pd.read_csv(self.population_file)
+            # Map columns based on standard Eurostat format
+            # Adjust these if your CSV headers are different
+            if 'Geopolitical entity (reporting)' in df.columns:
+                df = df[['Geopolitical entity (reporting)', 'TIME_PERIOD', 'OBS_VALUE']]
+                df.columns = ['Country', 'Year', 'Population']
+
+                # Clean numeric data
+                df['Population'] = pd.to_numeric(df['Population'], errors='coerce')
+                df.dropna(subset=['Population'], inplace=True)
+                self.population_df = df
+            else:
+                print("Error: population.csv columns do not match expected format.")
+        except Exception as e:
+            print(f"Error loading population data: {e}")
+
+    def _build_ui(self) -> None:
+        """Builds the UI: Control Bar + Splitter."""
+        main_layout = QVBoxLayout(self)
+        main_layout.setContentsMargins(0, 0, 0, 0)
+        main_layout.setSpacing(0)
+
+        # --- 1. HEADER / CONTROL BAR ---
+        controls_frame = QFrame()
+        controls_frame.setStyleSheet("background-color: #f0f0f0; border-bottom: 1px solid #ccc;")
+        controls_frame.setFixedHeight(60)
+
+        controls_layout = QHBoxLayout(controls_frame)
+        controls_layout.setSpacing(15)
+
+        # Year Selection
+        controls_layout.addWidget(QLabel("<b>Wybierz rok:</b>"))
+        self.year_combo = QComboBox()
+        self.year_combo.addItems(list(self.data_sources.keys()))
+        self.year_combo.setFixedWidth(100)
+        self.year_combo.currentTextChanged.connect(self._on_year_changed)
+        controls_layout.addWidget(self.year_combo)
+
+        # Separator
+        line = QFrame()
+        line.setFrameShape(QFrame.VLine)
+        line.setFrameShadow(QFrame.Sunken)
+        controls_layout.addWidget(line)
+
+        # Country Selection
+        controls_layout.addWidget(QLabel("<b>Wybierz kraj:</b>"))
+        self.country_combo = QComboBox()
+        self.country_combo.setEditable(True)
+        self.country_combo.setMinimumWidth(250)
+        self.country_combo.currentTextChanged.connect(self._on_country_changed)
+        controls_layout.addWidget(self.country_combo)
+
+        controls_layout.addStretch(1)
+        main_layout.addWidget(controls_frame, 0)
+
+        # --- 2. WORKSPACE (SPLITTER) ---
+        splitter = QSplitter(Qt.Horizontal)
+        splitter.setHandleWidth(2)
+
+        # LEFT PANEL - GLOBAL STATS
+        self.global_panel = QTextEdit()
+        self.global_panel.setReadOnly(True)
+        self.global_panel.setStyleSheet("border: none; background-color: #fdfdfd; padding: 10px;")
+
+        # RIGHT PANEL - COUNTRY DETAILS
+        self.country_panel = QTextEdit()
+        self.country_panel.setReadOnly(True)
+        self.country_panel.setStyleSheet(
+            "border: none; border-left: 1px solid #ddd; background-color: #ffffff; padding: 10px;")
+
+        left_widget = self._create_panel("STATYSTYKI GLOBALNE", self.global_panel)
+        right_widget = self._create_panel("SZCZEGÓŁY KRAJU", self.country_panel)
+
+        splitter.addWidget(left_widget)
+        splitter.addWidget(right_widget)
+
+        splitter.setStretchFactor(0, 1)
+        splitter.setStretchFactor(1, 2)
+
+        main_layout.addWidget(splitter, 1)
+
+    def _create_panel(self, title: str, content_widget: QWidget) -> QWidget:
+        container = QWidget()
+        layout = QVBoxLayout(container)
+        layout.setContentsMargins(0, 0, 0, 0)
+        layout.setSpacing(0)
+
+        header = QLabel(title)
+        header.setAlignment(Qt.AlignCenter)
+        header.setStyleSheet("""
+            background-color: #e6e6e6; 
+            color: #333; 
+            font-weight: bold; 
+            padding: 8px; 
+            border-bottom: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+        """)
+
+        layout.addWidget(header)
+        layout.addWidget(content_widget)
+        return container
+
+    def _load_data_for_year(self, year: str) -> None:
+        filename = self.data_sources.get(year)
+        if not filename or not os.path.exists(filename):
+            self.current_df = pd.DataFrame()
+            self.global_panel.setHtml(f"<h3 style='color:red'>Brak pliku: {filename}</h3>")
+            self.country_panel.setText("")
+            self.country_combo.clear()
+            return
+
+        try:
+            self.current_df = pd.read_csv(filename)
+            self._populate_countries()
+            self._update_global_stats()
+        except Exception as e:
+            self.global_panel.setHtml(f"<h3 style='color:red'>Błąd odczytu danych: {e}</h3>")
+
+    def _populate_countries(self) -> None:
+        if self.current_df.empty:
+            return
+
+        countries = set(self.current_df['origin_country'].unique()) | \
+                    set(self.current_df['destination_country'].unique())
+        sorted_list = sorted(list(countries))
+
+        self.country_combo.blockSignals(True)
+        self.country_combo.clear()
+        self.country_combo.addItems(sorted_list)
+        self.country_combo.blockSignals(False)
+
+        if sorted_list:
+            self.country_combo.setCurrentIndex(0)
+            self._update_country_stats(sorted_list[0])
+
+    def _on_year_changed(self, year: str) -> None:
+        if year:
+            self._load_data_for_year(year)
+
+    def _on_country_changed(self, country: str) -> None:
+        if country:
+            self._update_country_stats(country)
+
+    def _update_global_stats(self) -> None:
+        """Generates report for Left Panel (Global + Normalized Stats)."""
+        if self.current_df.empty:
+            return
+
+        current_year_str = self.year_combo.currentText()
+        df = self.current_df
+
+        # --- Basic Stats ---
+        total_flights = df['flights'].sum()
+        total_routes = len(df)
+        top_origins = df.groupby('origin_country')['flights'].sum().sort_values(ascending=False).head(5)
+
+        # Top 5 Routes
+        international_flights = df[df['origin_country'] != df['destination_country']]
+        top_international_routes = international_flights.sort_values(by='flights', ascending=False).head(5)
+
+        # --- HTML Construction ---
+        html = f"""
+        <h2 style="color: #2c3e50; margin-top:0;">Podsumowanie roku {current_year_str}</h2>
+        <p><b>Loty ogółem:</b> <span style="color:blue">{total_flights}</span></p>
+        <p><b>Liczba tras:</b> {total_routes}</p>
+
+        <hr>
+        <h3 style="color: #16a085;">Top 5: Ruch Wylotowy</h3>
+        <ol style="margin-top:0;">
+        """
+        for country, count in top_origins.items():
+            html += f"<li><b>{country}</b>: {count}</li>"
+        html += "</ol>"
+
+        html += """
+        <h3 style="color: #d35400;">Top 5: Trasy</h3>
+        <ul style="margin-top:0;">
+        """
+        for _, row in top_international_routes.iterrows():
+            html += f"<li>{row['origin_country']} &rarr; {row['destination_country']} ({row['flights']})</li>"
+        html += "</ul>"
+
+        # --- NEW SECTION: NORMALIZED STATS (FLIGHTS PER CAPITA) ---
+        html += "<hr>"
+        html += "<h3 style='color: #8e44ad; margin-bottom:5px;'>Top 7: Loty na Mieszkańca</h3>"
+
+        if not self.population_df.empty:
+            try:
+                # 1. Aggregate Incoming Flights (Popularity)
+                incoming_stats = df.groupby('destination_country')['flights'].sum().reset_index()
+                incoming_stats.columns = ['Country', 'Incoming_Flights']
+
+                # 2. Filter population for current year
+                pop_year = self.population_df[self.population_df['Year'] == int(current_year_str)]
+
+                # 3. Merge
+                merged = pd.merge(incoming_stats, pop_year, on='Country', how='inner')
+
+                if not merged.empty:
+                    # 4. Calculate & Sort
+                    merged['PerCapita'] = merged['Incoming_Flights'] / merged['Population']
+                    top_normalized = merged.sort_values('PerCapita', ascending=False).head(7)
+
+                    # 5. Table
+                    html += """
+                    <table width='100%' cellspacing='0' cellpadding='3' style='font-size:11px;'>
+                    <tr style='background-color:#eee;'>
+                        <th align='left'>Kraj</th>
+                        <th align='right'>Loty/Os.</th>
+                    </tr>
+                    """
+                    for i, row in enumerate(top_normalized.itertuples(), 1):
+                        color = "#f9f9f9" if i % 2 == 0 else "#ffffff"
+                        html += f"""
+                        <tr style='background-color:{color};'>
+                            <td>{i}. {row.Country}</td>
+                            <td align='right'><b>{row.PerCapita:.4f}</b></td>
+                        </tr>
+                        """
+                    html += "</table>"
+                    html += "<p style='font-size:10px; color:gray; margin-top:5px;'>*Obliczone jako przyloty / populacja</p>"
+                else:
+                    html += "<p style='color:red; font-size:11px;'>Brak pasujących danych populacyjnych.</p>"
+            except Exception as e:
+                html += f"<p style='color:red; font-size:11px;'>Błąd obliczeń: {str(e)}</p>"
+        else:
+            html += "<p style='color:gray; font-size:11px;'>Brak pliku population.csv.</p>"
+
+        self.global_panel.setHtml(html)
+
+    def _update_country_stats(self, country: str) -> None:
+        """Generates report for Right Panel (Country Details)."""
+        if self.current_df.empty or not country:
+            return
+
+        df = self.current_df
+        outbound = df[df['origin_country'] == country]
+        inbound = df[df['destination_country'] == country]
+        total_out = outbound['flights'].sum()
+        total_in = inbound['flights'].sum()
+
+        html = f"""
+        <h1 style="color: #2980b9; margin-top:0;">{country}</h1>
+        <table width="100%" cellpadding="5" cellspacing="0" style="background-color:#f0f8ff; border: 1px solid #ccc;">
+            <tr><td><b>Wyloty:</b></td><td style="color: green;">{total_out}</td></tr>
+            <tr><td><b>Przyloty:</b></td><td style="color: orange;">{total_in}</td></tr>
+            <tr><td><b>Suma:</b></td><td>{total_out + total_in}</td></tr>
+        </table>
+
+        <h3 style='border-bottom: 2px solid #ddd; padding-bottom:5px;'>Kierunki wylotowe:</h3>
+        """
+
+        if not outbound.empty:
+            sorted_out = outbound.sort_values(by='flights', ascending=False)
+            html += "<table width='100%' border='0' cellspacing='2'>"
+            html += "<tr style='background-color:#eee; font-size:11px;'><th>Cel</th><th>Loty</th><th width='40%'>Popularność</th></tr>"
+
+            max_val = sorted_out['flights'].max()
+            for _, row in sorted_out.iterrows():
+                bar_w = int((row['flights'] / max_val) * 100)
+                html += f"""
+                <tr>
+                    <td>{row['destination_country']}</td>
+                    <td align='center'><b>{row['flights']}</b></td>
+                    <td><div style="background-color:#3498db; width:{bar_w}%; height:8px;"></div></td>
+                </tr>
+                """
+            html += "</table>"
+        else:
+            html += "<p><i>Brak danych.</i></p>"
+
+        self.country_panel.setHtml(html)
+
 def build_modules(ctx: ApplicationContext) -> List[ModuleInfo]:
     """Register modules that are available in the GUI."""
 
@@ -503,10 +818,7 @@ def build_modules(ctx: ApplicationContext) -> List[ModuleInfo]:
         ModuleInfo(
             name="Statystyki popularności",
             description="Planowana zakładka do eksploracji statystyk przewozów i natężenia ruchu.",
-            factory=lambda ctx: PlaceholderModule(
-                "Statystyki popularności",
-                "Moduł w przygotowaniu. Pozwoli porównywać ruch pasażerski i liczbę połączeń w czasie.",
-            ),
+            factory=lambda ctx:PopularityStatsTab(ctx),
         ),
     ]
     return modules
