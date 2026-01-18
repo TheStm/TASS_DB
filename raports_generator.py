@@ -251,5 +251,5 @@ if __name__ == "__main__":
     # generate_monthly_flight_report(URI, USER, PASSWORD, year="2018")
 
     # 2. Use the report to analyze
-    # visualize_country_connections_heatmap("reports/report_country_connections_2018.csv", "2017")
-    print_country_stats("reports/monthly_flight_report_2018.csv", "Lebanon")
+    visualize_country_connections_heatmap("reports/report_country_connections_2017.csv", "2017")
+    # print_country_stats("reports/monthly_flight_report_2018.csv", "Lebanon")
