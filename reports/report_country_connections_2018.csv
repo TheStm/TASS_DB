@@ -1,0 +1,5258 @@
+origin_country,destination_country,flights
+Afghanistan,Turkey,290
+Afghanistan,Azerbaijan,164
+Afghanistan,Georgia,41
+Afghanistan,Romania,33
+Afghanistan,Germany,23
+Afghanistan,Netherlands,16
+Afghanistan,Belgium,10
+Afghanistan,Bulgaria,10
+Afghanistan,Croatia,3
+Afghanistan,Czech Republic,1
+Afghanistan,Lithuania,1
+Afghanistan,Spain,1
+Afghanistan,Norway,1
+Afghanistan,Serbia,1
+Afghanistan,Ireland,1
+Afghanistan,Ukraine,1
+Afghanistan,Latvia,1
+Albania,Italy,2113
+Albania,Turkey,416
+Albania,Germany,246
+Albania,Austria,224
+Albania,Greece,217
+Albania,United Kingdom,173
+Albania,Serbia,155
+Albania,Poland,137
+Albania,Slovenia,126
+Albania,Belgium,64
+Albania,Hungary,55
+Albania,Netherlands,45
+Albania,France,41
+Albania,Ukraine,26
+Albania,Czech Republic,23
+Albania,Israel,17
+Albania,Sweden,16
+Albania,Norway,15
+Albania,Belarus,12
+Albania,Finland,7
+Albania,Bulgaria,6
+Albania,Denmark,5
+Albania,Romania,4
+Albania,Slovakia,4
+Albania,Switzerland,3
+Albania,Croatia,3
+Albania,Macedonia,2
+Albania,Montenegro,2
+Albania,Kuwait,2
+Albania,Spain,2
+Albania,Georgia,1
+Albania,Jordan,1
+Albania,Moldova,1
+Albania,Egypt,1
+Albania,Morocco,1
+Algeria,France,6623
+Algeria,Spain,1494
+Algeria,Turkey,970
+Algeria,Saudi Arabia,818
+Algeria,Italy,389
+Algeria,Morocco,261
+Algeria,Germany,260
+Algeria,United Kingdom,196
+Algeria,United Arab Emirates,187
+Algeria,Egypt,184
+Algeria,Belgium,161
+Algeria,Qatar,125
+Algeria,Switzerland,111
+Algeria,Canada,108
+Algeria,Jordan,101
+Algeria,Austria,54
+Algeria,Lebanon,51
+Algeria,Portugal,50
+Algeria,China,35
+Algeria,Hungary,35
+Algeria,Russia,32
+Algeria,Tunisia,25
+Algeria,Syria,12
+Algeria,Netherlands,12
+Algeria,Malta,7
+Algeria,Algeria,6
+Algeria,Ukraine,4
+Algeria,Bulgaria,4
+Algeria,Western Sahara,3
+Algeria,Belarus,3
+Algeria,Luxembourg,3
+Algeria,Czech Republic,3
+Algeria,Moldova,2
+Algeria,Sweden,2
+Algeria,Macedonia,2
+Algeria,Serbia,2
+Algeria,Norway,1
+Algeria,Mali,1
+Algeria,Georgia,1
+Algeria,Lithuania,1
+Algeria,Slovakia,1
+Algeria,Croatia,1
+Algeria,South Africa,1
+Algeria,Denmark,1
+Algeria,Senegal,1
+Angola,Portugal,434
+Angola,France,50
+Angola,Germany,50
+Angola,Morocco,49
+Angola,Netherlands,48
+Angola,United Kingdom,16
+Angola,United States,5
+Angola,Spain,4
+Angola,Belgium,2
+Angola,Italy,2
+Angola,Russia,2
+Angola,Switzerland,1
+Angola,Norway,1
+Angola,Ghana,1
+Angola,Austria,1
+Anguilla,Switzerland,1
+Antigua and Barbuda,United Kingdom,174
+Antigua and Barbuda,Italy,17
+Antigua and Barbuda,France,3
+Antigua and Barbuda,Portugal,3
+Antigua and Barbuda,Switzerland,2
+Antigua and Barbuda,Germany,1
+Antigua and Barbuda,Finland,1
+Antigua and Barbuda,Spain,1
+Antigua and Barbuda,Russia,1
+Argentina,Spain,626
+Argentina,Italy,222
+Argentina,United Kingdom,201
+Argentina,Germany,138
+Argentina,France,121
+Argentina,Netherlands,106
+Argentina,Switzerland,10
+Argentina,Morocco,8
+Argentina,Turkey,1
+Armenia,Russia,2201
+Armenia,United Arab Emirates,294
+Armenia,Ukraine,217
+Armenia,Qatar,141
+Armenia,Iran,139
+Armenia,Georgia,122
+Armenia,Poland,104
+Armenia,Austria,96
+Armenia,France,79
+Armenia,Turkey,78
+Armenia,Egypt,66
+Armenia,Lebanon,66
+Armenia,Greece,54
+Armenia,Kazakhstan,41
+Armenia,Israel,38
+Armenia,Germany,31
+Armenia,Belarus,30
+Armenia,Iraq,24
+Armenia,Turkmenistan,12
+Armenia,Syria,12
+Armenia,Belgium,10
+Armenia,Bulgaria,10
+Armenia,Cyprus,6
+Armenia,Czech Republic,5
+Armenia,Switzerland,3
+Armenia,Italy,3
+Armenia,Jordan,2
+Armenia,China,2
+Armenia,Sweden,1
+Armenia,South Korea,1
+Armenia,Uzbekistan,1
+Armenia,United Kingdom,1
+Armenia,Spain,1
+Armenia,Montenegro,1
+Armenia,Macedonia,1
+Armenia,India,1
+Armenia,Bahrain,1
+Armenia,Serbia,1
+Armenia,Kuwait,1
+Aruba,Netherlands,52
+Aruba,United Kingdom,7
+Aruba,Belgium,7
+Aruba,Sweden,5
+Aruba,Spain,1
+Australia,United Kingdom,99
+Austria,Germany,12987
+Austria,Austria,4134
+Austria,United Kingdom,3436
+Austria,Italy,3089
+Austria,Switzerland,2618
+Austria,Spain,2489
+Austria,France,2400
+Austria,Netherlands,1724
+Austria,Turkey,1480
+Austria,Greece,1390
+Austria,Russia,1297
+Austria,Belgium,1057
+Austria,Romania,1033
+Austria,Poland,930
+Austria,Croatia,884
+Austria,Ukraine,882
+Austria,Serbia,778
+Austria,Bulgaria,765
+Austria,Czech Republic,634
+Austria,Denmark,610
+Austria,Sweden,602
+Austria,Israel,549
+Austria,United States,527
+Austria,Egypt,504
+Austria,Hungary,441
+Austria,Luxembourg,393
+Austria,Norway,353
+Austria,Portugal,306
+Austria,Finland,284
+Austria,Thailand,282
+Austria,Cyprus,271
+Austria,Slovenia,262
+Austria,United Arab Emirates,250
+Austria,Bosnia and Herzegovina,247
+Austria,China,238
+Austria,Iran,232
+Austria,Qatar,229
+Austria,Slovakia,228
+Austria,Albania,223
+Austria,Ireland,222
+Austria,Macedonia,217
+Austria,Belarus,209
+Austria,Latvia,204
+Austria,Moldova,184
+Austria,Montenegro,181
+Austria,Malta,165
+Austria,Jordan,157
+Austria,Estonia,136
+Austria,Taiwan,132
+Austria,Lithuania,125
+Austria,Ethiopia,112
+Austria,Armenia,97
+Austria,Canada,96
+Austria,Iraq,92
+Austria,Tunisia,79
+Austria,Morocco,73
+Austria,India,66
+Austria,South Korea,63
+Austria,Hong Kong,59
+Austria,Saudi Arabia,57
+Austria,Georgia,50
+Austria,Japan,42
+Austria,Algeria,38
+Austria,Mauritius,22
+Austria,Maldives,18
+Austria,Iceland,14
+Austria,Kuwait,14
+Austria,South Africa,11
+Austria,Seychelles,8
+Austria,Kazakhstan,8
+Austria,Lebanon,7
+Austria,Jersey,5
+Austria,Sri Lanka,4
+Austria,Cuba,4
+Austria,Cape Verde,3
+Austria,Nigeria,3
+Austria,Guernsey,3
+Austria,Azerbaijan,2
+Austria,Gibraltar,2
+Austria,Afghanistan,2
+Austria,Turkmenistan,2
+Austria,Isle of Man,2
+Austria,Libya,1
+Austria,Oman,1
+Austria,Dominican Republic,1
+Austria,Chad,1
+Austria,Guinea,1
+Austria,Mali,1
+Austria,Cote d'Ivoire,1
+Austria,Kenya,1
+Austria,Angola,1
+Austria,Singapore,1
+Azerbaijan,Azerbaijan,1659
+Azerbaijan,Russia,1638
+Azerbaijan,Turkey,1351
+Azerbaijan,United Arab Emirates,940
+Azerbaijan,Kazakhstan,342
+Azerbaijan,China,334
+Azerbaijan,Georgia,312
+Azerbaijan,Germany,294
+Azerbaijan,Ukraine,290
+Azerbaijan,Iran,259
+Azerbaijan,Qatar,243
+Azerbaijan,Iraq,238
+Azerbaijan,Israel,148
+Azerbaijan,Luxembourg,119
+Azerbaijan,Afghanistan,112
+Azerbaijan,Italy,103
+Azerbaijan,Netherlands,99
+Azerbaijan,Kuwait,95
+Azerbaijan,Turkmenistan,91
+Azerbaijan,United States,81
+Azerbaijan,Hungary,77
+Azerbaijan,United Kingdom,72
+Azerbaijan,Belarus,71
+Azerbaijan,Hong Kong,69
+Azerbaijan,Uzbekistan,56
+Azerbaijan,Saudi Arabia,56
+Azerbaijan,Japan,52
+Azerbaijan,France,50
+Azerbaijan,Bahrain,49
+Azerbaijan,Singapore,43
+Azerbaijan,Bulgaria,33
+Azerbaijan,Austria,29
+Azerbaijan,Malaysia,24
+Azerbaijan,India,22
+Azerbaijan,Latvia,20
+Azerbaijan,Oman,20
+Azerbaijan,South Korea,17
+Azerbaijan,Czech Republic,16
+Azerbaijan,Serbia,15
+Azerbaijan,Spain,13
+Azerbaijan,Switzerland,12
+Azerbaijan,Belgium,11
+Azerbaijan,Taiwan,5
+Azerbaijan,Kenya,5
+Azerbaijan,Greece,4
+Azerbaijan,Thailand,4
+Azerbaijan,Tajikistan,4
+Azerbaijan,Bosnia and Herzegovina,3
+Azerbaijan,Sweden,3
+Azerbaijan,Romania,3
+Azerbaijan,Slovakia,3
+Azerbaijan,Finland,2
+Azerbaijan,Poland,2
+Azerbaijan,Croatia,2
+Azerbaijan,Malta,2
+Azerbaijan,Jordan,2
+Azerbaijan,Cyprus,2
+Azerbaijan,Pakistan,1
+Azerbaijan,Indonesia,1
+Azerbaijan,Djibouti,1
+Azerbaijan,Slovenia,1
+Azerbaijan,Nigeria,1
+Azerbaijan,Canada,1
+Azerbaijan,Morocco,1
+Azerbaijan,Kyrgyzstan,1
+Azerbaijan,Norway,1
+Azerbaijan,Estonia,1
+Azerbaijan,Portugal,1
+Azerbaijan,Tunisia,1
+Azerbaijan,Mongolia,1
+Azerbaijan,Egypt,1
+Azerbaijan,Iceland,1
+Azerbaijan,Seychelles,1
+Azerbaijan,Maldives,1
+Bahamas,United Kingdom,76
+Bahamas,Switzerland,4
+Bahamas,France,3
+Bahamas,Italy,2
+Bahamas,Russia,2
+Bahamas,Netherlands,1
+Bahamas,Spain,1
+Bahamas,Greece,1
+Bahamas,Germany,1
+Bahrain,Turkey,483
+Bahrain,United Kingdom,365
+Bahrain,Lebanon,223
+Bahrain,Germany,192
+Bahrain,Russia,134
+Bahrain,France,124
+Bahrain,Cyprus,115
+Bahrain,Greece,102
+Bahrain,Georgia,64
+Bahrain,Italy,62
+Bahrain,Morocco,57
+Bahrain,Azerbaijan,50
+Bahrain,Belgium,19
+Bahrain,United States,3
+Bahrain,Netherlands,3
+Bahrain,Switzerland,2
+Bahrain,Ireland,1
+Bahrain,Luxembourg,1
+Bahrain,Ukraine,1
+Bahrain,Spain,1
+Barbados,United Kingdom,484
+Barbados,Germany,73
+Barbados,Netherlands,27
+Barbados,Belgium,5
+Barbados,Ireland,4
+Barbados,Portugal,2
+Barbados,France,2
+Barbados,Isle of Man,1
+Barbados,Austria,1
+Barbados,Denmark,1
+Belarus,Ukraine,1419
+Belarus,Turkey,421
+Belarus,Germany,358
+Belarus,Poland,320
+Belarus,Russia,282
+Belarus,Lithuania,227
+Belarus,Austria,223
+Belarus,Italy,193
+Belarus,Georgia,190
+Belarus,France,185
+Belarus,Egypt,174
+Belarus,Latvia,155
+Belarus,Bulgaria,131
+Belarus,Czech Republic,128
+Belarus,Hungary,116
+Belarus,Netherlands,115
+Belarus,Spain,102
+Belarus,Greece,95
+Belarus,Finland,77
+Belarus,Israel,74
+Belarus,Sweden,74
+Belarus,Azerbaijan,73
+Belarus,Switzerland,70
+Belarus,United Kingdom,69
+Belarus,Belgium,67
+Belarus,Montenegro,63
+Belarus,Cyprus,61
+Belarus,United Arab Emirates,59
+Belarus,Serbia,36
+Belarus,Armenia,28
+Belarus,Iraq,25
+Belarus,Moldova,23
+Belarus,Lebanon,14
+Belarus,Albania,12
+Belarus,Tunisia,9
+Belarus,Estonia,7
+Belarus,Saudi Arabia,5
+Belarus,Romania,2
+Belarus,Algeria,2
+Belarus,Croatia,2
+Belarus,Sudan,2
+Belarus,Belarus,2
+Belarus,Ethiopia,1
+Belarus,United States,1
+Belarus,Iran,1
+Belarus,Ireland,1
+Belarus,Denmark,1
+Belarus,Luxembourg,1
+Belarus,Slovenia,1
+Belarus,Turkmenistan,1
+Belarus,Bahrain,1
+Belarus,India,1
+Belarus,Slovakia,1
+Belgium,Spain,7221
+Belgium,Italy,4838
+Belgium,France,4800
+Belgium,Germany,4648
+Belgium,United Kingdom,4030
+Belgium,Switzerland,1741
+Belgium,Portugal,1740
+Belgium,Morocco,1532
+Belgium,Turkey,1439
+Belgium,Poland,1314
+Belgium,Greece,1291
+Belgium,United States,1247
+Belgium,Sweden,1246
+Belgium,Denmark,1168
+Belgium,Austria,1007
+Belgium,Romania,872
+Belgium,Czech Republic,778
+Belgium,Hungary,772
+Belgium,Netherlands,731
+Belgium,Ireland,663
+Belgium,United Arab Emirates,595
+Belgium,Norway,587
+Belgium,Israel,518
+Belgium,Russia,507
+Belgium,Finland,501
+Belgium,China,452
+Belgium,Qatar,449
+Belgium,Egypt,435
+Belgium,Bulgaria,412
+Belgium,Croatia,404
+Belgium,Belgium,373
+Belgium,Tunisia,357
+Belgium,Malta,272
+Belgium,Slovenia,261
+Belgium,Latvia,260
+Belgium,Iceland,254
+Belgium,Canada,219
+Belgium,Ukraine,207
+Belgium,Algeria,166
+Belgium,Estonia,164
+Belgium,Nigeria,159
+Belgium,Rwanda,148
+Belgium,Hong Kong,145
+Belgium,Lithuania,137
+Belgium,India,131
+Belgium,Cameroon,129
+Belgium,Japan,122
+Belgium,Senegal,122
+Belgium,Serbia,112
+Belgium,Cyprus,106
+Belgium,Ghana,99
+Belgium,Mexico,88
+Belgium,Dominican Republic,88
+Belgium,Thailand,84
+Belgium,Slovakia,75
+Belgium,Lebanon,71
+Belgium,Albania,70
+Belgium,Cape Verde,69
+Belgium,Belarus,68
+Belgium,Sierra Leone,67
+Belgium,Ethiopia,67
+Belgium,Montenegro,66
+Belgium,Macedonia,58
+Belgium,South Korea,54
+Belgium,Burkina Faso,53
+Belgium,Cote d'Ivoire,52
+Belgium,South Africa,48
+Belgium,Luxembourg,48
+Belgium,Moldova,45
+Belgium,Congo (Kinshasa),43
+Belgium,Angola,40
+Belgium,Cuba,35
+Belgium,Saudi Arabia,35
+Belgium,Georgia,31
+Belgium,Iran,25
+Belgium,Kuwait,22
+Belgium,Niger,19
+Belgium,Burundi,18
+Belgium,Gambia,16
+Belgium,Turkmenistan,15
+Belgium,Azerbaijan,11
+Belgium,Afghanistan,10
+Belgium,Armenia,10
+Belgium,Bosnia and Herzegovina,10
+Belgium,Libya,9
+Belgium,Jordan,9
+Belgium,Togo,8
+Belgium,Gabon,8
+Belgium,Sudan,6
+Belgium,Djibouti,6
+Belgium,Congo (Brazzaville),6
+Belgium,Jersey,5
+Belgium,Uganda,5
+Belgium,Central African Republic,4
+Belgium,Guernsey,4
+Belgium,Tanzania,4
+Belgium,Venezuela,3
+Belgium,Seychelles,2
+Belgium,Bahrain,2
+Belgium,Namibia,2
+Belgium,Kenya,2
+Belgium,Benin,2
+Belgium,Mali,2
+Belgium,Iraq,2
+Belgium,Kazakhstan,2
+Belgium,Netherlands Antilles,1
+Belgium,Mauritania,1
+Belgium,Guadeloupe,1
+Belgium,Uzbekistan,1
+Belgium,Reunion,1
+Belgium,Brazil,1
+Belgium,Isle of Man,1
+Belgium,Greenland,1
+Belgium,Mozambique,1
+Belgium,Saint Lucia,1
+Belgium,Antigua and Barbuda,1
+Belgium,Oman,1
+Benin,France,91
+Benin,Morocco,12
+Benin,Switzerland,2
+Benin,Belgium,1
+Benin,United States,1
+Benin,Spain,1
+Bermuda,United Kingdom,106
+Bermuda,Germany,2
+Bermuda,Italy,2
+Bermuda,Spain,2
+Bermuda,Portugal,2
+Bermuda,France,1
+Bermuda,Guernsey,1
+Bermuda,Sweden,1
+Bermuda,Algeria,1
+Bermuda,Cape Verde,1
+Bermuda,Netherlands,1
+Bermuda,Senegal,1
+Bolivia,Spain,148
+Bosnia and Herzegovina,Germany,529
+Bosnia and Herzegovina,Turkey,407
+Bosnia and Herzegovina,Croatia,250
+Bosnia and Herzegovina,Austria,249
+Bosnia and Herzegovina,Sweden,208
+Bosnia and Herzegovina,Serbia,207
+Bosnia and Herzegovina,Slovenia,175
+Bosnia and Herzegovina,United Arab Emirates,146
+Bosnia and Herzegovina,Italy,117
+Bosnia and Herzegovina,France,79
+Bosnia and Herzegovina,Qatar,68
+Bosnia and Herzegovina,Netherlands,44
+Bosnia and Herzegovina,Hungary,36
+Bosnia and Herzegovina,Denmark,34
+Bosnia and Herzegovina,Switzerland,34
+Bosnia and Herzegovina,Kuwait,19
+Bosnia and Herzegovina,Lebanon,16
+Bosnia and Herzegovina,Saudi Arabia,14
+Bosnia and Herzegovina,Norway,12
+Bosnia and Herzegovina,Belgium,9
+Bosnia and Herzegovina,Montenegro,7
+Bosnia and Herzegovina,Bosnia and Herzegovina,6
+Bosnia and Herzegovina,Tunisia,5
+Bosnia and Herzegovina,United Kingdom,4
+Bosnia and Herzegovina,Azerbaijan,3
+Bosnia and Herzegovina,Slovakia,3
+Bosnia and Herzegovina,Russia,3
+Bosnia and Herzegovina,Bulgaria,2
+Bosnia and Herzegovina,Czech Republic,2
+Bosnia and Herzegovina,Albania,1
+Bosnia and Herzegovina,Romania,1
+Bosnia and Herzegovina,Egypt,1
+Bosnia and Herzegovina,Iceland,1
+Bosnia and Herzegovina,Poland,1
+Bosnia and Herzegovina,Macedonia,1
+Bosnia and Herzegovina,Moldova,1
+Brazil,Portugal,1521
+Brazil,Spain,708
+Brazil,France,563
+Brazil,Italy,537
+Brazil,Germany,429
+Brazil,United Kingdom,389
+Brazil,Netherlands,279
+Brazil,Switzerland,159
+Brazil,Morocco,132
+Brazil,Qatar,123
+Brazil,Turkey,115
+Brazil,Luxembourg,43
+Brazil,Israel,8
+Brazil,Belgium,5
+Brazil,Poland,3
+Brazil,Ireland,2
+Brazil,Russia,1
+British Indian Ocean Territory,Ireland,1
+British Virgin Islands,United Kingdom,2
+Brunei,United Kingdom,31
+Bulgaria,Germany,2993
+Bulgaria,United Kingdom,2013
+Bulgaria,Russia,1318
+Bulgaria,Bulgaria,1144
+Bulgaria,Poland,1101
+Bulgaria,Italy,939
+Bulgaria,Austria,767
+Bulgaria,Turkey,600
+Bulgaria,Israel,559
+Bulgaria,Spain,538
+Bulgaria,Czech Republic,527
+Bulgaria,Greece,440
+Bulgaria,France,413
+Bulgaria,Belgium,409
+Bulgaria,Netherlands,399
+Bulgaria,Romania,342
+Bulgaria,Ukraine,214
+Bulgaria,Serbia,192
+Bulgaria,Cyprus,181
+Bulgaria,Qatar,178
+Bulgaria,Slovakia,167
+Bulgaria,Denmark,156
+Bulgaria,Belarus,134
+Bulgaria,Switzerland,116
+Bulgaria,United Arab Emirates,115
+Bulgaria,Ireland,113
+Bulgaria,Norway,102
+Bulgaria,Hungary,100
+Bulgaria,Finland,90
+Bulgaria,Sweden,84
+Bulgaria,Malta,53
+Bulgaria,Lithuania,51
+Bulgaria,Latvia,50
+Bulgaria,Estonia,44
+Bulgaria,Slovenia,39
+Bulgaria,Portugal,36
+Bulgaria,Luxembourg,34
+Bulgaria,Azerbaijan,29
+Bulgaria,Egypt,28
+Bulgaria,Macedonia,26
+Bulgaria,Croatia,19
+Bulgaria,Iran,14
+Bulgaria,Jordan,14
+Bulgaria,Armenia,13
+Bulgaria,Afghanistan,10
+Bulgaria,Tunisia,10
+Bulgaria,Kuwait,9
+Bulgaria,Saudi Arabia,8
+Bulgaria,Morocco,7
+Bulgaria,Moldova,6
+Bulgaria,Georgia,6
+Bulgaria,Lebanon,6
+Bulgaria,Kazakhstan,5
+Bulgaria,Albania,4
+Bulgaria,Algeria,3
+Bulgaria,Iraq,3
+Bulgaria,Iceland,2
+Bulgaria,United States,2
+Bulgaria,Montenegro,1
+Bulgaria,Turkmenistan,1
+Bulgaria,Chad,1
+Bulgaria,Rwanda,1
+Bulgaria,Bahrain,1
+Bulgaria,Libya,1
+Bulgaria,Bosnia and Herzegovina,1
+Bulgaria,Maldives,1
+Burkina Faso,Morocco,87
+Burkina Faso,Turkey,72
+Burkina Faso,Belgium,57
+Burkina Faso,France,47
+Burkina Faso,Egypt,1
+Burkina Faso,Netherlands,1
+Burkina Faso,Qatar,1
+Burkina Faso,Ukraine,1
+Burkina Faso,Algeria,1
+Burma,Italy,4
+Cameroon,France,195
+Cameroon,Belgium,122
+Cameroon,Turkey,114
+Cameroon,Morocco,91
+Cameroon,Italy,6
+Cameroon,Germany,3
+Cameroon,Spain,3
+Cameroon,Switzerland,2
+Cameroon,Luxembourg,2
+Cameroon,United Kingdom,1
+Canada,United Kingdom,2698
+Canada,Germany,1468
+Canada,France,1452
+Canada,Netherlands,817
+Canada,Italy,531
+Canada,Ireland,441
+Canada,Portugal,425
+Canada,Switzerland,401
+Canada,Spain,354
+Canada,India,240
+Canada,Belgium,226
+Canada,Israel,218
+Canada,China,194
+Canada,United Arab Emirates,192
+Canada,Morocco,182
+Canada,Turkey,179
+Canada,Greece,164
+Canada,Poland,150
+Canada,Algeria,108
+Canada,Austria,99
+Canada,Denmark,97
+Canada,Ethiopia,87
+Canada,Pakistan,71
+Canada,Egypt,69
+Canada,Czech Republic,60
+Canada,Qatar,56
+Canada,Hungary,53
+Canada,Croatia,50
+Canada,Hong Kong,48
+Canada,Tunisia,44
+Canada,Saudi Arabia,36
+Canada,Luxembourg,35
+Canada,Ukraine,35
+Canada,Jordan,34
+Canada,Romania,31
+Canada,Norway,5
+Canada,Canada,4
+Canada,Sweden,3
+Canada,Finland,1
+Canada,Montenegro,1
+Canada,Russia,1
+Canada,Estonia,1
+Canada,Lithuania,1
+Canada,Jersey,1
+Canada,Latvia,1
+Canada,Malta,1
+Cape Verde,Portugal,601
+Cape Verde,United Kingdom,333
+Cape Verde,Spain,151
+Cape Verde,Netherlands,128
+Cape Verde,Germany,119
+Cape Verde,France,103
+Cape Verde,Italy,82
+Cape Verde,Belgium,75
+Cape Verde,Morocco,43
+Cape Verde,Sweden,36
+Cape Verde,Czech Republic,36
+Cape Verde,United States,26
+Cape Verde,Finland,16
+Cape Verde,Slovakia,15
+Cape Verde,Poland,13
+Cape Verde,Luxembourg,9
+Cape Verde,Denmark,5
+Cape Verde,Norway,4
+Cape Verde,Algeria,2
+Cape Verde,Russia,2
+Cape Verde,Jordan,2
+Cape Verde,Netherlands Antilles,1
+Cape Verde,Iceland,1
+Cape Verde,Tunisia,1
+Cape Verde,Cape Verde,1
+Cape Verde,Gibraltar,1
+Cape Verde,Ukraine,1
+Cape Verde,Bermuda,1
+Cape Verde,Barbados,1
+Cape Verde,Austria,1
+Cayman Islands,Portugal,1
+Cayman Islands,France,1
+Central African Republic,Morocco,55
+Central African Republic,Belgium,2
+Central African Republic,Portugal,1
+Central African Republic,Germany,1
+Central African Republic,France,1
+Chad,France,54
+Chad,Morocco,52
+Chad,Turkey,33
+Chad,Portugal,4
+Chad,Luxembourg,3
+Chad,Belgium,3
+Chad,Malta,1
+Chad,Norway,1
+Chad,Italy,1
+Chad,Germany,1
+Chile,Spain,283
+Chile,France,120
+Chile,Italy,88
+Chile,United Kingdom,72
+China,Germany,2356
+China,France,1402
+China,Netherlands,1359
+China,United Kingdom,1312
+China,Italy,718
+China,Finland,387
+China,Turkey,380
+China,Belgium,376
+China,Spain,376
+China,Switzerland,349
+China,Denmark,285
+China,Austria,240
+China,Azerbaijan,240
+China,Israel,187
+China,Czech Republic,157
+China,Sweden,136
+China,Poland,108
+China,Ukraine,105
+China,Egypt,72
+China,Luxembourg,66
+China,Georgia,56
+China,Greece,43
+China,Portugal,41
+China,Algeria,36
+China,Ireland,21
+China,Hungary,2
+China,Turkmenistan,1
+China,Lithuania,1
+China,Estonia,1
+China,Latvia,1
+Colombia,Spain,943
+Colombia,Germany,131
+Colombia,United Kingdom,119
+Colombia,France,119
+Colombia,Netherlands,73
+Colombia,Portugal,3
+Colombia,Turkey,3
+Colombia,Belgium,2
+Congo (Brazzaville),France,158
+Congo (Brazzaville),Morocco,65
+Congo (Brazzaville),Belgium,7
+Congo (Brazzaville),Switzerland,1
+Congo (Brazzaville),United Kingdom,1
+Congo (Brazzaville),Luxembourg,1
+Congo (Brazzaville),Italy,1
+Congo (Brazzaville),Bulgaria,1
+Congo (Kinshasa),Belgium,68
+Congo (Kinshasa),France,53
+Congo (Kinshasa),Morocco,50
+Congo (Kinshasa),Israel,3
+Congo (Kinshasa),Switzerland,2
+Congo (Kinshasa),Malta,1
+Congo (Kinshasa),Netherlands,1
+Congo (Kinshasa),Russia,1
+Congo (Kinshasa),Italy,1
+Congo (Kinshasa),Turkey,1
+Congo (Kinshasa),Belarus,1
+Costa Rica,Spain,117
+Costa Rica,United Kingdom,59
+Costa Rica,France,48
+Costa Rica,Switzerland,40
+Costa Rica,Germany,28
+Costa Rica,Netherlands,17
+Costa Rica,Finland,1
+Cote d'Ivoire,France,234
+Cote d'Ivoire,Morocco,161
+Cote d'Ivoire,Turkey,98
+Cote d'Ivoire,Portugal,71
+Cote d'Ivoire,Belgium,52
+Cote d'Ivoire,United States,40
+Cote d'Ivoire,Lebanon,7
+Cote d'Ivoire,Spain,3
+Cote d'Ivoire,Luxembourg,3
+Cote d'Ivoire,Belarus,1
+Cote d'Ivoire,Switzerland,1
+Croatia,Germany,3396
+Croatia,Croatia,3243
+Croatia,United Kingdom,1900
+Croatia,France,942
+Croatia,Austria,891
+Croatia,Italy,774
+Croatia,Switzerland,637
+Croatia,Sweden,488
+Croatia,Netherlands,478
+Croatia,Spain,410
+Croatia,Belgium,408
+Croatia,Poland,382
+Croatia,Turkey,364
+Croatia,Norway,362
+Croatia,Serbia,315
+Croatia,Russia,315
+Croatia,Denmark,307
+Croatia,Qatar,257
+Croatia,Czech Republic,249
+Croatia,Bosnia and Herzegovina,247
+Croatia,Finland,242
+Croatia,Greece,235
+Croatia,Ireland,187
+Croatia,Macedonia,163
+Croatia,United Arab Emirates,148
+Croatia,Israel,67
+Croatia,Slovakia,64
+Croatia,Portugal,51
+Croatia,Latvia,51
+Croatia,Canada,49
+Croatia,Slovenia,42
+Croatia,Luxembourg,40
+Croatia,Romania,32
+Croatia,Montenegro,29
+Croatia,Estonia,22
+Croatia,Ukraine,20
+Croatia,Hungary,18
+Croatia,South Korea,17
+Croatia,Bulgaria,14
+Croatia,Malta,7
+Croatia,Lithuania,5
+Croatia,Saudi Arabia,5
+Croatia,Cyprus,4
+Croatia,Lebanon,4
+Croatia,United States,4
+Croatia,Belarus,3
+Croatia,Morocco,3
+Croatia,Algeria,2
+Croatia,Albania,2
+Croatia,Jersey,1
+Croatia,Kazakhstan,1
+Croatia,Japan,1
+Croatia,Azerbaijan,1
+Croatia,Faroe Islands,1
+Croatia,China,1
+Croatia,Egypt,1
+Cuba,Spain,330
+Cuba,Germany,228
+Cuba,France,218
+Cuba,Russia,184
+Cuba,United Kingdom,149
+Cuba,Italy,133
+Cuba,Netherlands,95
+Cuba,Switzerland,37
+Cuba,Poland,18
+Cuba,Portugal,14
+Cuba,Finland,13
+Cuba,Austria,4
+Cuba,Sweden,2
+Cuba,Ireland,2
+Cuba,Equatorial Guinea,1
+Cuba,Senegal,1
+Cyprus,United Kingdom,2960
+Cyprus,Greece,2168
+Cyprus,Russia,1663
+Cyprus,Israel,1060
+Cyprus,Germany,600
+Cyprus,Lebanon,370
+Cyprus,Romania,336
+Cyprus,Poland,294
+Cyprus,Austria,271
+Cyprus,Ukraine,262
+Cyprus,Qatar,235
+Cyprus,Sweden,232
+Cyprus,Switzerland,203
+Cyprus,Bulgaria,182
+Cyprus,United Arab Emirates,181
+Cyprus,Italy,177
+Cyprus,Jordan,149
+Cyprus,Egypt,144
+Cyprus,Malta,127
+Cyprus,France,124
+Cyprus,Denmark,120
+Cyprus,Bahrain,116
+Cyprus,Hungary,104
+Cyprus,Norway,93
+Cyprus,Netherlands,86
+Cyprus,Slovakia,86
+Cyprus,Serbia,86
+Cyprus,Belgium,72
+Cyprus,Belarus,66
+Cyprus,Czech Republic,60
+Cyprus,Latvia,59
+Cyprus,Lithuania,56
+Cyprus,Spain,52
+Cyprus,Ireland,51
+Cyprus,Georgia,40
+Cyprus,Finland,36
+Cyprus,Moldova,32
+Cyprus,Estonia,31
+Cyprus,Cyprus,24
+Cyprus,Saudi Arabia,24
+Cyprus,Iran,11
+Cyprus,Oman,7
+Cyprus,Montenegro,6
+Cyprus,Slovenia,5
+Cyprus,Luxembourg,5
+Cyprus,Armenia,4
+Cyprus,Kuwait,3
+Cyprus,Azerbaijan,3
+Cyprus,Morocco,3
+Cyprus,Iraq,2
+Cyprus,Djibouti,2
+Cyprus,Vietnam,1
+Cyprus,Thailand,1
+Cyprus,Kazakhstan,1
+Cyprus,United States,1
+Cyprus,Equatorial Guinea,1
+Cyprus,Croatia,1
+Cyprus,Rwanda,1
+Cyprus,Ethiopia,1
+Cyprus,Seychelles,1
+Cyprus,Somalia,1
+Cyprus,Macedonia,1
+Cyprus,Maldives,1
+Czech Republic,Germany,2800
+Czech Republic,United Kingdom,2704
+Czech Republic,Italy,1927
+Czech Republic,Russia,1835
+Czech Republic,France,1711
+Czech Republic,Spain,1549
+Czech Republic,Greece,1390
+Czech Republic,Netherlands,1148
+Czech Republic,Turkey,948
+Czech Republic,Poland,934
+Czech Republic,Belgium,783
+Czech Republic,Czech Republic,738
+Czech Republic,Switzerland,611
+Czech Republic,Austria,609
+Czech Republic,Egypt,555
+Czech Republic,Hungary,529
+Czech Republic,Bulgaria,520
+Czech Republic,Slovakia,467
+Czech Republic,Sweden,449
+Czech Republic,Denmark,441
+Czech Republic,Israel,423
+Czech Republic,Finland,391
+Czech Republic,United Arab Emirates,365
+Czech Republic,Ukraine,346
+Czech Republic,Tunisia,297
+Czech Republic,Qatar,284
+Czech Republic,Portugal,280
+Czech Republic,Croatia,258
+Czech Republic,Norway,243
+Czech Republic,Ireland,225
+Czech Republic,Romania,205
+Czech Republic,Latvia,192
+Czech Republic,Serbia,169
+Czech Republic,China,159
+Czech Republic,South Korea,132
+Czech Republic,Belarus,126
+Czech Republic,United States,124
+Czech Republic,Luxembourg,74
+Czech Republic,Georgia,63
+Czech Republic,Cyprus,61
+Czech Republic,Slovenia,57
+Czech Republic,Canada,56
+Czech Republic,Iceland,48
+Czech Republic,Cape Verde,47
+Czech Republic,Malta,44
+Czech Republic,Montenegro,39
+Czech Republic,Morocco,37
+Czech Republic,Lithuania,33
+Czech Republic,Lebanon,27
+Czech Republic,Albania,25
+Czech Republic,Jordan,13
+Czech Republic,Azerbaijan,12
+Czech Republic,Macedonia,9
+Czech Republic,Oman,7
+Czech Republic,Saudi Arabia,7
+Czech Republic,Estonia,6
+Czech Republic,Jersey,4
+Czech Republic,Armenia,4
+Czech Republic,India,4
+Czech Republic,Algeria,3
+Czech Republic,Libya,3
+Czech Republic,Afghanistan,2
+Czech Republic,Maldives,2
+Czech Republic,Uzbekistan,2
+Czech Republic,Greenland,2
+Czech Republic,Bosnia and Herzegovina,2
+Czech Republic,Seychelles,2
+Czech Republic,Singapore,1
+Czech Republic,Nigeria,1
+Czech Republic,Colombia,1
+Czech Republic,Isle of Man,1
+Czech Republic,Kazakhstan,1
+Czech Republic,Iraq,1
+Czech Republic,Malaysia,1
+Denmark,Denmark,9634
+Denmark,Germany,5657
+Denmark,Norway,5495
+Denmark,United Kingdom,5055
+Denmark,Sweden,3889
+Denmark,Spain,3759
+Denmark,Netherlands,2778
+Denmark,France,2170
+Denmark,Italy,1828
+Denmark,Poland,1551
+Denmark,Finland,1441
+Denmark,Greece,1225
+Denmark,Belgium,1206
+Denmark,Turkey,1183
+Denmark,Switzerland,998
+Denmark,United States,825
+Denmark,Lithuania,638
+Denmark,Iceland,625
+Denmark,Latvia,620
+Denmark,Austria,603
+Denmark,Portugal,478
+Denmark,Czech Republic,437
+Denmark,Faroe Islands,437
+Denmark,Russia,324
+Denmark,Estonia,322
+Denmark,Croatia,306
+Denmark,Hungary,301
+Denmark,Ireland,297
+Denmark,Luxembourg,286
+Denmark,China,280
+Denmark,Qatar,278
+Denmark,Egypt,265
+Denmark,Thailand,215
+Denmark,Romania,195
+Denmark,United Arab Emirates,181
+Denmark,Ukraine,180
+Denmark,Bulgaria,156
+Denmark,Morocco,143
+Denmark,Greenland,119
+Denmark,Cyprus,119
+Denmark,Serbia,114
+Denmark,Japan,110
+Denmark,Slovenia,102
+Denmark,Malta,102
+Denmark,Canada,94
+Denmark,Singapore,90
+Denmark,Iraq,68
+Denmark,India,66
+Denmark,Jordan,62
+Denmark,Lebanon,55
+Denmark,Israel,50
+Denmark,Hong Kong,49
+Denmark,Macedonia,44
+Denmark,Montenegro,33
+Denmark,Bosnia and Herzegovina,31
+Denmark,Dominican Republic,16
+Denmark,Pakistan,15
+Denmark,Georgia,9
+Denmark,Slovakia,8
+Denmark,Cape Verde,7
+Denmark,Mexico,6
+Denmark,Albania,5
+Denmark,Moldova,5
+Denmark,Azerbaijan,4
+Denmark,Jersey,4
+Denmark,Vietnam,3
+Denmark,Mauritius,3
+Denmark,Tunisia,3
+Denmark,Cuba,2
+Denmark,Belarus,2
+Denmark,Guadeloupe,1
+Denmark,Isle of Man,1
+Denmark,South Africa,1
+Denmark,Saudi Arabia,1
+Denmark,Guernsey,1
+Denmark,Chad,1
+Denmark,Kazakhstan,1
+Djibouti,Turkey,114
+Djibouti,France,20
+Djibouti,Ireland,4
+Djibouti,Cyprus,3
+Djibouti,Belgium,3
+Djibouti,Germany,3
+Djibouti,Bulgaria,2
+Djibouti,Greece,2
+Djibouti,Netherlands,2
+Djibouti,Spain,1
+Dominican Republic,Germany,419
+Dominican Republic,Spain,375
+Dominican Republic,France,221
+Dominican Republic,United Kingdom,204
+Dominican Republic,Russia,191
+Dominican Republic,Belgium,59
+Dominican Republic,Switzerland,43
+Dominican Republic,Italy,39
+Dominican Republic,Portugal,38
+Dominican Republic,Poland,35
+Dominican Republic,Sweden,19
+Dominican Republic,Denmark,9
+Dominican Republic,Finland,6
+Dominican Republic,Ukraine,6
+Dominican Republic,Austria,1
+Dominican Republic,Canada,1
+Dominican Republic,Ireland,1
+Dominican Republic,Turkey,1
+Ecuador,Spain,218
+Ecuador,Netherlands,123
+Egypt,Germany,4105
+Egypt,Ukraine,2078
+Egypt,Italy,1557
+Egypt,Turkey,1394
+Egypt,Lebanon,948
+Egypt,United Kingdom,930
+Egypt,Poland,620
+Egypt,Czech Republic,550
+Egypt,Belgium,503
+Egypt,Austria,501
+Egypt,France,482
+Egypt,Greece,423
+Egypt,Switzerland,415
+Egypt,Netherlands,401
+Egypt,Morocco,336
+Egypt,Denmark,261
+Egypt,Spain,247
+Egypt,Tunisia,205
+Egypt,Algeria,187
+Egypt,Hungary,176
+Egypt,Belarus,172
+Egypt,Russia,169
+Egypt,Cyprus,147
+Egypt,Slovakia,146
+Egypt,Israel,133
+Egypt,Lithuania,123
+Egypt,United States,121
+Egypt,Romania,88
+Egypt,Serbia,81
+Egypt,Estonia,74
+Egypt,China,71
+Egypt,Canada,69
+Egypt,Sweden,66
+Egypt,Armenia,66
+Egypt,Georgia,48
+Egypt,Latvia,46
+Egypt,Moldova,41
+Egypt,Kazakhstan,39
+Egypt,Slovenia,37
+Egypt,Luxembourg,36
+Egypt,Syria,35
+Egypt,Bulgaria,29
+Egypt,Japan,24
+Egypt,Norway,19
+Egypt,Mali,14
+Egypt,Finland,13
+Egypt,Malta,11
+Egypt,Macedonia,7
+Egypt,Egypt,4
+Egypt,Ireland,2
+Egypt,Albania,2
+Egypt,Iceland,1
+Egypt,Portugal,1
+Egypt,Montenegro,1
+Egypt,Guernsey,1
+Egypt,Kuwait,1
+Egypt,Croatia,1
+Egypt,Azerbaijan,1
+Egypt,Gambia,1
+El Salvador,Spain,81
+Equatorial Guinea,Spain,64
+Equatorial Guinea,Morocco,34
+Equatorial Guinea,Lebanon,4
+Equatorial Guinea,France,4
+Equatorial Guinea,Turkey,3
+Equatorial Guinea,United States,2
+Equatorial Guinea,Switzerland,2
+Equatorial Guinea,Belgium,2
+Equatorial Guinea,Greece,1
+Equatorial Guinea,United Kingdom,1
+Eritrea,Turkey,67
+Eritrea,Italy,3
+Eritrea,Greece,1
+Estonia,Finland,1052
+Estonia,Estonia,828
+Estonia,Sweden,805
+Estonia,Germany,740
+Estonia,Latvia,583
+Estonia,Russia,523
+Estonia,Poland,446
+Estonia,Lithuania,334
+Estonia,Denmark,326
+Estonia,Norway,322
+Estonia,Netherlands,244
+Estonia,United Kingdom,214
+Estonia,Belgium,204
+Estonia,Turkey,196
+Estonia,Ukraine,169
+Estonia,Austria,137
+Estonia,Italy,105
+Estonia,Greece,97
+Estonia,France,90
+Estonia,Spain,78
+Estonia,Egypt,72
+Estonia,Bulgaria,38
+Estonia,Cyprus,32
+Estonia,Croatia,23
+Estonia,Ireland,20
+Estonia,Malta,19
+Estonia,Montenegro,11
+Estonia,Switzerland,10
+Estonia,Romania,9
+Estonia,Macedonia,7
+Estonia,Czech Republic,7
+Estonia,Belarus,6
+Estonia,Hungary,3
+Estonia,Morocco,3
+Estonia,Portugal,3
+Estonia,Japan,2
+Estonia,Slovenia,2
+Estonia,Canada,2
+Estonia,Iceland,2
+Estonia,United States,2
+Estonia,Tunisia,2
+Estonia,Serbia,2
+Estonia,United Arab Emirates,2
+Estonia,Armenia,1
+Estonia,Luxembourg,1
+Estonia,Azerbaijan,1
+Estonia,Albania,1
+Estonia,Jersey,1
+Ethiopia,Ireland,286
+Ethiopia,Israel,241
+Ethiopia,Belgium,241
+Ethiopia,Lebanon,219
+Ethiopia,Italy,164
+Ethiopia,United Kingdom,152
+Ethiopia,Germany,142
+Ethiopia,France,126
+Ethiopia,Turkey,123
+Ethiopia,Austria,111
+Ethiopia,Sweden,94
+Ethiopia,Spain,38
+Ethiopia,Russia,9
+Ethiopia,Canada,2
+Ethiopia,United States,2
+Ethiopia,Morocco,2
+Ethiopia,Ukraine,1
+Ethiopia,Switzerland,1
+Ethiopia,Greece,1
+Ethiopia,Cyprus,1
+Ethiopia,Norway,1
+Faroe Islands,Denmark,441
+Faroe Islands,Iceland,45
+Faroe Islands,Norway,39
+Faroe Islands,United Kingdom,33
+Faroe Islands,Spain,11
+Faroe Islands,Germany,4
+Faroe Islands,Russia,4
+Faroe Islands,Switzerland,2
+Faroe Islands,Malta,2
+Faroe Islands,Sweden,1
+Faroe Islands,Italy,1
+Faroe Islands,Portugal,1
+Faroe Islands,Serbia,1
+Finland,Finland,14864
+Finland,Sweden,4685
+Finland,Germany,2704
+Finland,United Kingdom,1949
+Finland,Spain,1866
+Finland,Denmark,1439
+Finland,Russia,1394
+Finland,Latvia,1117
+Finland,Estonia,1060
+Finland,Norway,972
+Finland,France,881
+Finland,Netherlands,869
+Finland,Poland,741
+Finland,Italy,677
+Finland,Greece,633
+Finland,Japan,544
+Finland,Belgium,495
+Finland,Switzerland,471
+Finland,Czech Republic,399
+Finland,Turkey,394
+Finland,China,387
+Finland,Hungary,351
+Finland,Lithuania,341
+Finland,Thailand,304
+Finland,Austria,287
+Finland,Iceland,244
+Finland,Portugal,243
+Finland,Croatia,241
+Finland,Qatar,232
+Finland,United States,230
+Finland,Ireland,199
+Finland,Hong Kong,179
+Finland,United Arab Emirates,138
+Finland,Singapore,122
+Finland,South Korea,119
+Finland,Ukraine,117
+Finland,India,93
+Finland,Bulgaria,85
+Finland,Israel,81
+Finland,Belarus,76
+Finland,Romania,55
+Finland,Slovenia,40
+Finland,Cyprus,39
+Finland,Malta,27
+Finland,Serbia,26
+Finland,Morocco,19
+Finland,Montenegro,15
+Finland,Cuba,14
+Finland,Vietnam,12
+Finland,Egypt,10
+Finland,Mexico,9
+Finland,Lebanon,8
+Finland,Dominican Republic,7
+Finland,Cape Verde,7
+Finland,Tunisia,6
+Finland,Mauritius,5
+Finland,Luxembourg,5
+Finland,Albania,5
+Finland,Jordan,4
+Finland,Slovakia,4
+Finland,Gambia,4
+Finland,Afghanistan,2
+Finland,Sri Lanka,1
+Finland,Mongolia,1
+Finland,Georgia,1
+Finland,Guernsey,1
+Finland,Jersey,1
+Finland,Tanzania,1
+Finland,Seychelles,1
+Finland,Azerbaijan,1
+France,France,100710
+France,United Kingdom,21699
+France,Germany,19028
+France,Spain,18826
+France,Italy,17319
+France,Portugal,8542
+France,Morocco,7652
+France,Switzerland,6996
+France,Algeria,6612
+France,United States,6444
+France,Netherlands,6364
+France,Belgium,4800
+France,Tunisia,4165
+France,Turkey,3143
+France,Greece,3059
+France,Russia,2691
+France,Ireland,2633
+France,Austria,2432
+France,Denmark,2173
+France,Poland,2003
+France,Sweden,1742
+France,Czech Republic,1731
+France,Israel,1522
+France,China,1470
+France,Romania,1454
+France,Canada,1450
+France,United Arab Emirates,1140
+France,Norway,1131
+France,Hungary,1055
+France,Croatia,959
+France,Finland,895
+France,India,822
+France,Luxembourg,808
+France,Serbia,781
+France,Japan,680
+France,Guadeloupe,628
+France,Reunion,612
+France,Malta,600
+France,Qatar,580
+France,Lebanon,572
+France,Brazil,561
+France,Ukraine,551
+France,Iceland,522
+France,Martinique,515
+France,Egypt,508
+France,South Korea,419
+France,Bulgaria,419
+France,Mexico,385
+France,Saudi Arabia,339
+France,Senegal,308
+France,Hong Kong,305
+France,Singapore,271
+France,Latvia,270
+France,Slovenia,265
+France,Vietnam,233
+France,Mauritius,231
+France,Jordan,229
+France,Thailand,228
+France,Cuba,218
+France,Lithuania,213
+France,Macedonia,213
+France,Mali,208
+France,Cote d'Ivoire,203
+France,French Guiana,199
+France,Nigeria,198
+France,South Africa,193
+France,Dominican Republic,185
+France,Belarus,183
+France,Montenegro,167
+France,Cameroon,163
+France,Congo (Brazzaville),161
+France,Kenya,159
+France,Taiwan,158
+France,Iran,129
+France,Gabon,127
+France,Oman,125
+France,Bahrain,125
+France,Madagascar,124
+France,Ethiopia,123
+France,Chile,121
+France,Colombia,121
+France,Cape Verde,121
+France,Argentina,120
+France,Cyprus,118
+France,Slovakia,112
+France,Panama,108
+France,Niger,107
+France,Moldova,100
+France,Venezuela,95
+France,Kuwait,93
+France,Jersey,82
+France,Estonia,81
+France,Mauritania,81
+France,Benin,79
+France,Armenia,76
+France,Ghana,75
+France,Guernsey,72
+France,Bosnia and Herzegovina,68
+France,Netherlands Antilles,67
+France,Georgia,66
+France,Kazakhstan,61
+France,Chad,59
+France,Mayotte,57
+France,Burkina Faso,56
+France,Seychelles,53
+France,Sierra Leone,53
+France,Congo (Kinshasa),51
+France,Azerbaijan,51
+France,Angola,50
+France,Costa Rica,50
+France,Togo,48
+France,Albania,40
+France,Pakistan,36
+France,Djibouti,35
+France,Central African Republic,35
+France,Uzbekistan,34
+France,Haiti,31
+France,Maldives,29
+France,Turkmenistan,23
+France,Bahamas,14
+France,Western Sahara,12
+France,Gibraltar,11
+France,Libya,9
+France,Isle of Man,8
+France,Rwanda,4
+France,Iraq,3
+France,Guinea,2
+France,Saint Vincent and the Grenadines,2
+France,Philippines,1
+France,Sudan,1
+France,Macau,1
+France,Equatorial Guinea,1
+France,Faroe Islands,1
+France,Afghanistan,1
+France,Bermuda,1
+France,Antigua and Barbuda,1
+France,Botswana,1
+France,Barbados,1
+France,Saint Kitts and Nevis,1
+French Guiana,France,206
+French Guiana,Spain,2
+Gabon,France,124
+Gabon,Turkey,87
+Gabon,Morocco,52
+Gabon,United Kingdom,7
+Gabon,Belgium,2
+Gabon,Cyprus,2
+Gabon,Malta,1
+Gabon,Italy,1
+Gabon,Portugal,1
+Gabon,Austria,1
+Gambia,United Kingdom,102
+Gambia,Morocco,90
+Gambia,Spain,80
+Gambia,Netherlands,79
+Gambia,Turkey,9
+Gambia,Denmark,4
+Gambia,Sweden,4
+Gambia,Belgium,2
+Gambia,United States,2
+Gambia,Portugal,1
+Gambia,Egypt,1
+Gambia,Germany,1
+Georgia,Russia,1563
+Georgia,Turkey,928
+Georgia,United Arab Emirates,560
+Georgia,Ukraine,558
+Georgia,Israel,512
+Georgia,Iran,475
+Georgia,Azerbaijan,326
+Georgia,Germany,324
+Georgia,Kazakhstan,300
+Georgia,Georgia,266
+Georgia,Qatar,256
+Georgia,Poland,220
+Georgia,Belarus,191
+Georgia,Greece,129
+Georgia,Armenia,118
+Georgia,Latvia,103
+Georgia,Italy,97
+Georgia,United Kingdom,75
+Georgia,France,70
+Georgia,Kuwait,66
+Georgia,Bahrain,63
+Georgia,Czech Republic,63
+Georgia,Spain,63
+Georgia,China,57
+Georgia,Iraq,54
+Georgia,Hungary,48
+Georgia,Austria,47
+Georgia,Egypt,47
+Georgia,Cyprus,39
+Georgia,Netherlands,37
+Georgia,Lithuania,31
+Georgia,Belgium,29
+Georgia,Saudi Arabia,29
+Georgia,Afghanistan,27
+Georgia,Turkmenistan,24
+Georgia,Romania,23
+Georgia,Lebanon,19
+Georgia,Jordan,13
+Georgia,Slovakia,12
+Georgia,Denmark,10
+Georgia,Pakistan,8
+Georgia,India,8
+Georgia,Oman,8
+Georgia,Switzerland,7
+Georgia,Bulgaria,6
+Georgia,United States,2
+Georgia,Tajikistan,2
+Georgia,Finland,2
+Georgia,Malta,2
+Georgia,Uzbekistan,2
+Georgia,Sweden,1
+Georgia,Singapore,1
+Georgia,Estonia,1
+Georgia,Hong Kong,1
+Georgia,Serbia,1
+Germany,Germany,89054
+Germany,Spain,33587
+Germany,United Kingdom,24718
+Germany,Italy,22733
+Germany,France,19104
+Germany,Turkey,15873
+Germany,Austria,12942
+Germany,Switzerland,11781
+Germany,Poland,9454
+Germany,Greece,9299
+Germany,United States,8763
+Germany,Netherlands,8117
+Germany,Russia,6897
+Germany,Portugal,6301
+Germany,Denmark,5684
+Germany,Sweden,5611
+Germany,Belgium,4569
+Germany,Romania,4161
+Germany,Egypt,4116
+Germany,Croatia,3359
+Germany,Hungary,3260
+Germany,Ireland,3159
+Germany,Bulgaria,2977
+Germany,Czech Republic,2752
+Germany,Finland,2691
+Germany,United Arab Emirates,2609
+Germany,China,2528
+Germany,Norway,2523
+Germany,Serbia,2173
+Germany,Ukraine,1983
+Germany,Luxembourg,1867
+Germany,Israel,1802
+Germany,Morocco,1539
+Germany,Canada,1505
+Germany,Latvia,1448
+Germany,Japan,1219
+Germany,Tunisia,1144
+Germany,India,1113
+Germany,Malta,1073
+Germany,Slovenia,929
+Germany,Iceland,922
+Germany,Lithuania,886
+Germany,South Korea,778
+Germany,Qatar,770
+Germany,Estonia,721
+Germany,Singapore,662
+Germany,Thailand,646
+Germany,Cyprus,588
+Germany,South Africa,571
+Germany,Hong Kong,560
+Germany,Bosnia and Herzegovina,530
+Germany,Saudi Arabia,511
+Germany,Lebanon,480
+Germany,Brazil,457
+Germany,Mexico,446
+Germany,Dominican Republic,417
+Germany,Macedonia,409
+Germany,Iran,386
+Germany,Kazakhstan,355
+Germany,Belarus,354
+Germany,Kuwait,354
+Germany,Jordan,335
+Germany,Georgia,323
+Germany,Azerbaijan,311
+Germany,Algeria,294
+Germany,Slovakia,290
+Germany,Moldova,263
+Germany,Oman,256
+Germany,Albania,253
+Germany,Bahrain,252
+Germany,Cuba,231
+Germany,Montenegro,224
+Germany,Nigeria,205
+Germany,Iraq,170
+Germany,Vietnam,163
+Germany,Namibia,161
+Germany,Kenya,146
+Germany,Ethiopia,142
+Germany,Taiwan,138
+Germany,Cape Verde,135
+Germany,Colombia,132
+Germany,Afghanistan,130
+Germany,Mauritius,127
+Germany,Argentina,121
+Germany,Jamaica,121
+Germany,Panama,89
+Germany,Uzbekistan,82
+Germany,Turkmenistan,69
+Germany,Jersey,66
+Germany,Barbados,63
+Germany,Senegal,60
+Germany,Angola,50
+Germany,Maldives,43
+Germany,Seychelles,35
+Germany,Armenia,32
+Germany,Costa Rica,29
+Germany,Tajikistan,21
+Germany,Martinique,20
+Germany,Mali,19
+Germany,Puerto Rico,16
+Germany,Trinidad and Tobago,16
+Germany,Malaysia,15
+Germany,Tanzania,13
+Germany,Grenada,10
+Germany,Guernsey,10
+Germany,Antigua and Barbuda,9
+Germany,Guadeloupe,8
+Germany,Isle of Man,7
+Germany,Niger,6
+Germany,Djibouti,5
+Germany,Faroe Islands,5
+Germany,Netherlands Antilles,5
+Germany,Bahamas,4
+Germany,Mongolia,4
+Germany,Venezuela,3
+Germany,Cameroon,2
+Germany,Rwanda,2
+Germany,Ghana,2
+Germany,Pakistan,2
+Germany,Libya,2
+Germany,Uganda,2
+Germany,Sudan,2
+Germany,Greenland,2
+Germany,Gibraltar,2
+Germany,Chad,2
+Germany,Equatorial Guinea,1
+Germany,Gabon,1
+Germany,Uruguay,1
+Germany,Philippines,1
+Germany,Gambia,1
+Germany,British Virgin Islands,1
+Ghana,Netherlands,144
+Ghana,United States,139
+Ghana,Turkey,137
+Ghana,Portugal,130
+Ghana,United Kingdom,129
+Ghana,Belgium,113
+Ghana,Morocco,81
+Ghana,France,67
+Ghana,Lebanon,58
+Ghana,Italy,46
+Ghana,Luxembourg,16
+Ghana,Spain,9
+Ghana,Norway,2
+Ghana,Greece,1
+Ghana,Germany,1
+Ghana,Ukraine,1
+Ghana,Niger,1
+Ghana,Malta,1
+Ghana,Austria,1
+Gibraltar,United Kingdom,496
+Gibraltar,Morocco,38
+Gibraltar,Spain,29
+Gibraltar,France,8
+Gibraltar,Portugal,7
+Gibraltar,Switzerland,5
+Gibraltar,Germany,4
+Gibraltar,Italy,4
+Gibraltar,Netherlands,2
+Gibraltar,Austria,1
+Gibraltar,United States,1
+Gibraltar,Jersey,1
+Gibraltar,Luxembourg,1
+Gibraltar,Denmark,1
+Gibraltar,Cape Verde,1
+Gibraltar,Isle of Man,1
+Gibraltar,Guernsey,1
+Greece,Greece,35550
+Greece,Germany,9082
+Greece,United Kingdom,7996
+Greece,Italy,4596
+Greece,France,3005
+Greece,Poland,2577
+Greece,Russia,2394
+Greece,Cyprus,2166
+Greece,Netherlands,2089
+Greece,Israel,1833
+Greece,Turkey,1474
+Greece,Switzerland,1468
+Greece,Sweden,1441
+Greece,Austria,1390
+Greece,Czech Republic,1370
+Greece,Denmark,1214
+Greece,Belgium,1210
+Greece,Romania,917
+Greece,Spain,828
+Greece,Norway,784
+Greece,Finland,641
+Greece,Serbia,626
+Greece,Qatar,450
+Greece,Bulgaria,448
+Greece,Hungary,429
+Greece,Egypt,405
+Greece,United Arab Emirates,376
+Greece,United States,350
+Greece,Slovakia,349
+Greece,Ukraine,340
+Greece,Lebanon,280
+Greece,Croatia,240
+Greece,Albania,219
+Greece,Ireland,196
+Greece,Lithuania,196
+Greece,Jordan,166
+Greece,Canada,161
+Greece,Latvia,140
+Greece,Georgia,131
+Greece,Malta,118
+Greece,Portugal,111
+Greece,Bahrain,106
+Greece,Slovenia,103
+Greece,Saudi Arabia,96
+Greece,Belarus,94
+Greece,Estonia,92
+Greece,Luxembourg,89
+Greece,Moldova,70
+Greece,Singapore,56
+Greece,Armenia,51
+Greece,China,45
+Greece,Iran,40
+Greece,Montenegro,35
+Greece,Kuwait,26
+Greece,Macedonia,15
+Greece,Morocco,14
+Greece,Kazakhstan,14
+Greece,Tunisia,13
+Greece,Iraq,11
+Greece,Iceland,10
+Greece,Rwanda,7
+Greece,Sudan,6
+Greece,Tanzania,4
+Greece,India,3
+Greece,Equatorial Guinea,3
+Greece,Bosnia and Herzegovina,3
+Greece,Macau,2
+Greece,Azerbaijan,2
+Greece,Oman,2
+Greece,Ethiopia,2
+Greece,Cambodia,1
+Greece,Djibouti,1
+Greece,South Africa,1
+Greece,Libya,1
+Greece,Suriname,1
+Greece,South Korea,1
+Greece,Jersey,1
+Greece,Algeria,1
+Greece,Reunion,1
+Greece,Madagascar,1
+Greenland,Denmark,121
+Greenland,United Kingdom,2
+Greenland,Germany,2
+Greenland,Norway,1
+Greenland,France,1
+Grenada,Portugal,1
+Guadeloupe,France,606
+Guadeloupe,Italy,26
+Guadeloupe,Germany,8
+Guadeloupe,United Kingdom,2
+Guadeloupe,Denmark,1
+Guadeloupe,Belgium,1
+Guadeloupe,Spain,1
+Guernsey,United Kingdom,2724
+Guernsey,Guernsey,948
+Guernsey,Jersey,874
+Guernsey,France,73
+Guernsey,Germany,25
+Guernsey,Belgium,14
+Guernsey,Switzerland,13
+Guernsey,Netherlands,12
+Guernsey,Spain,9
+Guernsey,Italy,7
+Guernsey,Norway,5
+Guernsey,Ireland,5
+Guernsey,Isle of Man,3
+Guernsey,Austria,3
+Guernsey,Denmark,2
+Guernsey,Russia,2
+Guernsey,Canada,1
+Guernsey,Ghana,1
+Guernsey,Croatia,1
+Guernsey,Luxembourg,1
+Guernsey,Romania,1
+Guernsey,Finland,1
+Guernsey,Gibraltar,1
+Guernsey,United States,1
+Guernsey,Portugal,1
+Guernsey,Czech Republic,1
+Guernsey,United Arab Emirates,1
+Guinea,Morocco,132
+Guinea,France,53
+Guinea,Turkey,4
+Guinea,Belgium,1
+Guinea-Bissau,Portugal,75
+Guinea-Bissau,Morocco,39
+Guinea-Bissau,Spain,1
+Guinea-Bissau,United States,1
+Haiti,France,3
+Haiti,Senegal,1
+Honduras,Spain,17
+Hong Kong,United Kingdom,1186
+Hong Kong,Germany,543
+Hong Kong,France,301
+Hong Kong,Netherlands,243
+Hong Kong,Switzerland,237
+Hong Kong,Azerbaijan,229
+Hong Kong,Italy,213
+Hong Kong,Israel,179
+Hong Kong,Finland,175
+Hong Kong,Spain,132
+Hong Kong,Turkey,105
+Hong Kong,Belgium,75
+Hong Kong,Sweden,62
+Hong Kong,Austria,58
+Hong Kong,Denmark,52
+Hong Kong,Ireland,50
+Hong Kong,Latvia,1
+Hong Kong,China,1
+Hong Kong,Russia,1
+Hong Kong,Georgia,1
+Hong Kong,Greece,1
+Hungary,Germany,3200
+Hungary,United Kingdom,2370
+Hungary,Italy,1307
+Hungary,France,1083
+Hungary,Spain,912
+Hungary,Netherlands,819
+Hungary,Poland,736
+Hungary,Belgium,735
+Hungary,Russia,700
+Hungary,Turkey,669
+Hungary,Czech Republic,578
+Hungary,Romania,572
+Hungary,Switzerland,511
+Hungary,Israel,483
+Hungary,Greece,431
+Hungary,Austria,426
+Hungary,Sweden,381
+Hungary,Finland,350
+Hungary,Denmark,299
+Hungary,Qatar,258
+Hungary,Norway,240
+Hungary,Portugal,235
+Hungary,Ireland,228
+Hungary,Ukraine,214
+Hungary,Egypt,171
+Hungary,United Arab Emirates,170
+Hungary,Serbia,164
+Hungary,United States,134
+Hungary,Cyprus,103
+Hungary,Bulgaria,100
+Hungary,Malta,89
+Hungary,Morocco,65
+Hungary,China,60
+Hungary,Belarus,57
+Hungary,Latvia,55
+Hungary,Macedonia,54
+Hungary,Albania,54
+Hungary,Montenegro,53
+Hungary,Canada,52
+Hungary,Georgia,49
+Hungary,Luxembourg,47
+Hungary,Kazakhstan,44
+Hungary,Iceland,40
+Hungary,Bosnia and Herzegovina,40
+Hungary,Tunisia,38
+Hungary,Algeria,32
+Hungary,Azerbaijan,30
+Hungary,Hungary,28
+Hungary,Slovakia,17
+Hungary,Croatia,16
+Hungary,Jordan,10
+Hungary,Slovenia,6
+Hungary,Moldova,4
+Hungary,Lebanon,4
+Hungary,Maldives,3
+Hungary,South Africa,2
+Hungary,Estonia,1
+Hungary,Iraq,1
+Hungary,Vietnam,1
+Hungary,Bermuda,1
+Hungary,Uzbekistan,1
+Hungary,Lithuania,1
+Hungary,Armenia,1
+Iceland,United Kingdom,1851
+Iceland,Germany,906
+Iceland,Denmark,621
+Iceland,France,514
+Iceland,Spain,451
+Iceland,Norway,441
+Iceland,Netherlands,369
+Iceland,Ireland,309
+Iceland,Sweden,284
+Iceland,Finland,240
+Iceland,Belgium,238
+Iceland,Poland,224
+Iceland,Switzerland,152
+Iceland,Italy,73
+Iceland,Latvia,55
+Iceland,Czech Republic,46
+Iceland,Hungary,44
+Iceland,Faroe Islands,44
+Iceland,Israel,39
+Iceland,Russia,29
+Iceland,Lithuania,27
+Iceland,Austria,17
+Iceland,India,10
+Iceland,Greece,9
+Iceland,Romania,7
+Iceland,Ukraine,5
+Iceland,Portugal,5
+Iceland,Bulgaria,4
+Iceland,Turkey,4
+Iceland,Luxembourg,4
+Iceland,Slovenia,3
+Iceland,Slovakia,3
+Iceland,Japan,3
+Iceland,Qatar,2
+Iceland,Morocco,2
+Iceland,Canada,2
+Iceland,Serbia,2
+Iceland,Turkmenistan,1
+Iceland,Kazakhstan,1
+Iceland,Afghanistan,1
+Iceland,Estonia,1
+Iceland,United Arab Emirates,1
+Iceland,Cape Verde,1
+Iceland,Croatia,1
+Iceland,Saudi Arabia,1
+Iceland,Isle of Man,1
+India,United Kingdom,2086
+India,Germany,1258
+India,France,685
+India,United States,658
+India,Netherlands,549
+India,Turkey,396
+India,Italy,283
+India,Switzerland,242
+India,Canada,188
+India,Israel,113
+India,Finland,91
+India,Belgium,90
+India,Austria,87
+India,Denmark,65
+India,Spain,56
+India,Sweden,56
+India,Ukraine,56
+India,Romania,41
+India,Azerbaijan,33
+India,Luxembourg,25
+India,Iceland,10
+India,Russia,9
+India,Lebanon,5
+India,Greece,2
+India,Bulgaria,2
+India,Poland,1
+India,Norway,1
+India,Lithuania,1
+India,Moldova,1
+India,Ireland,1
+India,Cyprus,1
+India,Czech Republic,1
+India,Serbia,1
+India,Montenegro,1
+India,Belarus,1
+Indonesia,Turkey,125
+Indonesia,Netherlands,54
+Indonesia,United Kingdom,47
+Indonesia,Azerbaijan,2
+Indonesia,Spain,2
+Indonesia,Poland,2
+Indonesia,Bulgaria,1
+Iran,Turkey,3197
+Iran,Georgia,475
+Iran,Germany,385
+Iran,Azerbaijan,257
+Iran,Russia,254
+Iran,Austria,236
+Iran,Italy,193
+Iran,Armenia,138
+Iran,France,128
+Iran,United Kingdom,110
+Iran,Ukraine,95
+Iran,Netherlands,76
+Iran,Lebanon,70
+Iran,Sweden,69
+Iran,Serbia,50
+Iran,Greece,40
+Iran,Spain,35
+Iran,Belgium,25
+Iran,Bulgaria,13
+Iran,Cyprus,11
+Iran,Switzerland,2
+Iran,Belarus,2
+Iran,Tunisia,2
+Iran,Montenegro,1
+Iran,Lithuania,1
+Iran,United States,1
+Iran,Poland,1
+Iraq,Turkey,2315
+Iraq,Azerbaijan,240
+Iraq,Germany,165
+Iraq,Austria,95
+Iraq,Denmark,69
+Iraq,Georgia,62
+Iraq,Russia,29
+Iraq,Bulgaria,29
+Iraq,Ukraine,26
+Iraq,Sweden,24
+Iraq,Belarus,24
+Iraq,Armenia,21
+Iraq,Romania,19
+Iraq,Greece,5
+Iraq,Lebanon,4
+Iraq,Cyprus,4
+Iraq,United Kingdom,4
+Iraq,France,4
+Iraq,Croatia,2
+Iraq,Netherlands,2
+Iraq,Hungary,1
+Iraq,Switzerland,1
+Iraq,Moldova,1
+Iraq,Spain,1
+Iraq,Morocco,1
+Ireland,United Kingdom,19175
+Ireland,Spain,4544
+Ireland,United States,3768
+Ireland,Germany,3228
+Ireland,France,2656
+Ireland,Netherlands,1912
+Ireland,Italy,1609
+Ireland,Ireland,1261
+Ireland,Portugal,1138
+Ireland,Poland,928
+Ireland,Belgium,650
+Ireland,Switzerland,559
+Ireland,Canada,519
+Ireland,United Arab Emirates,476
+Ireland,Iceland,322
+Ireland,Denmark,291
+Ireland,Isle of Man,284
+Ireland,Turkey,279
+Ireland,Romania,239
+Ireland,Hungary,228
+Ireland,Czech Republic,221
+Ireland,Austria,221
+Ireland,Sweden,203
+Ireland,Greece,199
+Ireland,Finland,195
+Ireland,Norway,191
+Ireland,Croatia,188
+Ireland,Luxembourg,178
+Ireland,Lithuania,169
+Ireland,Qatar,124
+Ireland,Slovakia,122
+Ireland,Bulgaria,111
+Ireland,Latvia,99
+Ireland,Moldova,83
+Ireland,Malta,80
+Ireland,Kuwait,65
+Ireland,Morocco,61
+Ireland,Jersey,56
+Ireland,Cyprus,52
+Ireland,Hong Kong,51
+Ireland,Ethiopia,49
+Ireland,Russia,40
+Ireland,Estonia,20
+Ireland,China,18
+Ireland,Barbados,7
+Ireland,Saudi Arabia,5
+Ireland,Mexico,4
+Ireland,Djibouti,4
+Ireland,Dominican Republic,4
+Ireland,Ukraine,3
+Ireland,Afghanistan,3
+Ireland,Israel,2
+Ireland,Serbia,2
+Ireland,Greenland,2
+Ireland,Guernsey,2
+Ireland,Kazakhstan,2
+Ireland,Jordan,1
+Ireland,Georgia,1
+Ireland,Faroe Islands,1
+Ireland,Algeria,1
+Ireland,Belarus,1
+Ireland,Bahrain,1
+Ireland,British Indian Ocean Territory,1
+Ireland,Egypt,1
+Ireland,Azerbaijan,1
+Ireland,Slovenia,1
+Ireland,Netherlands Antilles,1
+Isle of Man,United Kingdom,2429
+Isle of Man,Ireland,265
+Isle of Man,Spain,15
+Isle of Man,Switzerland,12
+Isle of Man,France,11
+Isle of Man,Netherlands,10
+Isle of Man,Germany,4
+Isle of Man,Italy,4
+Isle of Man,Sweden,4
+Isle of Man,Portugal,3
+Isle of Man,Guernsey,2
+Isle of Man,Jersey,1
+Isle of Man,Denmark,1
+Isle of Man,Israel,1
+Isle of Man,Austria,1
+Isle of Man,Norway,1
+Isle of Man,Cyprus,1
+Isle of Man,Belgium,1
+Isle of Man,Canada,1
+Isle of Man,Gibraltar,1
+Israel,Israel,4947
+Israel,Turkey,2447
+Israel,Germany,1811
+Israel,Greece,1791
+Israel,Italy,1616
+Israel,France,1512
+Israel,Russia,1389
+Israel,Ukraine,1203
+Israel,United Kingdom,1053
+Israel,Cyprus,1017
+Israel,Romania,989
+Israel,United States,979
+Israel,Poland,946
+Israel,Spain,910
+Israel,Netherlands,608
+Israel,Switzerland,581
+Israel,Belgium,566
+Israel,Austria,550
+Israel,Bulgaria,546
+Israel,Georgia,511
+Israel,Hungary,488
+Israel,Czech Republic,415
+Israel,Jordan,349
+Israel,Ethiopia,241
+Israel,Canada,214
+Israel,China,189
+Israel,Hong Kong,179
+Israel,Serbia,155
+Israel,Azerbaijan,155
+Israel,Egypt,139
+Israel,Thailand,126
+Israel,Latvia,116
+Israel,India,113
+Israel,Portugal,83
+Israel,Croatia,77
+Israel,Finland,76
+Israel,Moldova,75
+Israel,Belarus,73
+Israel,Lithuania,71
+Israel,Malta,67
+Israel,South Korea,60
+Israel,Uzbekistan,59
+Israel,Montenegro,56
+Israel,Sweden,55
+Israel,Denmark,51
+Israel,Slovakia,51
+Israel,South Africa,50
+Israel,Tanzania,46
+Israel,Iceland,40
+Israel,Armenia,39
+Israel,Slovenia,25
+Israel,Norway,20
+Israel,Albania,18
+Israel,Macedonia,12
+Israel,Seychelles,9
+Israel,Brazil,8
+Israel,Congo (Kinshasa),4
+Israel,Kazakhstan,2
+Israel,Ireland,2
+Israel,Isle of Man,2
+Israel,Morocco,1
+Israel,Estonia,1
+Israel,Gabon,1
+Israel,Japan,1
+Israel,Tajikistan,1
+Israel,Kenya,1
+Italy,Italy,91457
+Italy,Germany,22994
+Italy,United Kingdom,20001
+Italy,Spain,17656
+Italy,France,17309
+Italy,Netherlands,6319
+Italy,Switzerland,4806
+Italy,Belgium,4797
+Italy,Russia,4470
+Italy,Greece,4307
+Italy,Romania,3980
+Italy,United States,3230
+Italy,Austria,3019
+Italy,Poland,2984
+Italy,Turkey,2832
+Italy,Portugal,2744
+Italy,Albania,2120
+Italy,Czech Republic,1952
+Italy,Denmark,1832
+Italy,Malta,1750
+Italy,Morocco,1692
+Italy,Ireland,1605
+Italy,Israel,1600
+Italy,Egypt,1581
+Italy,United Arab Emirates,1403
+Italy,Hungary,1266
+Italy,Luxembourg,1219
+Italy,Ukraine,1179
+Italy,Sweden,1147
+Italy,Qatar,989
+Italy,Bulgaria,940
+Italy,Tunisia,857
+Italy,Croatia,781
+Italy,China,723
+Italy,Moldova,702
+Italy,Finland,678
+Italy,Serbia,605
+Italy,Norway,538
+Italy,Brazil,534
+Italy,Canada,522
+Italy,South Korea,439
+Italy,Lithuania,377
+Italy,Algeria,373
+Italy,Lebanon,361
+Italy,Latvia,349
+Italy,Japan,332
+Italy,Slovakia,301
+Italy,India,288
+Italy,Saudi Arabia,280
+Italy,Hong Kong,269
+Italy,Montenegro,255
+Italy,Argentina,241
+Italy,Iran,196
+Italy,Belarus,191
+Italy,Cyprus,183
+Italy,Thailand,181
+Italy,Cuba,177
+Italy,Jordan,177
+Italy,Singapore,168
+Italy,Ethiopia,165
+Italy,Oman,145
+Italy,Slovenia,130
+Italy,Bosnia and Herzegovina,120
+Italy,Macedonia,110
+Italy,Mexico,109
+Italy,Estonia,104
+Italy,Georgia,101
+Italy,Kuwait,101
+Italy,Azerbaijan,95
+Italy,Tanzania,94
+Italy,Chile,87
+Italy,Cape Verde,84
+Italy,Bahrain,83
+Italy,Iceland,76
+Italy,Uzbekistan,75
+Italy,Senegal,75
+Italy,Maldives,73
+Italy,Dominican Republic,62
+Italy,South Africa,56
+Italy,Nigeria,51
+Italy,Taiwan,43
+Italy,Kenya,38
+Italy,Guadeloupe,27
+Italy,Madagascar,23
+Italy,Mauritius,17
+Italy,Jersey,14
+Italy,Kazakhstan,10
+Italy,Guernsey,10
+Italy,Martinique,9
+Italy,Jamaica,8
+Italy,Vietnam,8
+Italy,Isle of Man,6
+Italy,Antigua and Barbuda,5
+Italy,Gibraltar,5
+Italy,Bahamas,5
+Italy,Libya,4
+Italy,Niger,4
+Italy,Togo,4
+Italy,Armenia,4
+Italy,Venezuela,4
+Italy,Eritrea,3
+Italy,Cameroon,3
+Italy,Netherlands Antilles,3
+Italy,Djibouti,3
+Italy,Rwanda,2
+Italy,Ghana,2
+Italy,Congo (Brazzaville),2
+Italy,Iraq,2
+Italy,Angola,2
+Italy,Tajikistan,1
+Italy,Uganda,1
+Italy,Barbados,1
+Italy,Faroe Islands,1
+Italy,Chad,1
+Italy,Turks and Caicos Islands,1
+Italy,Mauritania,1
+Italy,Equatorial Guinea,1
+Jamaica,United Kingdom,237
+Jamaica,Germany,125
+Jamaica,Belgium,34
+Jamaica,Netherlands,26
+Jamaica,Italy,18
+Jamaica,Poland,5
+Jamaica,Sweden,4
+Jamaica,Portugal,4
+Jamaica,Russia,3
+Jamaica,Spain,2
+Jamaica,Bermuda,1
+Japan,Germany,1034
+Japan,France,741
+Japan,United Kingdom,585
+Japan,Finland,544
+Japan,Netherlands,259
+Japan,Italy,226
+Japan,Belgium,124
+Japan,Turkey,122
+Japan,Switzerland,121
+Japan,Denmark,107
+Japan,Poland,80
+Japan,Spain,66
+Japan,Austria,42
+Japan,Egypt,21
+Japan,Azerbaijan,20
+Japan,Sweden,4
+Japan,Iceland,3
+Japan,Norway,2
+Japan,Slovenia,2
+Japan,Croatia,2
+Japan,Portugal,2
+Japan,Latvia,2
+Japan,Estonia,1
+Jersey,United Kingdom,3512
+Jersey,Guernsey,934
+Jersey,France,83
+Jersey,Ireland,58
+Jersey,Spain,51
+Jersey,Germany,46
+Jersey,Switzerland,43
+Jersey,Portugal,22
+Jersey,Netherlands,10
+Jersey,Italy,10
+Jersey,Sweden,8
+Jersey,Austria,7
+Jersey,Luxembourg,6
+Jersey,Denmark,5
+Jersey,Belgium,5
+Jersey,Malta,2
+Jersey,Norway,2
+Jersey,Isle of Man,2
+Jersey,Iceland,1
+Jersey,Israel,1
+Jersey,Russia,1
+Jersey,Gibraltar,1
+Jersey,United States,1
+Jersey,Canada,1
+Jersey,Czech Republic,1
+Jersey,Lithuania,1
+Jersey,Romania,1
+Jersey,Poland,1
+Jersey,Lebanon,1
+Jersey,Greece,1
+Jersey,Finland,1
+Jordan,Turkey,1262
+Jordan,Israel,345
+Jordan,Germany,340
+Jordan,Lebanon,261
+Jordan,United Kingdom,250
+Jordan,France,229
+Jordan,United States,202
+Jordan,Italy,175
+Jordan,Greece,166
+Jordan,Austria,158
+Jordan,Cyprus,145
+Jordan,Spain,128
+Jordan,Russia,121
+Jordan,Netherlands,116
+Jordan,Ukraine,102
+Jordan,Algeria,97
+Jordan,Romania,85
+Jordan,Tunisia,71
+Jordan,Denmark,66
+Jordan,Switzerland,52
+Jordan,Canada,34
+Jordan,Belgium,16
+Jordan,Poland,16
+Jordan,Georgia,14
+Jordan,Lithuania,12
+Jordan,Bulgaria,10
+Jordan,Czech Republic,9
+Jordan,Hungary,9
+Jordan,Slovakia,5
+Jordan,Finland,4
+Jordan,Azerbaijan,3
+Jordan,Armenia,3
+Jordan,Morocco,2
+Jordan,Moldova,2
+Jordan,Bosnia and Herzegovina,2
+Jordan,Portugal,1
+Jordan,Albania,1
+Jordan,Montenegro,1
+Jordan,Croatia,1
+Jordan,Ireland,1
+Jordan,Malta,1
+Kazakhstan,Turkey,1159
+Kazakhstan,Germany,552
+Kazakhstan,Ukraine,396
+Kazakhstan,Azerbaijan,316
+Kazakhstan,Georgia,295
+Kazakhstan,United Kingdom,111
+Kazakhstan,Netherlands,74
+Kazakhstan,Poland,63
+Kazakhstan,France,60
+Kazakhstan,Hungary,43
+Kazakhstan,Egypt,40
+Kazakhstan,Armenia,37
+Kazakhstan,Lithuania,28
+Kazakhstan,Latvia,27
+Kazakhstan,United Arab Emirates,11
+Kazakhstan,Greece,10
+Kazakhstan,Spain,10
+Kazakhstan,Italy,7
+Kazakhstan,Belgium,6
+Kazakhstan,Austria,6
+Kazakhstan,Switzerland,4
+Kazakhstan,Kuwait,4
+Kazakhstan,Cyprus,4
+Kazakhstan,Romania,2
+Kazakhstan,Tunisia,2
+Kazakhstan,Saudi Arabia,2
+Kazakhstan,Kazakhstan,2
+Kazakhstan,Finland,1
+Kazakhstan,Lebanon,1
+Kazakhstan,Slovenia,1
+Kazakhstan,Bulgaria,1
+Kazakhstan,Luxembourg,1
+Kazakhstan,Israel,1
+Kazakhstan,Bahrain,1
+Kazakhstan,Qatar,1
+Kazakhstan,Moldova,1
+Kazakhstan,Ireland,1
+Kazakhstan,Slovakia,1
+Kazakhstan,Sudan,1
+Kenya,Netherlands,528
+Kenya,United Kingdom,369
+Kenya,Turkey,306
+Kenya,France,218
+Kenya,Germany,158
+Kenya,Italy,95
+Kenya,Belgium,78
+Kenya,United States,28
+Kenya,Poland,13
+Kenya,Greece,3
+Kenya,Israel,1
+Kenya,Luxembourg,1
+Kuwait,Turkey,1108
+Kuwait,Lebanon,320
+Kuwait,United Kingdom,314
+Kuwait,Germany,309
+Kuwait,Ireland,162
+Kuwait,Netherlands,113
+Kuwait,Italy,105
+Kuwait,France,97
+Kuwait,Azerbaijan,83
+Kuwait,Georgia,68
+Kuwait,Switzerland,41
+Kuwait,Greece,27
+Kuwait,Bosnia and Herzegovina,19
+Kuwait,Austria,15
+Kuwait,Bulgaria,13
+Kuwait,Spain,12
+Kuwait,United States,8
+Kuwait,Belgium,6
+Kuwait,Romania,4
+Kuwait,Luxembourg,3
+Kuwait,Latvia,3
+Kuwait,Malta,3
+Kuwait,Czech Republic,3
+Kuwait,Cyprus,2
+Kuwait,Russia,2
+Kuwait,Ukraine,1
+Kuwait,Serbia,1
+Kuwait,Algeria,1
+Kuwait,Denmark,1
+Kuwait,Tunisia,1
+Kuwait,Norway,1
+Kuwait,Kazakhstan,1
+Kuwait,Armenia,1
+Kyrgyzstan,Italy,1
+Kyrgyzstan,Azerbaijan,1
+Latvia,Russia,1741
+Latvia,Germany,1446
+Latvia,Finland,1120
+Latvia,Lithuania,927
+Latvia,United Kingdom,914
+Latvia,Sweden,906
+Latvia,Norway,632
+Latvia,Denmark,631
+Latvia,Estonia,584
+Latvia,Ukraine,573
+Latvia,Poland,539
+Latvia,Italy,348
+Latvia,Netherlands,297
+Latvia,France,273
+Latvia,Spain,265
+Latvia,Belgium,261
+Latvia,Switzerland,226
+Latvia,Turkey,210
+Latvia,Austria,205
+Latvia,Czech Republic,176
+Latvia,Belarus,154
+Latvia,Greece,139
+Latvia,Israel,119
+Latvia,Latvia,104
+Latvia,Georgia,104
+Latvia,Ireland,100
+Latvia,Cyprus,58
+Latvia,Hungary,53
+Latvia,Malta,53
+Latvia,Iceland,53
+Latvia,Croatia,53
+Latvia,Bulgaria,47
+Latvia,Egypt,46
+Latvia,United Arab Emirates,31
+Latvia,Portugal,31
+Latvia,Kazakhstan,27
+Latvia,Uzbekistan,25
+Latvia,Azerbaijan,23
+Latvia,Slovakia,17
+Latvia,Afghanistan,15
+Latvia,Montenegro,6
+Latvia,United States,4
+Latvia,Serbia,3
+Latvia,India,2
+Latvia,Slovenia,1
+Latvia,Tunisia,1
+Latvia,Kuwait,1
+Latvia,Canada,1
+Latvia,Luxembourg,1
+Lebanon,Turkey,1360
+Lebanon,United Arab Emirates,994
+Lebanon,Egypt,981
+Lebanon,France,576
+Lebanon,Qatar,533
+Lebanon,Germany,482
+Lebanon,Saudi Arabia,437
+Lebanon,Cyprus,375
+Lebanon,Italy,368
+Lebanon,United Kingdom,366
+Lebanon,Kuwait,323
+Lebanon,Jordan,301
+Lebanon,Greece,288
+Lebanon,Ethiopia,216
+Lebanon,Bahrain,207
+Lebanon,Switzerland,157
+Lebanon,Russia,84
+Lebanon,Serbia,84
+Lebanon,Romania,83
+Lebanon,Morocco,81
+Lebanon,Spain,79
+Lebanon,Iran,70
+Lebanon,Belgium,67
+Lebanon,Armenia,66
+Lebanon,Tunisia,54
+Lebanon,Denmark,54
+Lebanon,Algeria,53
+Lebanon,Ukraine,39
+Lebanon,Nigeria,38
+Lebanon,Sweden,36
+Lebanon,Ghana,33
+Lebanon,Czech Republic,23
+Lebanon,Georgia,19
+Lebanon,Belarus,13
+Lebanon,Bosnia and Herzegovina,11
+Lebanon,Netherlands,11
+Lebanon,Bulgaria,9
+Lebanon,Finland,8
+Lebanon,Austria,7
+Lebanon,Cote d'Ivoire,6
+Lebanon,India,6
+Lebanon,Sudan,5
+Lebanon,Equatorial Guinea,5
+Lebanon,Croatia,4
+Lebanon,Malaysia,4
+Lebanon,United States,3
+Lebanon,Malta,3
+Lebanon,Ireland,2
+Lebanon,Iraq,2
+Lebanon,Hungary,2
+Lebanon,Hong Kong,2
+Lebanon,Tanzania,1
+Lebanon,Norway,1
+Lebanon,Congo (Brazzaville),1
+Lebanon,Azerbaijan,1
+Lebanon,Slovenia,1
+Lebanon,Lithuania,1
+Lebanon,Mauritania,1
+Lebanon,South Africa,1
+Lebanon,Luxembourg,1
+Lebanon,Canada,1
+Lebanon,Slovakia,1
+Lebanon,Oman,1
+Liberia,Belgium,67
+Liberia,Morocco,65
+Liberia,Netherlands,53
+Liberia,France,2
+Liberia,Turkey,1
+Liberia,Spain,1
+Libya,Turkey,373
+Libya,Malta,125
+Libya,Tunisia,108
+Libya,Syria,5
+Libya,Belgium,5
+Libya,Italy,4
+Libya,France,4
+Libya,India,1
+Libya,Greece,1
+Libya,Poland,1
+Libya,Bulgaria,1
+Libya,Ukraine,1
+Lithuania,United Kingdom,1104
+Lithuania,Latvia,934
+Lithuania,Poland,888
+Lithuania,Germany,878
+Lithuania,Denmark,637
+Lithuania,Norway,432
+Lithuania,Turkey,395
+Lithuania,Italy,387
+Lithuania,Sweden,364
+Lithuania,Russia,359
+Lithuania,Finland,340
+Lithuania,Estonia,332
+Lithuania,Ukraine,332
+Lithuania,Spain,297
+Lithuania,Belarus,227
+Lithuania,Netherlands,224
+Lithuania,France,214
+Lithuania,Greece,193
+Lithuania,Ireland,167
+Lithuania,Belgium,138
+Lithuania,Egypt,123
+Lithuania,Austria,120
+Lithuania,Israel,70
+Lithuania,Cyprus,57
+Lithuania,Bulgaria,47
+Lithuania,Malta,36
+Lithuania,Georgia,33
+Lithuania,Iceland,28
+Lithuania,Morocco,27
+Lithuania,Kazakhstan,25
+Lithuania,Tunisia,14
+Lithuania,Switzerland,12
+Lithuania,Jordan,12
+Lithuania,Portugal,11
+Lithuania,Montenegro,11
+Lithuania,United Arab Emirates,9
+Lithuania,Croatia,5
+Lithuania,Czech Republic,5
+Lithuania,United States,3
+Lithuania,Lithuania,3
+Lithuania,Serbia,3
+Lithuania,Luxembourg,3
+Lithuania,Canada,2
+Lithuania,China,1
+Lithuania,Slovenia,1
+Lithuania,Hungary,1
+Lithuania,Iran,1
+Lithuania,Slovakia,1
+Lithuania,Macedonia,1
+Lithuania,Albania,1
+Lithuania,Romania,1
+Luxembourg,Germany,1842
+Luxembourg,United Kingdom,1209
+Luxembourg,Italy,1160
+Luxembourg,France,822
+Luxembourg,Portugal,818
+Luxembourg,Spain,778
+Luxembourg,Switzerland,675
+Luxembourg,United States,530
+Luxembourg,Netherlands,470
+Luxembourg,Austria,364
+Luxembourg,Denmark,286
+Luxembourg,Qatar,189
+Luxembourg,Poland,183
+Luxembourg,Ireland,180
+Luxembourg,Azerbaijan,170
+Luxembourg,China,169
+Luxembourg,Brazil,151
+Luxembourg,Turkey,130
+Luxembourg,United Arab Emirates,116
+Luxembourg,Sweden,93
+Luxembourg,Greece,89
+Luxembourg,Mexico,78
+Luxembourg,Kuwait,67
+Luxembourg,Saudi Arabia,54
+Luxembourg,Tunisia,53
+Luxembourg,Turkmenistan,52
+Luxembourg,Belgium,45
+Luxembourg,Lebanon,44
+Luxembourg,Czech Republic,44
+Luxembourg,Croatia,38
+Luxembourg,Thailand,36
+Luxembourg,Singapore,35
+Luxembourg,Kazakhstan,35
+Luxembourg,Georgia,34
+Luxembourg,Nigeria,34
+Luxembourg,Morocco,34
+Luxembourg,Japan,34
+Luxembourg,Bahrain,33
+Luxembourg,Bulgaria,33
+Luxembourg,Oman,30
+Luxembourg,South Africa,28
+Luxembourg,Egypt,24
+Luxembourg,Russia,22
+Luxembourg,Hong Kong,22
+Luxembourg,Congo (Kinshasa),20
+Luxembourg,Burkina Faso,17
+Luxembourg,Puerto Rico,17
+Luxembourg,Malaysia,17
+Luxembourg,Cote d'Ivoire,16
+Luxembourg,Mali,16
+Luxembourg,South Korea,16
+Luxembourg,Cape Verde,11
+Luxembourg,Slovenia,11
+Luxembourg,Jersey,10
+Luxembourg,Malta,9
+Luxembourg,Taiwan,7
+Luxembourg,Cameroon,7
+Luxembourg,Jordan,7
+Luxembourg,Finland,6
+Luxembourg,Ghana,5
+Luxembourg,Canada,4
+Luxembourg,Chad,4
+Luxembourg,Iceland,4
+Luxembourg,Vietnam,4
+Luxembourg,Cyprus,3
+Luxembourg,Serbia,3
+Luxembourg,Montenegro,3
+Luxembourg,Congo (Brazzaville),2
+Luxembourg,Hungary,2
+Luxembourg,Latvia,1
+Luxembourg,Anguilla,1
+Luxembourg,French Guiana,1
+Luxembourg,Norway,1
+Luxembourg,Algeria,1
+Luxembourg,Gibraltar,1
+Luxembourg,Guernsey,1
+Luxembourg,Lithuania,1
+Luxembourg,Isle of Man,1
+Luxembourg,Afghanistan,1
+Luxembourg,Ukraine,1
+Macau,Greece,1
+Macau,Sweden,1
+Macedonia,Germany,420
+Macedonia,Turkey,403
+Macedonia,France,217
+Macedonia,Sweden,215
+Macedonia,Austria,212
+Macedonia,Switzerland,182
+Macedonia,Serbia,172
+Macedonia,Croatia,167
+Macedonia,Slovakia,151
+Macedonia,Slovenia,129
+Macedonia,Italy,109
+Macedonia,Netherlands,107
+Macedonia,Poland,99
+Macedonia,United Kingdom,92
+Macedonia,Qatar,64
+Macedonia,Belgium,59
+Macedonia,Hungary,55
+Macedonia,United Arab Emirates,48
+Macedonia,Denmark,45
+Macedonia,Norway,36
+Macedonia,Malta,31
+Macedonia,Spain,28
+Macedonia,Bulgaria,23
+Macedonia,Montenegro,16
+Macedonia,Greece,11
+Macedonia,Israel,11
+Macedonia,Estonia,8
+Macedonia,Czech Republic,7
+Macedonia,Egypt,7
+Macedonia,Romania,4
+Macedonia,Russia,3
+Macedonia,Albania,3
+Macedonia,Macedonia,3
+Macedonia,Saudi Arabia,3
+Macedonia,Bosnia and Herzegovina,2
+Macedonia,Latvia,1
+Macedonia,Moldova,1
+Macedonia,Armenia,1
+Macedonia,Bahrain,1
+Macedonia,Cyprus,1
+Madagascar,France,127
+Madagascar,Italy,21
+Madagascar,Turkey,18
+Madagascar,Poland,6
+Madagascar,Greece,5
+Madagascar,Romania,1
+Malaysia,United Kingdom,362
+Malaysia,Netherlands,123
+Malaysia,Turkey,123
+Malaysia,Azerbaijan,34
+Malaysia,Germany,13
+Malaysia,Lebanon,3
+Malaysia,Bulgaria,3
+Malaysia,Thailand,1
+Malaysia,Czech Republic,1
+Malaysia,Finland,1
+Maldives,Turkey,116
+Maldives,Russia,81
+Maldives,Italy,71
+Maldives,Germany,42
+Maldives,France,26
+Maldives,United Kingdom,26
+Maldives,Switzerland,21
+Maldives,Austria,16
+Maldives,Hungary,2
+Maldives,Slovakia,1
+Maldives,Bulgaria,1
+Maldives,Czech Republic,1
+Maldives,Norway,1
+Maldives,Ukraine,1
+Maldives,Azerbaijan,1
+Maldives,Latvia,1
+Maldives,Cyprus,1
+Mali,France,174
+Mali,Morocco,156
+Mali,Turkey,55
+Mali,Germany,18
+Mali,Egypt,13
+Mali,Spain,11
+Mali,Luxembourg,4
+Mali,Belgium,2
+Mali,Sweden,2
+Mali,Italy,1
+Mali,United Kingdom,1
+Mali,Netherlands,1
+Mali,Tunisia,1
+Mali,Switzerland,1
+Malta,Italy,1814
+Malta,United Kingdom,1735
+Malta,Germany,1037
+Malta,France,559
+Malta,Spain,388
+Malta,Belgium,277
+Malta,Turkey,246
+Malta,Poland,232
+Malta,Switzerland,226
+Malta,Tunisia,211
+Malta,Netherlands,173
+Malta,Austria,165
+Malta,Cyprus,143
+Malta,Greece,122
+Malta,Libya,121
+Malta,Sweden,113
+Malta,Denmark,100
+Malta,Hungary,91
+Malta,Romania,82
+Malta,Russia,81
+Malta,Ireland,81
+Malta,Israel,71
+Malta,Serbia,69
+Malta,Portugal,66
+Malta,Latvia,54
+Malta,Bulgaria,51
+Malta,Czech Republic,42
+Malta,Lithuania,36
+Malta,Macedonia,33
+Malta,Slovakia,32
+Malta,Morocco,31
+Malta,Finland,28
+Malta,Estonia,17
+Malta,Norway,15
+Malta,Ukraine,12
+Malta,Egypt,11
+Malta,Croatia,8
+Malta,Algeria,6
+Malta,Mauritius,5
+Malta,Slovenia,5
+Malta,Lebanon,4
+Malta,Saudi Arabia,4
+Malta,Nigeria,3
+Malta,Qatar,2
+Malta,Montenegro,2
+Malta,Niger,2
+Malta,Bahrain,2
+Malta,Jersey,2
+Malta,South Africa,2
+Malta,Zimbabwe,2
+Malta,Luxembourg,2
+Malta,Faroe Islands,2
+Malta,Azerbaijan,2
+Malta,Rwanda,2
+Malta,Venezuela,1
+Malta,Kenya,1
+Malta,Bosnia and Herzegovina,1
+Malta,Jordan,1
+Malta,Cape Verde,1
+Malta,Mozambique,1
+Malta,Belarus,1
+Malta,Brazil,1
+Malta,United States,1
+Malta,Georgia,1
+Malta,Burkina Faso,1
+Malta,Oman,1
+Malta,Ethiopia,1
+Malta,Kuwait,1
+Malta,United Arab Emirates,1
+Martinique,France,539
+Martinique,Germany,9
+Martinique,Italy,8
+Martinique,United Kingdom,1
+Mauritania,Morocco,204
+Mauritania,Spain,200
+Mauritania,France,83
+Mauritania,Turkey,15
+Mauritania,United Kingdom,3
+Mauritania,Egypt,2
+Mauritania,Cyprus,1
+Mauritania,United Arab Emirates,1
+Mauritania,Greece,1
+Mauritania,Netherlands Antilles,1
+Mauritius,France,231
+Mauritius,United Kingdom,149
+Mauritius,Germany,129
+Mauritius,Turkey,78
+Mauritius,Netherlands,43
+Mauritius,Switzerland,27
+Mauritius,Austria,19
+Mauritius,Italy,18
+Mauritius,Sweden,8
+Mauritius,Poland,6
+Mauritius,Finland,5
+Mauritius,Denmark,4
+Mauritius,Spain,4
+Mauritius,Malta,3
+Mauritius,Greece,1
+Mauritius,Romania,1
+Mauritius,Belgium,1
+Mayotte,France,20
+Mexico,United Kingdom,709
+Mexico,Spain,644
+Mexico,Germany,416
+Mexico,France,363
+Mexico,Netherlands,294
+Mexico,Italy,142
+Mexico,Switzerland,46
+Mexico,Belgium,45
+Mexico,Russia,27
+Mexico,Portugal,18
+Mexico,Sweden,15
+Mexico,Poland,14
+Mexico,Luxembourg,11
+Mexico,Finland,10
+Mexico,Denmark,7
+Mexico,Ireland,2
+Mexico,Greece,1
+Mexico,Azerbaijan,1
+Mexico,United States,1
+Mexico,Turkey,1
+Moldova,Russia,1213
+Moldova,Italy,698
+Moldova,Turkey,572
+Moldova,Romania,543
+Moldova,Germany,263
+Moldova,United Kingdom,211
+Moldova,Austria,184
+Moldova,Ukraine,147
+Moldova,Poland,133
+Moldova,France,99
+Moldova,Spain,87
+Moldova,Ireland,82
+Moldova,Israel,74
+Moldova,Greece,70
+Moldova,Portugal,47
+Moldova,Belgium,45
+Moldova,Switzerland,39
+Moldova,Egypt,39
+Moldova,Cyprus,32
+Moldova,Belarus,23
+Moldova,Slovakia,15
+Moldova,United Arab Emirates,13
+Moldova,Montenegro,5
+Moldova,Denmark,5
+Moldova,Serbia,4
+Moldova,Bulgaria,4
+Moldova,Czech Republic,3
+Moldova,Hungary,2
+Moldova,Algeria,2
+Moldova,Moldova,1
+Moldova,Bosnia and Herzegovina,1
+Moldova,United States,1
+Moldova,Albania,1
+Moldova,Morocco,1
+Moldova,Sudan,1
+Mongolia,Germany,4
+Mongolia,United Kingdom,1
+Mongolia,Latvia,1
+Mongolia,Austria,1
+Montenegro,Serbia,1125
+Montenegro,Russia,903
+Montenegro,Italy,261
+Montenegro,Germany,226
+Montenegro,Turkey,190
+Montenegro,Austria,185
+Montenegro,Slovenia,174
+Montenegro,France,173
+Montenegro,United Kingdom,145
+Montenegro,Ukraine,138
+Montenegro,Poland,135
+Montenegro,Switzerland,83
+Montenegro,Sweden,72
+Montenegro,Belgium,65
+Montenegro,Belarus,64
+Montenegro,Israel,55
+Montenegro,Hungary,52
+Montenegro,Montenegro,50
+Montenegro,Czech Republic,41
+Montenegro,Greece,39
+Montenegro,Croatia,34
+Montenegro,Denmark,34
+Montenegro,Netherlands,19
+Montenegro,Finland,18
+Montenegro,Norway,18
+Montenegro,United Arab Emirates,16
+Montenegro,Lithuania,11
+Montenegro,Spain,11
+Montenegro,Estonia,10
+Montenegro,Bosnia and Herzegovina,8
+Montenegro,Slovakia,7
+Montenegro,Latvia,6
+Montenegro,Moldova,5
+Montenegro,Romania,4
+Montenegro,Malta,3
+Montenegro,Cyprus,3
+Montenegro,Bulgaria,2
+Montenegro,Kuwait,1
+Montenegro,Jordan,1
+Montenegro,Iran,1
+Montenegro,Georgia,1
+Montenegro,Lebanon,1
+Montenegro,Egypt,1
+Montenegro,Ireland,1
+Montenegro,Morocco,1
+Montenegro,Luxembourg,1
+Morocco,France,7683
+Morocco,Morocco,5648
+Morocco,Spain,3059
+Morocco,Italy,1721
+Morocco,Belgium,1537
+Morocco,Germany,1524
+Morocco,United Kingdom,1507
+Morocco,Portugal,884
+Morocco,Netherlands,854
+Morocco,Saudi Arabia,539
+Morocco,Western Sahara,463
+Morocco,Tunisia,396
+Morocco,Switzerland,382
+Morocco,Senegal,351
+Morocco,Egypt,338
+Morocco,Turkey,326
+Morocco,United Arab Emirates,310
+Morocco,Algeria,251
+Morocco,United States,225
+Morocco,Mauritania,209
+Morocco,Qatar,203
+Morocco,Canada,177
+Morocco,Mali,157
+Morocco,Poland,154
+Morocco,Cote d'Ivoire,154
+Morocco,Cameroon,142
+Morocco,Denmark,141
+Morocco,Brazil,134
+Morocco,Guinea,131
+Morocco,Sweden,122
+Morocco,Nigeria,120
+Morocco,Niger,102
+Morocco,Russia,96
+Morocco,Gambia,90
+Morocco,Burkina Faso,87
+Morocco,Lebanon,83
+Morocco,Ghana,82
+Morocco,Austria,71
+Morocco,Benin,70
+Morocco,Liberia,67
+Morocco,Hungary,64
+Morocco,Congo (Brazzaville),63
+Morocco,Gabon,63
+Morocco,Ireland,61
+Morocco,Sierra Leone,60
+Morocco,Bahrain,58
+Morocco,Chad,50
+Morocco,Angola,49
+Morocco,Congo (Kinshasa),48
+Morocco,Cape Verde,42
+Morocco,Gibraltar,39
+Morocco,Norway,39
+Morocco,Guinea-Bissau,38
+Morocco,Czech Republic,36
+Morocco,Malta,35
+Morocco,Luxembourg,31
+Morocco,Oman,30
+Morocco,Lithuania,28
+Morocco,Equatorial Guinea,24
+Morocco,Finland,20
+Morocco,Slovakia,18
+Morocco,Greece,17
+Morocco,Togo,7
+Morocco,Venezuela,5
+Morocco,Bulgaria,4
+Morocco,Iceland,3
+Morocco,Uganda,3
+Morocco,Ethiopia,3
+Morocco,Rwanda,3
+Morocco,Estonia,2
+Morocco,India,2
+Morocco,Cyprus,2
+Morocco,Jordan,1
+Morocco,Argentina,1
+Morocco,Seychelles,1
+Morocco,Jersey,1
+Morocco,Hong Kong,1
+Morocco,South Africa,1
+Morocco,Kenya,1
+Morocco,China,1
+Morocco,Romania,1
+Morocco,Latvia,1
+Morocco,Libya,1
+Morocco,Thailand,1
+Mozambique,Portugal,59
+Mozambique,Turkey,1
+Mozambique,Greece,1
+Mozambique,United Kingdom,1
+Namibia,Germany,136
+Namibia,Belgium,2
+Nepal,Turkey,86
+Nepal,United Kingdom,1
+Netherlands,United Kingdom,17101
+Netherlands,Spain,9191
+Netherlands,Germany,8143
+Netherlands,Italy,6448
+Netherlands,France,6389
+Netherlands,United States,4142
+Netherlands,Norway,3047
+Netherlands,Denmark,2804
+Netherlands,Switzerland,2558
+Netherlands,Portugal,2530
+Netherlands,Sweden,2260
+Netherlands,Turkey,2118
+Netherlands,Greece,2084
+Netherlands,Poland,2013
+Netherlands,Ireland,1848
+Netherlands,Austria,1732
+Netherlands,China,1316
+Netherlands,Czech Republic,1167
+Netherlands,Russia,1083
+Netherlands,United Arab Emirates,898
+Netherlands,Finland,876
+Netherlands,Morocco,852
+Netherlands,Canada,824
+Netherlands,Hungary,812
+Netherlands,Belgium,759
+Netherlands,Romania,691
+Netherlands,Israel,614
+Netherlands,Luxembourg,606
+Netherlands,India,562
+Netherlands,Croatia,482
+Netherlands,Egypt,385
+Netherlands,Bulgaria,382
+Netherlands,Iceland,369
+Netherlands,Brazil,368
+Netherlands,Serbia,319
+Netherlands,Netherlands Antilles,317
+Netherlands,South Africa,315
+Netherlands,Netherlands,299
+Netherlands,Latvia,297
+Netherlands,Ukraine,288
+Netherlands,Hong Kong,288
+Netherlands,Kenya,248
+Netherlands,Estonia,246
+Netherlands,Mexico,244
+Netherlands,Singapore,243
+Netherlands,Qatar,239
+Netherlands,Saudi Arabia,231
+Netherlands,Japan,230
+Netherlands,Lithuania,223
+Netherlands,Thailand,212
+Netherlands,South Korea,212
+Netherlands,Taiwan,195
+Netherlands,Slovenia,189
+Netherlands,Malta,176
+Netherlands,Cuba,147
+Netherlands,Suriname,144
+Netherlands,Aruba,140
+Netherlands,Jordan,134
+Netherlands,Cape Verde,125
+Netherlands,Tanzania,124
+Netherlands,Ghana,123
+Netherlands,Malaysia,122
+Netherlands,Nigeria,122
+Netherlands,Panama,122
+Netherlands,Rwanda,122
+Netherlands,Ecuador,122
+Netherlands,Belarus,115
+Netherlands,Kuwait,107
+Netherlands,Indonesia,105
+Netherlands,Argentina,105
+Netherlands,Azerbaijan,105
+Netherlands,Macedonia,105
+Netherlands,Cyprus,91
+Netherlands,Iran,75
+Netherlands,Kazakhstan,75
+Netherlands,Colombia,72
+Netherlands,Georgia,54
+Netherlands,Sierra Leone,51
+Netherlands,Tunisia,48
+Netherlands,Angola,47
+Netherlands,Mauritius,44
+Netherlands,Albania,44
+Netherlands,Gambia,41
+Netherlands,Bosnia and Herzegovina,40
+Netherlands,Dominican Republic,36
+Netherlands,Senegal,24
+Netherlands,Costa Rica,23
+Netherlands,Sri Lanka,19
+Netherlands,Algeria,17
+Netherlands,Slovakia,17
+Netherlands,Guernsey,11
+Netherlands,Lebanon,10
+Netherlands,Jersey,7
+Netherlands,Montenegro,6
+Netherlands,Gibraltar,2
+Netherlands,Pakistan,2
+Netherlands,Congo (Kinshasa),1
+Netherlands,Vietnam,1
+Netherlands,Burkina Faso,1
+Netherlands,Turkmenistan,1
+Netherlands,Armenia,1
+Netherlands,Sudan,1
+Netherlands,Mali,1
+Netherlands,Libya,1
+Netherlands,Isle of Man,1
+Netherlands,Barbados,1
+Netherlands Antilles,Netherlands,425
+Netherlands Antilles,France,56
+Netherlands Antilles,Belgium,11
+Netherlands Antilles,Germany,10
+Netherlands Antilles,Portugal,9
+Netherlands Antilles,United Kingdom,9
+Netherlands Antilles,Turkey,5
+Netherlands Antilles,Russia,2
+Netherlands Antilles,Spain,2
+Netherlands Antilles,Italy,1
+Netherlands Antilles,Mauritania,1
+Netherlands Antilles,Switzerland,1
+Netherlands Antilles,Luxembourg,1
+Netherlands Antilles,Iceland,1
+Netherlands Antilles,Guernsey,1
+Niger,Morocco,94
+Niger,France,90
+Niger,Turkey,35
+Niger,Germany,7
+Niger,Malta,2
+Niger,Belgium,2
+Niger,Lebanon,2
+Niger,Romania,1
+Niger,Italy,1
+Niger,Slovenia,1
+Nigeria,United Kingdom,380
+Nigeria,Turkey,262
+Nigeria,Germany,205
+Nigeria,France,198
+Nigeria,Belgium,180
+Nigeria,Morocco,125
+Nigeria,Netherlands,122
+Nigeria,Qatar,121
+Nigeria,United States,108
+Nigeria,Lebanon,36
+Nigeria,Spain,19
+Nigeria,Italy,14
+Nigeria,Azerbaijan,4
+Nigeria,Austria,3
+Nigeria,Portugal,3
+Nigeria,Luxembourg,2
+Nigeria,Malta,2
+Nigeria,Czech Republic,2
+Nigeria,Slovakia,1
+Nigeria,Greece,1
+Nigeria,Macedonia,1
+Nigeria,Norway,1
+Norway,Norway,80519
+Norway,Denmark,5524
+Norway,United Kingdom,3894
+Norway,Sweden,3471
+Norway,Spain,3219
+Norway,Netherlands,3033
+Norway,Germany,2509
+Norway,Poland,2491
+Norway,France,1133
+Norway,Finland,968
+Norway,Greece,807
+Norway,Latvia,632
+Norway,Turkey,571
+Norway,Italy,542
+Norway,Belgium,459
+Norway,Iceland,458
+Norway,Lithuania,432
+Norway,Switzerland,399
+Norway,United States,378
+Norway,Croatia,370
+Norway,Estonia,321
+Norway,Austria,319
+Norway,Russia,312
+Norway,Portugal,248
+Norway,Czech Republic,240
+Norway,Qatar,238
+Norway,Hungary,235
+Norway,Ireland,193
+Norway,United Arab Emirates,162
+Norway,Thailand,158
+Norway,Bulgaria,104
+Norway,Cyprus,97
+Norway,Romania,87
+Norway,Serbia,87
+Norway,South Korea,86
+Norway,Faroe Islands,41
+Norway,Morocco,38
+Norway,Macedonia,36
+Norway,Israel,31
+Norway,Pakistan,18
+Norway,Montenegro,18
+Norway,Albania,16
+Norway,Malta,15
+Norway,Egypt,14
+Norway,Bosnia and Herzegovina,12
+Norway,Slovenia,6
+Norway,Guernsey,5
+Norway,Kuwait,4
+Norway,Canada,4
+Norway,Ukraine,3
+Norway,Luxembourg,2
+Norway,Slovakia,2
+Norway,Ghana,2
+Norway,Isle of Man,2
+Norway,Dominican Republic,1
+Norway,Jersey,1
+Norway,Azerbaijan,1
+Norway,Greenland,1
+Norway,Lebanon,1
+Norway,Algeria,1
+Norway,Kazakhstan,1
+Norway,Tanzania,1
+Norway,Iran,1
+Oman,United Kingdom,455
+Oman,Turkey,256
+Oman,Germany,254
+Oman,Italy,146
+Oman,France,123
+Oman,Switzerland,123
+Oman,Russia,34
+Oman,Morocco,32
+Oman,Azerbaijan,20
+Oman,Slovakia,9
+Oman,Poland,9
+Oman,Cyprus,7
+Oman,Czech Republic,7
+Oman,Georgia,6
+Oman,Greece,2
+Oman,Algeria,1
+Oman,Bulgaria,1
+Oman,Lebanon,1
+Pakistan,Turkey,371
+Pakistan,United Kingdom,366
+Pakistan,Canada,69
+Pakistan,Italy,37
+Pakistan,France,35
+Pakistan,Denmark,18
+Pakistan,Norway,15
+Pakistan,Georgia,4
+Pakistan,Cyprus,2
+Pakistan,Azerbaijan,2
+Pakistan,Poland,1
+Pakistan,Bulgaria,1
+Pakistan,Ukraine,1
+Pakistan,Spain,1
+Pakistan,Switzerland,1
+Pakistan,Germany,1
+Pakistan,Iran,1
+Panama,Netherlands,130
+Panama,Spain,122
+Panama,France,107
+Panama,Germany,87
+Panama,Turkey,52
+Panama,Poland,1
+Paraguay,Spain,84
+Paraguay,Belgium,1
+Philippines,Turkey,122
+Philippines,United Kingdom,2
+Poland,Poland,9852
+Poland,Germany,9381
+Poland,United Kingdom,7982
+Poland,Italy,2994
+Poland,Spain,2700
+Poland,Greece,2576
+Poland,Norway,2503
+Poland,Ukraine,2325
+Poland,France,2082
+Poland,Sweden,2047
+Poland,Netherlands,2020
+Poland,Denmark,1557
+Poland,Turkey,1253
+Poland,Belgium,1230
+Poland,Bulgaria,1094
+Poland,Switzerland,1093
+Poland,Russia,1006
+Poland,Israel,958
+Poland,Austria,941
+Poland,Czech Republic,931
+Poland,Ireland,919
+Poland,Lithuania,883
+Poland,Hungary,743
+Poland,Finland,739
+Poland,Romania,631
+Poland,Portugal,627
+Poland,Egypt,616
+Poland,Latvia,537
+Poland,Estonia,444
+Poland,United States,430
+Poland,Croatia,376
+Poland,Belarus,322
+Poland,United Arab Emirates,308
+Poland,Cyprus,293
+Poland,Qatar,249
+Poland,Malta,236
+Poland,Slovakia,228
+Poland,Georgia,219
+Poland,Iceland,215
+Poland,Luxembourg,182
+Poland,Serbia,168
+Poland,Slovenia,159
+Poland,Morocco,153
+Poland,Canada,150
+Poland,Tunisia,150
+Poland,Montenegro,139
+Poland,Moldova,136
+Poland,Albania,136
+Poland,China,110
+Poland,Armenia,107
+Poland,Macedonia,97
+Poland,South Korea,87
+Poland,Japan,80
+Poland,Hong Kong,62
+Poland,Kazakhstan,62
+Poland,Singapore,43
+Poland,Dominican Republic,36
+Poland,Cuba,17
+Poland,Thailand,17
+Poland,Jordan,16
+Poland,Mexico,14
+Poland,Kenya,13
+Poland,Cape Verde,10
+Poland,Madagascar,10
+Poland,Oman,9
+Poland,Tanzania,6
+Poland,Vietnam,5
+Poland,Jamaica,5
+Poland,Mauritius,5
+Poland,Indonesia,4
+Poland,Kuwait,3
+Poland,Brazil,2
+Poland,Azerbaijan,2
+Poland,Uzbekistan,2
+Poland,Bosnia and Herzegovina,1
+Poland,Turkmenistan,1
+Poland,Maldives,1
+Poland,Namibia,1
+Poland,Malaysia,1
+Poland,Jersey,1
+Poland,Gambia,1
+Portugal,Portugal,19960
+Portugal,United Kingdom,9218
+Portugal,France,8556
+Portugal,Spain,7878
+Portugal,Germany,6275
+Portugal,Switzerland,2816
+Portugal,Italy,2729
+Portugal,Netherlands,2531
+Portugal,Belgium,1806
+Portugal,Brazil,1528
+Portugal,Ireland,1131
+Portugal,United States,1100
+Portugal,Morocco,880
+Portugal,Luxembourg,817
+Portugal,Poland,629
+Portugal,Cape Verde,604
+Portugal,Denmark,478
+Portugal,Angola,443
+Portugal,Canada,423
+Portugal,Sweden,363
+Portugal,Turkey,359
+Portugal,Austria,308
+Portugal,Czech Republic,283
+Portugal,Russia,271
+Portugal,Norway,255
+Portugal,Finland,245
+Portugal,Hungary,237
+Portugal,United Arab Emirates,212
+Portugal,Romania,189
+Portugal,Senegal,146
+Portugal,Greece,119
+Portugal,Israel,83
+Portugal,Tunisia,82
+Portugal,Guinea-Bissau,76
+Portugal,Cote d'Ivoire,70
+Portugal,Togo,68
+Portugal,Ghana,66
+Portugal,Malta,64
+Portugal,Mozambique,57
+Portugal,Venezuela,51
+Portugal,Algeria,50
+Portugal,Moldova,47
+Portugal,Croatia,47
+Portugal,China,39
+Portugal,Bulgaria,39
+Portugal,Dominican Republic,31
+Portugal,Latvia,27
+Portugal,Ukraine,24
+Portugal,Mexico,20
+Portugal,Sao Tome and Principe,19
+Portugal,Jersey,18
+Portugal,Cuba,14
+Portugal,Netherlands Antilles,8
+Portugal,Gibraltar,8
+Portugal,Lithuania,7
+Portugal,Gambia,6
+Portugal,Iceland,6
+Portugal,Central African Republic,5
+Portugal,Antigua and Barbuda,5
+Portugal,Jamaica,4
+Portugal,Bahamas,3
+Portugal,Nigeria,3
+Portugal,Cyprus,3
+Portugal,Slovakia,3
+Portugal,Isle of Man,3
+Portugal,Mauritania,2
+Portugal,Slovenia,2
+Portugal,Saint Lucia,2
+Portugal,Guadeloupe,2
+Portugal,Guernsey,2
+Portugal,Colombia,2
+Portugal,Japan,2
+Portugal,Estonia,2
+Portugal,Egypt,2
+Portugal,Barbados,2
+Portugal,Cayman Islands,1
+Portugal,Niger,1
+Portugal,Martinique,1
+Portugal,Reunion,1
+Portugal,Kuwait,1
+Portugal,British Virgin Islands,1
+Portugal,Macedonia,1
+Portugal,Serbia,1
+Portugal,South Africa,1
+Portugal,Faroe Islands,1
+Portugal,Saudi Arabia,1
+Portugal,Azerbaijan,1
+Portugal,Puerto Rico,1
+Portugal,Montenegro,1
+Portugal,Cameroon,1
+Portugal,Afghanistan,1
+Portugal,Suriname,1
+Portugal,Mali,1
+Portugal,Grenada,1
+Portugal,Virgin Islands,1
+Portugal,Sudan,1
+Portugal,Tanzania,1
+Puerto Rico,Netherlands,134
+Puerto Rico,Spain,44
+Puerto Rico,Germany,19
+Puerto Rico,Luxembourg,5
+Puerto Rico,France,1
+Qatar,United Kingdom,1751
+Qatar,United States,1314
+Qatar,Turkey,1259
+Qatar,Italy,941
+Qatar,Germany,782
+Qatar,Spain,724
+Qatar,Lebanon,496
+Qatar,Russia,492
+Qatar,France,481
+Qatar,Greece,451
+Qatar,Switzerland,340
+Qatar,Hungary,311
+Qatar,Belgium,296
+Qatar,Luxembourg,281
+Qatar,Denmark,278
+Qatar,Sweden,270
+Qatar,Georgia,255
+Qatar,Poland,255
+Qatar,Netherlands,249
+Qatar,Romania,247
+Qatar,Croatia,246
+Qatar,Azerbaijan,245
+Qatar,Cyprus,239
+Qatar,Czech Republic,233
+Qatar,Finland,231
+Qatar,Austria,230
+Qatar,Ukraine,201
+Qatar,Morocco,196
+Qatar,Bulgaria,180
+Qatar,Norway,159
+Qatar,Armenia,140
+Qatar,Ireland,128
+Qatar,Algeria,125
+Qatar,Serbia,122
+Qatar,Tunisia,122
+Qatar,Bosnia and Herzegovina,68
+Qatar,Macedonia,63
+Qatar,Canada,55
+Qatar,Nigeria,3
+Qatar,Latvia,2
+Qatar,Malta,2
+Qatar,Estonia,1
+Qatar,Kazakhstan,1
+Reunion,France,612
+Reunion,Greece,3
+Reunion,Belgium,1
+Romania,Romania,6900
+Romania,Germany,4251
+Romania,Italy,3984
+Romania,United Kingdom,2956
+Romania,Spain,1833
+Romania,France,1473
+Romania,Turkey,1365
+Romania,Austria,1021
+Romania,Israel,985
+Romania,Greece,919
+Romania,Belgium,866
+Romania,Netherlands,692
+Romania,Hungary,572
+Romania,Poland,560
+Romania,Moldova,554
+Romania,Cyprus,332
+Romania,Bulgaria,327
+Romania,United Arab Emirates,310
+Romania,Serbia,275
+Romania,Sweden,251
+Romania,Qatar,245
+Romania,Ireland,243
+Romania,Russia,222
+Romania,Czech Republic,207
+Romania,Switzerland,199
+Romania,Denmark,192
+Romania,Portugal,187
+Romania,Egypt,89
+Romania,Norway,88
+Romania,Jordan,87
+Romania,Ukraine,87
+Romania,Lebanon,85
+Romania,Malta,80
+Romania,Finland,55
+Romania,United States,54
+Romania,Croatia,38
+Romania,Afghanistan,33
+Romania,Canada,30
+Romania,Slovenia,23
+Romania,Georgia,21
+Romania,Iraq,20
+Romania,Tunisia,16
+Romania,Slovakia,14
+Romania,Estonia,9
+Romania,Albania,6
+Romania,Kuwait,5
+Romania,Montenegro,5
+Romania,Iceland,4
+Romania,Macedonia,3
+Romania,Bosnia and Herzegovina,3
+Romania,Morocco,3
+Romania,Latvia,2
+Romania,Azerbaijan,2
+Romania,Bahrain,2
+Romania,Kazakhstan,2
+Romania,Lithuania,1
+Romania,Ethiopia,1
+Romania,Armenia,1
+Romania,Jersey,1
+Romania,India,1
+Romania,Belarus,1
+Russia,Turkey,10491
+Russia,Germany,7076
+Russia,Russia,5360
+Russia,Italy,4402
+Russia,Spain,2897
+Russia,France,2725
+Russia,Greece,2383
+Russia,United Arab Emirates,2215
+Russia,Armenia,2200
+Russia,Czech Republic,1850
+Russia,Latvia,1733
+Russia,Cyprus,1670
+Russia,Azerbaijan,1634
+Russia,Georgia,1573
+Russia,United Kingdom,1554
+Russia,Finland,1389
+Russia,Israel,1378
+Russia,Austria,1369
+Russia,Bulgaria,1312
+Russia,Switzerland,1245
+Russia,Moldova,1210
+Russia,Netherlands,1061
+Russia,Poland,1009
+Russia,Tunisia,904
+Russia,Montenegro,903
+Russia,United States,726
+Russia,Hungary,672
+Russia,Sweden,639
+Russia,Serbia,565
+Russia,Estonia,516
+Russia,Belgium,507
+Russia,Qatar,491
+Russia,Lithuania,356
+Russia,Denmark,328
+Russia,Croatia,312
+Russia,Belarus,285
+Russia,Norway,283
+Russia,Portugal,268
+Russia,Luxembourg,265
+Russia,Iran,233
+Russia,Romania,224
+Russia,Dominican Republic,186
+Russia,Cuba,177
+Russia,Egypt,175
+Russia,Slovenia,154
+Russia,Bahrain,128
+Russia,Jordan,118
+Russia,Slovakia,106
+Russia,Morocco,94
+Russia,Maldives,90
+Russia,Lebanon,78
+Russia,Malta,77
+Russia,Saudi Arabia,68
+Russia,Syria,39
+Russia,Iceland,38
+Russia,Ireland,36
+Russia,Algeria,35
+Russia,Oman,34
+Russia,Uzbekistan,31
+Russia,Mexico,30
+Russia,Iraq,27
+Russia,India,15
+Russia,Sri Lanka,14
+Russia,Tanzania,12
+Russia,Ethiopia,8
+Russia,Netherlands Antilles,5
+Russia,Faroe Islands,4
+Russia,Sudan,4
+Russia,Guernsey,3
+Russia,Rwanda,3
+Russia,Kuwait,3
+Russia,Macedonia,3
+Russia,Bosnia and Herzegovina,3
+Russia,Jamaica,3
+Russia,Singapore,2
+Russia,Angola,2
+Russia,South Africa,2
+Russia,Senegal,2
+Russia,Venezuela,2
+Russia,Seychelles,2
+Russia,Namibia,1
+Russia,Canada,1
+Russia,Madagascar,1
+Russia,Nigeria,1
+Russia,Togo,1
+Russia,Ukraine,1
+Russia,Burma,1
+Russia,Gambia,1
+Russia,Turks and Caicos Islands,1
+Russia,Western Sahara,1
+Russia,Thailand,1
+Russia,Mauritius,1
+Russia,Indonesia,1
+Rwanda,Belgium,56
+Rwanda,Italy,5
+Rwanda,Greece,2
+Rwanda,France,2
+Rwanda,Malta,2
+Rwanda,Germany,2
+Rwanda,United Kingdom,2
+Rwanda,Portugal,1
+Rwanda,Morocco,1
+Rwanda,Austria,1
+Saint Kitts and Nevis,Portugal,1
+Saint Lucia,United Kingdom,208
+Saint Lucia,Jersey,1
+Saint Lucia,Netherlands,1
+Saint Pierre and Miquelon,France,1
+Saint Vincent and the Grenadines,United Kingdom,1
+Saint Vincent and the Grenadines,France,1
+Saint Vincent and the Grenadines,Portugal,1
+Saint Vincent and the Grenadines,Tunisia,1
+Sao Tome and Principe,Portugal,20
+Sao Tome and Principe,France,1
+Sao Tome and Principe,Belgium,1
+Saudi Arabia,Turkey,3817
+Saudi Arabia,Algeria,803
+Saudi Arabia,United Kingdom,611
+Saudi Arabia,Morocco,524
+Saudi Arabia,Tunisia,521
+Saudi Arabia,Germany,469
+Saudi Arabia,Lebanon,432
+Saudi Arabia,France,339
+Saudi Arabia,United States,326
+Saudi Arabia,Italy,276
+Saudi Arabia,Netherlands,230
+Saudi Arabia,Switzerland,170
+Saudi Arabia,Spain,120
+Saudi Arabia,Greece,89
+Saudi Arabia,Azerbaijan,66
+Saudi Arabia,Russia,65
+Saudi Arabia,Austria,53
+Saudi Arabia,Canada,36
+Saudi Arabia,Belgium,35
+Saudi Arabia,Georgia,29
+Saudi Arabia,Cyprus,28
+Saudi Arabia,Bosnia and Herzegovina,20
+Saudi Arabia,Bulgaria,8
+Saudi Arabia,Belarus,8
+Saudi Arabia,Macedonia,7
+Saudi Arabia,Ireland,5
+Saudi Arabia,Czech Republic,5
+Saudi Arabia,Croatia,4
+Saudi Arabia,Portugal,3
+Saudi Arabia,Kazakhstan,3
+Saudi Arabia,Luxembourg,2
+Saudi Arabia,Serbia,2
+Saudi Arabia,Moldova,1
+Saudi Arabia,Denmark,1
+Saudi Arabia,Norway,1
+Saudi Arabia,Malta,1
+Saudi Arabia,Romania,1
+Senegal,Morocco,346
+Senegal,France,296
+Senegal,Spain,217
+Senegal,Turkey,156
+Senegal,Portugal,143
+Senegal,Belgium,120
+Senegal,United States,96
+Senegal,Italy,75
+Senegal,United Arab Emirates,74
+Senegal,Germany,59
+Senegal,Czech Republic,11
+Senegal,United Kingdom,4
+Senegal,Switzerland,2
+Senegal,Russia,2
+Senegal,Canada,2
+Senegal,Algeria,2
+Senegal,Qatar,1
+Senegal,Netherlands,1
+Senegal,Venezuela,1
+Senegal,Egypt,1
+Senegal,Luxembourg,1
+Senegal,Western Sahara,1
+Senegal,Haiti,1
+Senegal,Ecuador,1
+Senegal,Greece,1
+Senegal,Finland,1
+Serbia,Germany,2216
+Serbia,Montenegro,1133
+Serbia,Switzerland,1119
+Serbia,Turkey,991
+Serbia,Austria,830
+Serbia,France,763
+Serbia,Greece,638
+Serbia,Italy,612
+Serbia,Russia,562
+Serbia,Slovenia,420
+Serbia,Sweden,358
+Serbia,Netherlands,318
+Serbia,Croatia,313
+Serbia,Romania,274
+Serbia,United Kingdom,269
+Serbia,United Arab Emirates,264
+Serbia,Bosnia and Herzegovina,203
+Serbia,Bulgaria,197
+Serbia,Czech Republic,170
+Serbia,Poland,169
+Serbia,Macedonia,168
+Serbia,Israel,155
+Serbia,Albania,142
+Serbia,Qatar,123
+Serbia,Belgium,121
+Serbia,Denmark,115
+Serbia,Hungary,89
+Serbia,Norway,88
+Serbia,Cyprus,88
+Serbia,Lebanon,86
+Serbia,Spain,81
+Serbia,Egypt,78
+Serbia,Malta,70
+Serbia,United States,68
+Serbia,Iran,53
+Serbia,Slovakia,46
+Serbia,Ukraine,36
+Serbia,Belarus,33
+Serbia,Tunisia,33
+Serbia,Finland,28
+Serbia,Saudi Arabia,24
+Serbia,Uzbekistan,11
+Serbia,Serbia,8
+Serbia,Azerbaijan,7
+Serbia,Latvia,6
+Serbia,Afghanistan,5
+Serbia,Moldova,5
+Serbia,Lithuania,4
+Serbia,Estonia,4
+Serbia,Portugal,4
+Serbia,Ireland,3
+Serbia,Armenia,2
+Serbia,Luxembourg,2
+Serbia,Algeria,2
+Serbia,Kenya,1
+Serbia,Liberia,1
+Serbia,Georgia,1
+Serbia,Faroe Islands,1
+Serbia,Libya,1
+Seychelles,Turkey,54
+Seychelles,France,51
+Seychelles,Germany,36
+Seychelles,United Kingdom,29
+Seychelles,Israel,11
+Seychelles,Austria,9
+Seychelles,Switzerland,7
+Seychelles,Poland,1
+Seychelles,Russia,1
+Sierra Leone,Morocco,58
+Sierra Leone,France,1
+Singapore,United Kingdom,983
+Singapore,Germany,666
+Singapore,Netherlands,293
+Singapore,France,264
+Singapore,Switzerland,244
+Singapore,Turkey,206
+Singapore,Italy,171
+Singapore,Finland,120
+Singapore,Denmark,90
+Singapore,Greece,57
+Singapore,Poland,42
+Singapore,Spain,35
+Singapore,Azerbaijan,8
+Singapore,Russia,3
+Singapore,Malta,1
+Singapore,Romania,1
+Singapore,Cyprus,1
+Singapore,Luxembourg,1
+Slovakia,United Kingdom,674
+Slovakia,Czech Republic,475
+Slovakia,Greece,350
+Slovakia,Slovakia,348
+Slovakia,Turkey,348
+Slovakia,Italy,313
+Slovakia,Germany,284
+Slovakia,Poland,238
+Slovakia,Austria,228
+Slovakia,Spain,186
+Slovakia,Bulgaria,165
+Slovakia,Macedonia,152
+Slovakia,Egypt,142
+Slovakia,Ireland,124
+Slovakia,France,121
+Slovakia,Ukraine,102
+Slovakia,Russia,100
+Slovakia,Cyprus,84
+Slovakia,Belgium,67
+Slovakia,United Arab Emirates,64
+Slovakia,Croatia,64
+Slovakia,Israel,56
+Slovakia,Serbia,45
+Slovakia,Switzerland,41
+Slovakia,Tunisia,40
+Slovakia,Malta,31
+Slovakia,Netherlands,24
+Slovakia,Morocco,19
+Slovakia,Romania,15
+Slovakia,Latvia,14
+Slovakia,Hungary,14
+Slovakia,Cape Verde,14
+Slovakia,Georgia,12
+Slovakia,Denmark,11
+Slovakia,Oman,8
+Slovakia,Moldova,8
+Slovakia,Montenegro,7
+Slovakia,Slovenia,6
+Slovakia,Finland,6
+Slovakia,Sweden,5
+Slovakia,Jordan,5
+Slovakia,Albania,5
+Slovakia,Iceland,4
+Slovakia,Luxembourg,3
+Slovakia,Norway,2
+Slovakia,Belarus,1
+Slovakia,Saudi Arabia,1
+Slovakia,Portugal,1
+Slovakia,Bosnia and Herzegovina,1
+Slovakia,Maldives,1
+Slovakia,Lebanon,1
+Slovakia,Estonia,1
+Slovakia,Sao Tome and Principe,1
+Slovenia,Germany,918
+Slovenia,Serbia,443
+Slovenia,Switzerland,359
+Slovenia,United Kingdom,301
+Slovenia,France,277
+Slovenia,Austria,265
+Slovenia,Belgium,250
+Slovenia,Turkey,239
+Slovenia,Netherlands,191
+Slovenia,Bosnia and Herzegovina,178
+Slovenia,Montenegro,171
+Slovenia,Poland,160
+Slovenia,Russia,159
+Slovenia,Macedonia,127
+Slovenia,Albania,127
+Slovenia,Italy,102
+Slovenia,Denmark,102
+Slovenia,Greece,99
+Slovenia,Czech Republic,60
+Slovenia,Croatia,46
+Slovenia,Finland,41
+Slovenia,Ukraine,39
+Slovenia,Egypt,39
+Slovenia,Bulgaria,38
+Slovenia,Romania,28
+Slovenia,Israel,24
+Slovenia,Spain,19
+Slovenia,Tunisia,17
+Slovenia,Luxembourg,15
+Slovenia,Malta,6
+Slovenia,Slovakia,5
+Slovenia,Norway,5
+Slovenia,Hungary,4
+Slovenia,Sweden,4
+Slovenia,Iceland,2
+Slovenia,Belarus,2
+Slovenia,Cyprus,2
+Slovenia,Slovenia,1
+Slovenia,Lithuania,1
+Slovenia,Portugal,1
+Slovenia,United States,1
+Slovenia,Turkmenistan,1
+Slovenia,Canada,1
+Slovenia,Estonia,1
+Slovenia,Japan,1
+Slovenia,Ireland,1
+Slovenia,Saudi Arabia,1
+Somalia,Turkey,2
+South Africa,United Kingdom,787
+South Africa,Germany,524
+South Africa,Netherlands,245
+South Africa,Turkey,224
+South Africa,France,193
+South Africa,Switzerland,158
+South Africa,United States,110
+South Africa,Spain,55
+South Africa,Italy,54
+South Africa,Israel,53
+South Africa,Austria,11
+South Africa,Russia,4
+South Africa,Luxembourg,2
+South Africa,Belgium,2
+South Africa,Morocco,2
+South Africa,Ghana,1
+South Africa,Cyprus,1
+South Africa,Hungary,1
+South Africa,Greece,1
+South Africa,Czech Republic,1
+South Africa,Sweden,1
+South Africa,Norway,1
+South Korea,Germany,569
+South Korea,United Kingdom,400
+South Korea,France,369
+South Korea,Italy,362
+South Korea,Turkey,360
+South Korea,Netherlands,248
+South Korea,Austria,228
+South Korea,Spain,170
+South Korea,Czech Republic,129
+South Korea,Finland,121
+South Korea,Poland,88
+South Korea,Israel,54
+South Korea,Azerbaijan,50
+South Korea,Switzerland,31
+South Korea,Croatia,29
+South Korea,Norway,2
+South Korea,Sweden,1
+Spain,Spain,131586
+Spain,United Kingdom,45851
+Spain,Germany,33486
+Spain,France,18821
+Spain,Italy,17678
+Spain,Netherlands,9083
+Spain,Portugal,8026
+Spain,Belgium,7179
+Spain,Switzerland,6418
+Spain,Ireland,4541
+Spain,Sweden,3877
+Spain,Denmark,3739
+Spain,United States,3324
+Spain,Norway,3197
+Spain,Morocco,3089
+Spain,Russia,2921
+Spain,Poland,2702
+Spain,Austria,2465
+Spain,Finland,1860
+Spain,Romania,1832
+Spain,Czech Republic,1554
+Spain,Algeria,1493
+Spain,Turkey,1480
+Spain,Colombia,945
+Spain,Hungary,933
+Spain,Israel,909
+Spain,Greece,813
+Spain,Luxembourg,781
+Spain,Mexico,759
+Spain,United Arab Emirates,733
+Spain,Brazil,705
+Spain,Qatar,674
+Spain,Argentina,636
+Spain,Bulgaria,524
+Spain,Ukraine,517
+Spain,Iceland,451
+Spain,China,411
+Spain,Croatia,407
+Spain,Dominican Republic,395
+Spain,Malta,388
+Spain,Canada,350
+Spain,Cuba,332
+Spain,Lithuania,295
+Spain,Chile,290
+Spain,Latvia,263
+Spain,Egypt,250
+Spain,Senegal,221
+Spain,Ecuador,221
+Spain,Slovakia,193
+Spain,Mauritania,185
+Spain,Cape Verde,182
+Spain,Venezuela,176
+Spain,Western Sahara,175
+Spain,South Korea,173
+Spain,Tunisia,159
+Spain,Uruguay,158
+Spain,Bolivia,149
+Spain,Hong Kong,133
+Spain,Jordan,124
+Spain,Costa Rica,123
+Spain,Panama,122
+Spain,Belarus,107
+Spain,Saudi Arabia,97
+Spain,Lebanon,92
+Spain,Gambia,86
+Spain,Paraguay,85
+Spain,Guatemala,84
+Spain,Moldova,84
+Spain,Estonia,81
+Spain,Serbia,67
+Spain,Japan,66
+Spain,Equatorial Guinea,66
+Spain,Georgia,62
+Spain,South Africa,59
+Spain,India,56
+Spain,Cyprus,52
+Spain,Jersey,52
+Spain,Puerto Rico,42
+Spain,Uzbekistan,40
+Spain,Ethiopia,37
+Spain,Iran,35
+Spain,Singapore,35
+Spain,Pakistan,33
+Spain,Gibraltar,32
+Spain,Macedonia,30
+Spain,Slovenia,27
+Spain,Bahrain,23
+Spain,Honduras,17
+Spain,Isle of Man,15
+Spain,Mali,13
+Spain,Afghanistan,13
+Spain,Montenegro,12
+Spain,Kuwait,12
+Spain,Faroe Islands,11
+Spain,Angola,9
+Spain,Guernsey,9
+Spain,Azerbaijan,7
+Spain,Nigeria,5
+Spain,Mauritius,5
+Spain,Turkmenistan,5
+Spain,Ghana,4
+Spain,Albania,4
+Spain,Kazakhstan,3
+Spain,Jamaica,3
+Spain,Netherlands Antilles,3
+Spain,Cote d'Ivoire,2
+Spain,French Guiana,2
+Spain,Guinea-Bissau,2
+Spain,Gabon,2
+Spain,Iraq,1
+Spain,Aruba,1
+Spain,Niger,1
+Spain,Burkina Faso,1
+Spain,Sao Tome and Principe,1
+Spain,Liberia,1
+Spain,Cameroon,1
+Spain,Bosnia and Herzegovina,1
+Spain,Congo (Brazzaville),1
+Spain,Chad,1
+Spain,Armenia,1
+Spain,Benin,1
+Spain,Kenya,1
+Spain,Thailand,1
+Spain,Cayman Islands,1
+Spain,Rwanda,1
+Spain,Antigua and Barbuda,1
+Spain,Tanzania,1
+Sri Lanka,United Kingdom,146
+Sri Lanka,Ukraine,43
+Sri Lanka,Turkey,32
+Sri Lanka,Italy,22
+Sri Lanka,Netherlands,19
+Sri Lanka,Russia,13
+Sri Lanka,Switzerland,11
+Sri Lanka,Germany,7
+Sri Lanka,Sweden,5
+Sri Lanka,Austria,4
+Sri Lanka,Finland,2
+Sri Lanka,Malta,1
+Sri Lanka,Oman,1
+Sudan,Turkey,164
+Sudan,Syria,11
+Sudan,Russia,4
+Sudan,Lebanon,3
+Sudan,Belarus,2
+Sudan,United Kingdom,2
+Sudan,Greece,2
+Sudan,Moldova,1
+Sudan,Ukraine,1
+Sudan,Algeria,1
+Sudan,Switzerland,1
+Sudan,Malta,1
+Sudan,Germany,1
+Sudan,Italy,1
+Sudan,Macedonia,1
+Sudan,Georgia,1
+Suriname,Netherlands,143
+Sweden,Sweden,41892
+Sweden,Germany,5542
+Sweden,Finland,4689
+Sweden,Denmark,3944
+Sweden,Spain,3853
+Sweden,United Kingdom,3716
+Sweden,Norway,3524
+Sweden,Netherlands,2213
+Sweden,Poland,2021
+Sweden,France,1743
+Sweden,Greece,1421
+Sweden,Belgium,1275
+Sweden,Italy,1131
+Sweden,Turkey,1125
+Sweden,Switzerland,916
+Sweden,Latvia,897
+Sweden,Estonia,868
+Sweden,Russia,632
+Sweden,United States,607
+Sweden,Austria,597
+Sweden,Croatia,494
+Sweden,Czech Republic,448
+Sweden,Hungary,380
+Sweden,Portugal,362
+Sweden,Lithuania,361
+Sweden,Serbia,358
+Sweden,Iceland,280
+Sweden,Thailand,278
+Sweden,Qatar,274
+Sweden,Romania,253
+Sweden,Ukraine,231
+Sweden,Cyprus,229
+Sweden,United Arab Emirates,225
+Sweden,Macedonia,217
+Sweden,Bosnia and Herzegovina,207
+Sweden,Ireland,198
+Sweden,China,138
+Sweden,Morocco,116
+Sweden,Malta,114
+Sweden,Ethiopia,92
+Sweden,Luxembourg,86
+Sweden,Bulgaria,80
+Sweden,Belarus,75
+Sweden,Iran,70
+Sweden,Egypt,69
+Sweden,Montenegro,68
+Sweden,Hong Kong,63
+Sweden,Israel,54
+Sweden,India,54
+Sweden,Cape Verde,45
+Sweden,South Korea,41
+Sweden,Lebanon,35
+Sweden,Albania,17
+Sweden,Vietnam,13
+Sweden,Mexico,11
+Sweden,Dominican Republic,10
+Sweden,Tunisia,9
+Sweden,Mauritius,9
+Sweden,Sri Lanka,6
+Sweden,Jordan,5
+Sweden,Jersey,5
+Sweden,Jamaica,4
+Sweden,Aruba,4
+Sweden,Slovakia,4
+Sweden,Canada,4
+Sweden,Gambia,4
+Sweden,Isle of Man,3
+Sweden,Venezuela,2
+Sweden,Saudi Arabia,2
+Sweden,Japan,2
+Sweden,Slovenia,2
+Sweden,Georgia,2
+Sweden,Faroe Islands,1
+Sweden,Bermuda,1
+Sweden,Kazakhstan,1
+Sweden,Guernsey,1
+Sweden,Uzbekistan,1
+Sweden,Senegal,1
+Sweden,Niger,1
+Sweden,Azerbaijan,1
+Sweden,Bahrain,1
+Sweden,Antigua and Barbuda,1
+Switzerland,Germany,11744
+Switzerland,United Kingdom,9556
+Switzerland,France,6963
+Switzerland,Spain,6454
+Switzerland,Italy,4825
+Switzerland,Switzerland,3482
+Switzerland,Portugal,2822
+Switzerland,Austria,2620
+Switzerland,Netherlands,2540
+Switzerland,United States,2152
+Switzerland,Belgium,1777
+Switzerland,Turkey,1494
+Switzerland,Greece,1462
+Switzerland,Russia,1241
+Switzerland,Serbia,1136
+Switzerland,Poland,1084
+Switzerland,Denmark,985
+Switzerland,Sweden,935
+Switzerland,United Arab Emirates,891
+Switzerland,Luxembourg,655
+Switzerland,Croatia,614
+Switzerland,Czech Republic,611
+Switzerland,Israel,598
+Switzerland,Ireland,561
+Switzerland,Hungary,514
+Switzerland,Finland,475
+Switzerland,Egypt,422
+Switzerland,Canada,400
+Switzerland,Norway,396
+Switzerland,Morocco,382
+Switzerland,Slovenia,353
+Switzerland,Ukraine,350
+Switzerland,China,349
+Switzerland,Qatar,338
+Switzerland,Thailand,271
+Switzerland,India,247
+Switzerland,Singapore,245
+Switzerland,Hong Kong,239
+Switzerland,Latvia,226
+Switzerland,Malta,222
+Switzerland,Cyprus,208
+Switzerland,Romania,205
+Switzerland,Tunisia,196
+Switzerland,Macedonia,187
+Switzerland,Saudi Arabia,174
+Switzerland,South Africa,161
+Switzerland,Brazil,160
+Switzerland,Lebanon,159
+Switzerland,Iceland,155
+Switzerland,Oman,123
+Switzerland,Japan,123
+Switzerland,Bulgaria,115
+Switzerland,Algeria,96
+Switzerland,Kenya,95
+Switzerland,Montenegro,87
+Switzerland,Belarus,56
+Switzerland,Jersey,55
+Switzerland,South Korea,53
+Switzerland,Jordan,52
+Switzerland,Mexico,47
+Switzerland,Dominican Republic,46
+Switzerland,Costa Rica,41
+Switzerland,Moldova,40
+Switzerland,Kuwait,40
+Switzerland,Cuba,38
+Switzerland,Slovakia,38
+Switzerland,Bosnia and Herzegovina,32
+Switzerland,Mauritius,29
+Switzerland,Maldives,25
+Switzerland,Estonia,18
+Switzerland,Azerbaijan,14
+Switzerland,Isle of Man,13
+Switzerland,Lithuania,12
+Switzerland,Guernsey,10
+Switzerland,Sri Lanka,9
+Switzerland,Argentina,9
+Switzerland,Vietnam,9
+Switzerland,Bahamas,8
+Switzerland,Georgia,7
+Switzerland,Kazakhstan,7
+Switzerland,Seychelles,7
+Switzerland,Gibraltar,5
+Switzerland,Albania,4
+Switzerland,Antigua and Barbuda,3
+Switzerland,Senegal,3
+Switzerland,Turkmenistan,3
+Switzerland,Equatorial Guinea,3
+Switzerland,Iraq,3
+Switzerland,Uzbekistan,3
+Switzerland,Netherlands Antilles,3
+Switzerland,Congo (Kinshasa),2
+Switzerland,Tanzania,2
+Switzerland,Malaysia,2
+Switzerland,Congo (Brazzaville),2
+Switzerland,Libya,2
+Switzerland,Ghana,2
+Switzerland,Pakistan,2
+Switzerland,Saint Lucia,2
+Switzerland,Turks and Caicos Islands,1
+Switzerland,Venezuela,1
+Switzerland,Saint Vincent and the Grenadines,1
+Switzerland,Armenia,1
+Switzerland,Western Sahara,1
+Switzerland,Namibia,1
+Switzerland,Faroe Islands,1
+Switzerland,Angola,1
+Switzerland,Cayman Islands,1
+Switzerland,Benin,1
+Switzerland,Ecuador,1
+Switzerland,Cape Verde,1
+Switzerland,Nigeria,1
+Switzerland,Iran,1
+Switzerland,Jamaica,1
+Switzerland,Cote d'Ivoire,1
+Switzerland,Grenada,1
+Switzerland,Virgin Islands,1
+Switzerland,Cameroon,1
+Syria,Russia,37
+Syria,Egypt,33
+Syria,Armenia,11
+Syria,Algeria,10
+Syria,Sudan,8
+Syria,Libya,5
+Syria,Turkey,1
+Syria,Tunisia,1
+Taiwan,Netherlands,190
+Taiwan,France,157
+Taiwan,Austria,133
+Taiwan,Germany,120
+Taiwan,Turkey,114
+Taiwan,United Kingdom,79
+Taiwan,Italy,44
+Taiwan,Azerbaijan,1
+Taiwan,Luxembourg,1
+Tajikistan,Turkey,102
+Tajikistan,Germany,16
+Tajikistan,Georgia,1
+Tajikistan,United States,1
+Tajikistan,Switzerland,1
+Tajikistan,Austria,1
+Tajikistan,Azerbaijan,1
+Tajikistan,Bulgaria,1
+Tanzania,Turkey,192
+Tanzania,Netherlands,120
+Tanzania,Switzerland,95
+Tanzania,Israel,46
+Tanzania,Italy,40
+Tanzania,Germany,38
+Tanzania,Russia,12
+Tanzania,Poland,6
+Tanzania,Morocco,2
+Tanzania,Greece,2
+Tanzania,Lebanon,1
+Tanzania,Portugal,1
+Thailand,Germany,539
+Thailand,United Kingdom,506
+Thailand,Turkey,314
+Thailand,Finland,304
+Thailand,Austria,283
+Thailand,Sweden,275
+Thailand,Switzerland,272
+Thailand,France,225
+Thailand,Denmark,215
+Thailand,Italy,186
+Thailand,Netherlands,175
+Thailand,Norway,157
+Thailand,Israel,127
+Thailand,Belgium,83
+Thailand,Ukraine,77
+Thailand,Poland,17
+Thailand,Azerbaijan,7
+Thailand,Russia,2
+Thailand,India,1
+Thailand,Luxembourg,1
+Thailand,Bulgaria,1
+Thailand,Pakistan,1
+Togo,United States,70
+Togo,Morocco,69
+Togo,France,50
+Togo,Belgium,13
+Togo,Italy,1
+Trinidad and Tobago,United Kingdom,1
+Tunisia,France,4211
+Tunisia,Germany,1122
+Tunisia,Russia,911
+Tunisia,Italy,863
+Tunisia,Turkey,508
+Tunisia,Saudi Arabia,480
+Tunisia,Morocco,415
+Tunisia,Belgium,365
+Tunisia,United Kingdom,288
+Tunisia,Czech Republic,288
+Tunisia,Malta,211
+Tunisia,Switzerland,207
+Tunisia,Egypt,195
+Tunisia,Spain,168
+Tunisia,Poland,149
+Tunisia,Qatar,122
+Tunisia,United Arab Emirates,100
+Tunisia,Libya,99
+Tunisia,Austria,82
+Tunisia,Portugal,80
+Tunisia,Jordan,72
+Tunisia,Netherlands,60
+Tunisia,Ukraine,57
+Tunisia,Lebanon,56
+Tunisia,Luxembourg,52
+Tunisia,Canada,43
+Tunisia,Slovakia,40
+Tunisia,Hungary,36
+Tunisia,Serbia,35
+Tunisia,Algeria,24
+Tunisia,Slovenia,18
+Tunisia,Lithuania,16
+Tunisia,Romania,16
+Tunisia,Denmark,11
+Tunisia,Belarus,9
+Tunisia,Greece,8
+Tunisia,Bahrain,8
+Tunisia,Bulgaria,8
+Tunisia,Finland,5
+Tunisia,Bosnia and Herzegovina,5
+Tunisia,Kazakhstan,3
+Tunisia,Macedonia,3
+Tunisia,Croatia,2
+Tunisia,Iran,2
+Tunisia,Latvia,2
+Tunisia,Estonia,2
+Tunisia,China,1
+Tunisia,Senegal,1
+Tunisia,Albania,1
+Tunisia,United States,1
+Tunisia,Tunisia,1
+Tunisia,Syria,1
+Turkey,Turkey,121298
+Turkey,Germany,15838
+Turkey,Russia,10475
+Turkey,United Kingdom,5450
+Turkey,Ukraine,4230
+Turkey,Saudi Arabia,3681
+Turkey,Iran,3202
+Turkey,France,3177
+Turkey,Italy,2763
+Turkey,Israel,2417
+Turkey,Iraq,2319
+Turkey,Netherlands,2073
+Turkey,United Arab Emirates,1616
+Turkey,Spain,1540
+Turkey,Greece,1480
+Turkey,Belgium,1466
+Turkey,Austria,1454
+Turkey,Switzerland,1433
+Turkey,Lebanon,1387
+Turkey,Egypt,1371
+Turkey,Romania,1357
+Turkey,Azerbaijan,1346
+Turkey,Qatar,1270
+Turkey,Poland,1259
+Turkey,United States,1236
+Turkey,Kazakhstan,1220
+Turkey,Jordan,1218
+Turkey,Denmark,1172
+Turkey,Kuwait,1162
+Turkey,Sweden,1089
+Turkey,Algeria,1030
+Turkey,Serbia,999
+Turkey,Czech Republic,987
+Turkey,Georgia,923
+Turkey,Hungary,638
+Turkey,Bulgaria,598
+Turkey,Moldova,569
+Turkey,Norway,535
+Turkey,Tunisia,506
+Turkey,Bahrain,500
+Turkey,Belarus,453
+Turkey,Uzbekistan,438
+Turkey,Turkmenistan,427
+Turkey,Finland,425
+Turkey,Albania,414
+Turkey,Bosnia and Herzegovina,408
+Turkey,Macedonia,404
+Turkey,China,386
+Turkey,Pakistan,385
+Turkey,Lithuania,370
+Turkey,Libya,368
+Turkey,Croatia,366
+Turkey,Morocco,355
+Turkey,Portugal,355
+Turkey,Slovakia,348
+Turkey,Ireland,330
+Turkey,Nigeria,329
+Turkey,South Korea,323
+Turkey,Thailand,315
+Turkey,India,299
+Turkey,Afghanistan,298
+Turkey,Oman,271
+Turkey,South Africa,251
+Turkey,Malta,247
+Turkey,Slovenia,239
+Turkey,Tanzania,213
+Turkey,Singapore,205
+Turkey,Latvia,198
+Turkey,Estonia,195
+Turkey,Montenegro,193
+Turkey,Kenya,192
+Turkey,Sudan,176
+Turkey,Canada,157
+Turkey,Luxembourg,148
+Turkey,Cameroon,140
+Turkey,Vietnam,131
+Turkey,Ethiopia,129
+Turkey,Indonesia,127
+Turkey,Ghana,127
+Turkey,Rwanda,124
+Turkey,Philippines,123
+Turkey,Japan,122
+Turkey,Taiwan,122
+Turkey,Malaysia,122
+Turkey,Hong Kong,117
+Turkey,Brazil,115
+Turkey,Maldives,115
+Turkey,Djibouti,113
+Turkey,Congo (Kinshasa),104
+Turkey,Tajikistan,101
+Turkey,Mauritania,99
+Turkey,Benin,97
+Turkey,Nepal,83
+Turkey,Armenia,83
+Turkey,Mauritius,78
+Turkey,Burkina Faso,73
+Turkey,Eritrea,65
+Turkey,Niger,54
+Turkey,Colombia,53
+Turkey,Cuba,52
+Turkey,Seychelles,52
+Turkey,Senegal,47
+Turkey,Mali,34
+Turkey,Uganda,18
+Turkey,Mexico,5
+Turkey,Iceland,4
+Turkey,Venezuela,3
+Turkey,Dominican Republic,2
+Turkey,Liberia,1
+Turkey,Yemen,1
+Turkey,Gabon,1
+Turkey,Brunei,1
+Turkey,Barbados,1
+Turkey,Equatorial Guinea,1
+Turkey,Somalia,1
+Turkey,Guinea-Bissau,1
+Turkey,Chad,1
+Turkey,Gambia,1
+Turkmenistan,Turkey,418
+Turkmenistan,United Kingdom,93
+Turkmenistan,Azerbaijan,90
+Turkmenistan,Luxembourg,71
+Turkmenistan,Germany,48
+Turkmenistan,Austria,31
+Turkmenistan,Hungary,24
+Turkmenistan,France,20
+Turkmenistan,Ukraine,18
+Turkmenistan,Belgium,14
+Turkmenistan,Armenia,12
+Turkmenistan,Czech Republic,6
+Turkmenistan,Portugal,5
+Turkmenistan,Spain,5
+Turkmenistan,Bulgaria,4
+Turkmenistan,Russia,3
+Turkmenistan,Belarus,3
+Turkmenistan,Georgia,2
+Turkmenistan,Norway,2
+Turkmenistan,Lithuania,2
+Turkmenistan,Macedonia,2
+Turkmenistan,Denmark,1
+Turkmenistan,Italy,1
+Turkmenistan,Ireland,1
+Turkmenistan,Moldova,1
+Turkmenistan,Latvia,1
+Turkmenistan,United States,1
+Turkmenistan,Qatar,1
+Turkmenistan,Slovakia,1
+Turkmenistan,Serbia,1
+Turks and Caicos Islands,United Kingdom,1
+Turks and Caicos Islands,Portugal,1
+Turks and Caicos Islands,Russia,1
+Turks and Caicos Islands,France,1
+Uganda,Belgium,143
+Uganda,Turkey,138
+Uganda,Netherlands,128
+Uganda,Morocco,3
+Uganda,Germany,2
+Uganda,Israel,1
+Uganda,Italy,1
+Ukraine,Ukraine,5478
+Ukraine,Turkey,4161
+Ukraine,Poland,2319
+Ukraine,Egypt,2065
+Ukraine,Germany,2009
+Ukraine,Belarus,1411
+Ukraine,Israel,1197
+Ukraine,Italy,1187
+Ukraine,Austria,884
+Ukraine,Latvia,569
+Ukraine,Georgia,553
+Ukraine,France,548
+Ukraine,United Kingdom,537
+Ukraine,Spain,518
+Ukraine,United Arab Emirates,463
+Ukraine,Kazakhstan,384
+Ukraine,Switzerland,358
+Ukraine,Lithuania,347
+Ukraine,Greece,346
+Ukraine,Czech Republic,344
+Ukraine,Netherlands,289
+Ukraine,Cyprus,257
+Ukraine,Azerbaijan,253
+Ukraine,Hungary,241
+Ukraine,Sweden,227
+Ukraine,Armenia,218
+Ukraine,Bulgaria,217
+Ukraine,Belgium,211
+Ukraine,Qatar,201
+Ukraine,Denmark,183
+Ukraine,Estonia,166
+Ukraine,Moldova,149
+Ukraine,Montenegro,134
+Ukraine,United States,118
+Ukraine,Finland,117
+Ukraine,China,104
+Ukraine,Jordan,102
+Ukraine,Slovakia,101
+Ukraine,Iran,93
+Ukraine,Romania,87
+Ukraine,Thailand,82
+Ukraine,India,64
+Ukraine,Tunisia,57
+Ukraine,Serbia,50
+Ukraine,Sri Lanka,46
+Ukraine,Slovenia,40
+Ukraine,Lebanon,38
+Ukraine,Canada,36
+Ukraine,Portugal,26
+Ukraine,Albania,25
+Ukraine,Iraq,22
+Ukraine,Croatia,16
+Ukraine,Malta,13
+Ukraine,Ireland,8
+Ukraine,Ethiopia,4
+Ukraine,Turkmenistan,4
+Ukraine,Saudi Arabia,4
+Ukraine,Afghanistan,3
+Ukraine,Dominican Republic,3
+Ukraine,Maldives,3
+Ukraine,Kuwait,2
+Ukraine,Norway,2
+Ukraine,Macedonia,2
+Ukraine,Uzbekistan,1
+Ukraine,Iceland,1
+Ukraine,Sudan,1
+Ukraine,Saint Vincent and the Grenadines,1
+Ukraine,Luxembourg,1
+Ukraine,Mauritius,1
+United Arab Emirates,United Kingdom,3724
+United Arab Emirates,Germany,2721
+United Arab Emirates,Russia,2204
+United Arab Emirates,United States,1724
+United Arab Emirates,Turkey,1664
+United Arab Emirates,Italy,1438
+United Arab Emirates,France,1113
+United Arab Emirates,Lebanon,972
+United Arab Emirates,Azerbaijan,928
+United Arab Emirates,Switzerland,883
+United Arab Emirates,Spain,751
+United Arab Emirates,Netherlands,717
+United Arab Emirates,Georgia,547
+United Arab Emirates,Belgium,528
+United Arab Emirates,Ireland,479
+United Arab Emirates,Ukraine,463
+United Arab Emirates,Czech Republic,394
+United Arab Emirates,Greece,368
+United Arab Emirates,Romania,312
+United Arab Emirates,Morocco,306
+United Arab Emirates,Poland,304
+United Arab Emirates,Armenia,294
+United Arab Emirates,Serbia,256
+United Arab Emirates,Austria,253
+United Arab Emirates,Sweden,228
+United Arab Emirates,Portugal,217
+United Arab Emirates,Algeria,189
+United Arab Emirates,Canada,185
+United Arab Emirates,Cyprus,177
+United Arab Emirates,Hungary,166
+United Arab Emirates,Bulgaria,157
+United Arab Emirates,Norway,148
+United Arab Emirates,Croatia,148
+United Arab Emirates,Bosnia and Herzegovina,146
+United Arab Emirates,Denmark,142
+United Arab Emirates,Finland,141
+United Arab Emirates,Tunisia,98
+United Arab Emirates,Slovakia,62
+United Arab Emirates,Belarus,57
+United Arab Emirates,Macedonia,47
+United Arab Emirates,Luxembourg,46
+United Arab Emirates,Latvia,35
+United Arab Emirates,Montenegro,18
+United Arab Emirates,Moldova,14
+United Arab Emirates,Kazakhstan,13
+United Arab Emirates,Lithuania,9
+United Arab Emirates,Malta,5
+United Arab Emirates,Senegal,3
+United Arab Emirates,Kuwait,2
+United Arab Emirates,Iceland,1
+United Arab Emirates,Guinea,1
+United Arab Emirates,Estonia,1
+United Kingdom,United Kingdom,91630
+United Kingdom,Spain,45931
+United Kingdom,Germany,24910
+United Kingdom,France,21818
+United Kingdom,Italy,20088
+United Kingdom,Ireland,19434
+United Kingdom,Netherlands,17034
+United Kingdom,United States,16846
+United Kingdom,Switzerland,9556
+United Kingdom,Portugal,9157
+United Kingdom,Poland,8013
+United Kingdom,Greece,8007
+United Kingdom,Turkey,5430
+United Kingdom,Denmark,5032
+United Kingdom,Belgium,4009
+United Kingdom,Norway,3883
+United Kingdom,United Arab Emirates,3744
+United Kingdom,Sweden,3700
+United Kingdom,Jersey,3508
+United Kingdom,Austria,3470
+United Kingdom,Romania,2973
+United Kingdom,Cyprus,2948
+United Kingdom,Czech Republic,2710
+United Kingdom,Guernsey,2697
+United Kingdom,Canada,2683
+United Kingdom,Isle of Man,2416
+United Kingdom,Hungary,2348
+United Kingdom,India,2061
+United Kingdom,Bulgaria,1989
+United Kingdom,Finland,1949
+United Kingdom,Croatia,1887
+United Kingdom,Iceland,1842
+United Kingdom,Malta,1740
+United Kingdom,Qatar,1613
+United Kingdom,Morocco,1493
+United Kingdom,Russia,1463
+United Kingdom,Luxembourg,1344
+United Kingdom,China,1247
+United Kingdom,Hong Kong,1186
+United Kingdom,Lithuania,1102
+United Kingdom,Israel,1076
+United Kingdom,Singapore,981
+United Kingdom,Latvia,918
+United Kingdom,Egypt,899
+United Kingdom,South Africa,795
+United Kingdom,Mexico,723
+United Kingdom,Slovakia,681
+United Kingdom,Saudi Arabia,613
+United Kingdom,Japan,587
+United Kingdom,Ukraine,538
+United Kingdom,Thailand,505
+United Kingdom,Gibraltar,503
+United Kingdom,Oman,454
+United Kingdom,Barbados,454
+United Kingdom,Brazil,389
+United Kingdom,Nigeria,379
+United Kingdom,Malaysia,369
+United Kingdom,Bahrain,367
+United Kingdom,Lebanon,367
+United Kingdom,Pakistan,366
+United Kingdom,South Korea,361
+United Kingdom,Cape Verde,335
+United Kingdom,Kuwait,311
+United Kingdom,Serbia,290
+United Kingdom,Slovenia,290
+United Kingdom,Tunisia,288
+United Kingdom,Jordan,250
+United Kingdom,Kenya,245
+United Kingdom,Jamaica,235
+United Kingdom,Saint Lucia,217
+United Kingdom,Moldova,214
+United Kingdom,Estonia,214
+United Kingdom,Dominican Republic,203
+United Kingdom,Argentina,201
+United Kingdom,Algeria,195
+United Kingdom,Antigua and Barbuda,178
+United Kingdom,Albania,173
+United Kingdom,Ethiopia,155
+United Kingdom,Mauritius,150
+United Kingdom,Cuba,150
+United Kingdom,Montenegro,146
+United Kingdom,Sri Lanka,146
+United Kingdom,Ghana,126
+United Kingdom,Vietnam,126
+United Kingdom,Colombia,122
+United Kingdom,Kazakhstan,114
+United Kingdom,Iran,109
+United Kingdom,Bermuda,107
+United Kingdom,Macedonia,106
+United Kingdom,Australia,98
+United Kingdom,Turkmenistan,95
+United Kingdom,Gambia,93
+United Kingdom,Bahamas,82
+United Kingdom,Georgia,79
+United Kingdom,Taiwan,79
+United Kingdom,Azerbaijan,74
+United Kingdom,Chile,74
+United Kingdom,Bangladesh,71
+United Kingdom,Belarus,66
+United Kingdom,Costa Rica,59
+United Kingdom,Iraq,51
+United Kingdom,Indonesia,48
+United Kingdom,Uzbekistan,35
+United Kingdom,Faroe Islands,32
+United Kingdom,Seychelles,32
+United Kingdom,Brunei,32
+United Kingdom,Maldives,28
+United Kingdom,Angola,16
+United Kingdom,Netherlands Antilles,12
+United Kingdom,Trinidad and Tobago,9
+United Kingdom,Aruba,8
+United Kingdom,Armenia,7
+United Kingdom,Saint Vincent and the Grenadines,4
+United Kingdom,Rwanda,3
+United Kingdom,Philippines,3
+United Kingdom,Turks and Caicos Islands,3
+United Kingdom,Gabon,3
+United Kingdom,Mauritania,3
+United Kingdom,Afghanistan,2
+United Kingdom,Senegal,2
+United Kingdom,Greenland,2
+United Kingdom,British Virgin Islands,2
+United Kingdom,Venezuela,2
+United Kingdom,Bosnia and Herzegovina,2
+United Kingdom,Libya,2
+United Kingdom,Macau,1
+United Kingdom,Mali,1
+United Kingdom,Belize,1
+United Kingdom,Uruguay,1
+United Kingdom,Mongolia,1
+United Kingdom,Equatorial Guinea,1
+United Kingdom,Tanzania,1
+United Kingdom,Botswana,1
+United Kingdom,Guadeloupe,1
+United Kingdom,Anguilla,1
+United States,United Kingdom,17086
+United States,Germany,9007
+United States,France,6465
+United States,Netherlands,4455
+United States,Ireland,3383
+United States,Spain,3286
+United States,Italy,3183
+United States,United Arab Emirates,2216
+United States,Switzerland,2161
+United States,Belgium,1652
+United States,Qatar,1350
+United States,Turkey,1300
+United States,Portugal,1084
+United States,Israel,983
+United States,Denmark,845
+United States,India,821
+United States,Luxembourg,658
+United States,Russia,628
+United States,Sweden,611
+United States,Austria,524
+United States,Poland,436
+United States,China,415
+United States,Norway,396
+United States,Greece,344
+United States,Saudi Arabia,329
+United States,Finland,238
+United States,Morocco,226
+United States,Hong Kong,218
+United States,Jordan,208
+United States,Bahrain,187
+United States,Ethiopia,158
+United States,Ghana,146
+United States,Hungary,132
+United States,South Africa,131
+United States,Czech Republic,128
+United States,Kuwait,126
+United States,Egypt,122
+United States,Ukraine,118
+United States,Nigeria,113
+United States,Senegal,101
+United States,Azerbaijan,78
+United States,Togo,71
+United States,Serbia,69
+United States,Romania,55
+United States,Cote d'Ivoire,38
+United States,Uzbekistan,35
+United States,Singapore,31
+United States,Kenya,29
+United States,Cape Verde,17
+United States,United States,16
+United States,Croatia,10
+United States,Canada,8
+United States,Latvia,6
+United States,Angola,4
+United States,Estonia,4
+United States,Jersey,3
+United States,Lebanon,3
+United States,Equatorial Guinea,3
+United States,Cyprus,2
+United States,Iceland,2
+United States,Kazakhstan,2
+United States,Malta,2
+United States,Gambia,2
+United States,Guernsey,2
+United States,Tajikistan,1
+United States,Slovakia,1
+United States,Belarus,1
+United States,Moldova,1
+United States,Lithuania,1
+United States,Montenegro,1
+United States,Mauritius,1
+United States,Benin,1
+United States,Bulgaria,1
+United States,Isle of Man,1
+United States,Mauritania,1
+United States,Georgia,1
+United States,Oman,1
+Uruguay,Spain,160
+Uruguay,Russia,1
+Uruguay,Germany,1
+Uzbekistan,Turkey,417
+Uzbekistan,Germany,67
+Uzbekistan,Israel,61
+Uzbekistan,Azerbaijan,61
+Uzbekistan,Italy,50
+Uzbekistan,United Kingdom,35
+Uzbekistan,United States,35
+Uzbekistan,Russia,32
+Uzbekistan,France,32
+Uzbekistan,Austria,26
+Uzbekistan,Latvia,25
+Uzbekistan,Spain,17
+Uzbekistan,Serbia,9
+Uzbekistan,Georgia,5
+Uzbekistan,Switzerland,4
+Uzbekistan,Poland,3
+Uzbekistan,Lebanon,2
+Uzbekistan,Bulgaria,2
+Uzbekistan,Greece,2
+Uzbekistan,Denmark,1
+Uzbekistan,Ukraine,1
+Uzbekistan,Sweden,1
+Uzbekistan,Lithuania,1
+Uzbekistan,Netherlands,1
+Uzbekistan,Czech Republic,1
+Uzbekistan,Finland,1
+Venezuela,Spain,193
+Venezuela,France,93
+Venezuela,Turkey,55
+Venezuela,Portugal,31
+Venezuela,Belgium,11
+Venezuela,Morocco,6
+Venezuela,Italy,4
+Venezuela,Germany,3
+Venezuela,Finland,1
+Venezuela,United Kingdom,1
+Venezuela,Austria,1
+Venezuela,Russia,1
+Vietnam,France,234
+Vietnam,Germany,187
+Vietnam,United Kingdom,128
+Vietnam,Turkey,128
+Vietnam,Sweden,13
+Vietnam,Finland,12
+Vietnam,Switzerland,10
+Vietnam,Poland,5
+Vietnam,Denmark,3
+Vietnam,Belgium,1
+Vietnam,Norway,1
+Western Sahara,Morocco,465
+Western Sahara,Spain,174
+Western Sahara,Western Sahara,156
+Western Sahara,France,10
+Western Sahara,Algeria,6
+Western Sahara,Senegal,3
+Western Sahara,Tunisia,1
+Western Sahara,Switzerland,1

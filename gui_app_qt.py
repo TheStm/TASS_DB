@@ -7,6 +7,10 @@ import tempfile
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Callable, Dict, List, Optional
+import os
+import uuid
+from typing import List, Dict
+import matplotlib.pyplot as plt
 
 import folium
 import pandas as pd
@@ -26,6 +30,7 @@ from PySide6.QtWidgets import (
     QTextEdit,
     QVBoxLayout,
     QWidget,
+    QSplitter,
     QComboBox,
     QTableWidget,
     QTableWidgetItem,
@@ -633,6 +638,302 @@ class HubAnalysisTab(QWidget):
         self.map_widget.setHtml("<p>Brak danych do wyświetlenia.</p>")
 
 
+class PopularityStatsTab(QWidget):
+
+    def __init__(self, ctx, parent: Optional[QWidget] = None) -> None:
+        super().__init__(parent)
+        self._ctx = ctx
+
+        # Słownik tłumaczeń (English -> Polish)
+        self.pl_names = {
+            "United Kingdom": "Wielka Brytania", "United States": "USA", "Germany": "Niemcy",
+            "France": "Francja", "Spain": "Hiszpania", "Italy": "Włochy", "Poland": "Polska",
+            "Ireland": "Irlandia", "Netherlands": "Holandia", "Belgium": "Belgia",
+            "Switzerland": "Szwajcaria", "Austria": "Austria", "Portugal": "Portugalia",
+            "Greece": "Grecja", "Sweden": "Szwecja", "Norway": "Norwegia", "Denmark": "Dania",
+            "Finland": "Finlandia", "Russia": "Rosja", "Ukraine": "Ukraina",
+            "Czech Republic": "Czechy", "Hungary": "Węgry", "Turkey": "Turcja",
+            "Romania": "Rumunia", "Bulgaria": "Bułgaria", "Croatia": "Chorwacja",
+            "Slovakia": "Słowacja", "Lithuania": "Litwa", "Latvia": "Łotwa",
+            "Estonia": "Estonia", "Belarus": "Białoruś", "China": "Chiny", "Japan": "Japonia",
+            "Canada": "Kanada", "Australia": "Australia", "India": "Indie",
+            "United Arab Emirates": "ZEA", "Egypt": "Egipt", "Israel": "Izrael",
+            "Cyprus": "Cypr", "Malta": "Malta", "Iceland": "Islandia"
+        }
+
+        # Konfiguracja plików
+        self.annual_sources = {
+            "2017": "reports/report_country_connections_2017.csv",
+            "2018": "reports/report_country_connections_2018.csv"
+        }
+        self.monthly_sources = {
+            "2017": "reports/monthly_flight_report_2017.csv",
+            "2018": "reports/monthly_flight_report_2018.csv"
+        }
+        self.population_file = "population.csv"
+
+        self.current_annual_df: pd.DataFrame = pd.DataFrame()
+        self.current_monthly_df: pd.DataFrame = pd.DataFrame()
+        self.population_df: pd.DataFrame = pd.DataFrame()
+
+        self._load_population_data()
+        self._build_ui()
+        self._load_data_for_year("2017")
+
+    def _translate(self, name: str) -> str:
+        """Tłumaczy nazwę kraju na polski."""
+        return self.pl_names.get(name, name)
+
+    def _load_population_data(self):
+        if not os.path.exists(self.population_file): return
+        try:
+            df = pd.read_csv(self.population_file)
+            if 'Geopolitical entity (reporting)' in df.columns:
+                df = df[['Geopolitical entity (reporting)', 'TIME_PERIOD', 'OBS_VALUE']]
+                df.columns = ['Country', 'Year', 'Population']
+                df['Population'] = pd.to_numeric(df['Population'], errors='coerce')
+                df.dropna(subset=['Population'], inplace=True)
+                self.population_df = df
+        except:
+            pass
+
+    def _build_ui(self) -> None:
+        main_layout = QVBoxLayout(self)
+        main_layout.setContentsMargins(0, 0, 0, 0)
+        main_layout.setSpacing(0)
+
+        # HEADER
+        controls_frame = QFrame()
+        controls_frame.setStyleSheet("background-color: #f0f0f0; border-bottom: 1px solid #ccc;")
+        controls_frame.setFixedHeight(60)
+        controls_layout = QHBoxLayout(controls_frame)
+
+        controls_layout.addWidget(QLabel("<b>Rok:</b>"))
+        self.year_combo = QComboBox()
+        self.year_combo.addItems(list(self.annual_sources.keys()))
+        self.year_combo.setFixedWidth(80)
+        self.year_combo.currentTextChanged.connect(self._on_year_changed)
+        controls_layout.addWidget(self.year_combo)
+
+        controls_layout.addWidget(QLabel("<b>Kraj:</b>"))
+        self.country_combo = QComboBox()
+        self.country_combo.setEditable(True)
+        self.country_combo.setMinimumWidth(200)
+        self.country_combo.currentTextChanged.connect(self._on_country_changed)
+        controls_layout.addWidget(self.country_combo)
+
+        controls_layout.addStretch(1)
+        main_layout.addWidget(controls_frame, 0)
+
+        # SPLITTER
+        splitter = QSplitter(Qt.Horizontal)
+        self.global_panel = QTextEdit()
+        self.global_panel.setReadOnly(True)
+        self.country_panel = QTextEdit()
+        self.country_panel.setReadOnly(True)
+
+        splitter.addWidget(self._create_panel("GLOBALNE", self.global_panel))
+        splitter.addWidget(self._create_panel("SZCZEGÓŁY KRAJU", self.country_panel))
+        splitter.setStretchFactor(0, 1)
+        splitter.setStretchFactor(1, 2)
+        main_layout.addWidget(splitter, 1)
+
+    def _create_panel(self, title: str, w: QWidget) -> QWidget:
+        c = QWidget()
+        l = QVBoxLayout(c)
+        l.setContentsMargins(0, 0, 0, 0)
+        l.setSpacing(0)
+        h = QLabel(title)
+        h.setAlignment(Qt.AlignCenter)
+        h.setStyleSheet("background:#e0e0e0; font-weight:bold; padding:6px; border-bottom:1px solid #ccc;")
+        l.addWidget(h)
+        l.addWidget(w)
+        return c
+
+    def _load_data_for_year(self, year: str) -> None:
+        # 1. Wczytaj dane roczne
+        try:
+            self.current_annual_df = pd.read_csv(self.annual_sources.get(year, ""))
+        except:
+            self.current_annual_df = pd.DataFrame()
+
+        # 2. Wczytaj dane miesięczne i FILTRUJ MIESIĄCE
+        try:
+            self.current_monthly_df = pd.read_csv(self.monthly_sources.get(year, ""))
+            if 'month' in self.current_monthly_df.columns:
+                # Formatowanie miesiąca do "01", "02" etc.
+                self.current_monthly_df['month'] = self.current_monthly_df['month'].astype(str).str.zfill(2)
+
+                # --- FILTRACJA: TYLKO Marzec (03), Czerwiec (06), Wrzesień (09), Grudzień (12) ---
+                allowed_months = ['03', '06', '09', '12']
+                self.current_monthly_df = self.current_monthly_df[
+                    self.current_monthly_df['month'].isin(allowed_months)
+                ]
+        except:
+            self.current_monthly_df = pd.DataFrame()
+
+        # Odśwież UI
+        self._populate_countries()
+        self._update_global_stats()
+
+        # Pobierz aktualnie wybrany kraj (jego angielską nazwę "pod spodem")
+        idx = self.country_combo.currentIndex()
+        if idx >= 0:
+            english_name = self.country_combo.itemData(idx)
+            self._update_country_stats(english_name)
+
+    def _populate_countries(self) -> None:
+        if self.current_annual_df.empty: return
+
+        # Pobierz unikalne kraje (nazwy angielskie z CSV)
+        countries_en = set(self.current_annual_df['origin_country'].unique()) | \
+                       set(self.current_annual_df['destination_country'].unique())
+
+        # Sortuj według polskich nazw
+        sorted_list = sorted(list(countries_en), key=lambda x: self._translate(x))
+
+        self.country_combo.blockSignals(True)
+        self.country_combo.clear()
+        # Dodajemy: Tekst = Polska nazwa, Data = Angielska nazwa
+        for country in sorted_list:
+            self.country_combo.addItem(self._translate(country), country)
+
+        self.country_combo.blockSignals(False)
+        if self.country_combo.count() > 0: self.country_combo.setCurrentIndex(0)
+
+    def _on_year_changed(self, y):
+        self._load_data_for_year(y)
+
+    def _on_country_changed(self, index):
+        # Pobieramy ukrytą angielską nazwę do filtrowania danych
+        english_name = self.country_combo.itemData(self.country_combo.currentIndex())
+        if english_name:
+            self._update_country_stats(english_name)
+
+    def _update_global_stats(self):
+        if self.current_annual_df.empty: return
+        df = self.current_annual_df
+
+        # 1. TOP 5 DESTYNACJI
+        top_dest = df.groupby('destination_country')['flights'].sum().sort_values(ascending=False).head(5)
+
+        html = f"<h3>Top 5 Destynacji</h3><ol>"
+        for c, v in top_dest.items(): html += f"<li>{self._translate(c)}: <b>{v}</b></li>"
+        html += "</ol>"
+
+        # 2. TOP 5 TRAS (Przywrócone)
+        inter_df = df[df['origin_country'] != df['destination_country']]
+        top_routes = inter_df.sort_values(by='flights', ascending=False).head(5)
+
+        html += "<hr><h3>Top 5 Tras</h3><ul>"
+        for _, row in top_routes.iterrows():
+            orig = self._translate(row['origin_country'])
+            dest = self._translate(row['destination_country'])
+            html += f"<li>{orig} &rarr; {dest} ({row['flights']})</li>"
+        html += "</ul>"
+
+        # 3. NORMALIZACJA (Loty / Osobę)
+        if not self.population_df.empty:
+            try:
+                inc = df.groupby('destination_country')['flights'].sum().reset_index()
+                inc.columns = ['Country', 'Incoming_Flights']
+                pop = self.population_df[self.population_df['Year'] == int(self.year_combo.currentText())]
+                m = pd.merge(inc, pop, on='Country')
+                m['PC'] = m['Incoming_Flights'] / m['Population']
+                top = m.sort_values('PC', ascending=False).head(7)
+
+                html += "<hr><h3>Przyloty na mieszkańca (Top 7)</h3><table width='100%' cellpadding='2'>"
+                for i, r in enumerate(top.itertuples(), 1):
+                    pl_country = self._translate(r.Country)
+                    html += f"<tr><td>{i}. {pl_country}</td><td align='right'><b>{r.PC:.4f}</b></td></tr>"
+                html += "</table>"
+            except:
+                pass
+        self.global_panel.setHtml(html)
+
+    def _generate_seasonality_chart(self, country: str) -> Optional[str]:
+        if self.current_monthly_df.empty: return None
+        # Filtrujemy po angielskiej nazwie
+        data = self.current_monthly_df[self.current_monthly_df['origin_country'] == country]
+        if data.empty: return None
+
+        # Grupuj po miesiącach (powinny zostać tylko 03, 06, 09, 12)
+        grp = data.groupby('month')['flights'].sum().reset_index().sort_values('month')
+
+        # Mały rozmiar wykresu
+        plt.figure(figsize=(4.5, 2.2))
+
+        plt.plot(grp['month'], grp['flights'], marker='o', color='#2980b9', linewidth=2, markersize=5)
+        # Opcjonalne: jeśli chcesz tylko punkty bez linii (bo są dziury w miesiącach), usuń linestyle
+        # plt.plot(grp['month'], grp['flights'], 'o', color='#2980b9')
+
+        pl_name = self._translate(country)
+        plt.title(f"Sezonowość (kwartały): {pl_name}", fontsize=9)
+        plt.grid(True, alpha=0.3)
+        plt.xticks(fontsize=7)
+        plt.yticks(fontsize=7)
+        plt.xlabel("Miesiąc", fontsize=7)
+
+        plt.tight_layout(pad=0.4)
+
+        fname = f"temp/chart_{uuid.uuid4().hex[:6]}.png"
+        path = os.path.abspath(fname)
+        plt.savefig(path, dpi=100)
+        plt.close()
+        return path.replace('\\', '/')
+
+    def _update_country_stats(self, country: str):
+        if self.current_annual_df.empty or not country: return
+        df = self.current_annual_df
+        pl_country = self._translate(country)
+
+        out = df[df['origin_country'] == country]
+        inc = df[df['destination_country'] == country]
+
+        # 1. TYTUŁ
+        html = f"<h2 style='margin:0; text-align:center; color:#2c3e50;'>{pl_country}</h2>"
+
+        # 2. WYKRES SEZONOWOŚCI (Na górze)
+        chart = self._generate_seasonality_chart(country)
+        if chart:
+            html += f"<div style='text-align:center; margin-top:5px;'><img src='{chart}' width='400'></div>"
+        else:
+            html += "<p style='color:gray; text-align:center; font-size:10px;'>Brak danych dla wybranych miesięcy.</p>"
+
+        # 3. STATYSTYKI OGÓLNE
+        tot_out = out['flights'].sum()
+        tot_in = inc['flights'].sum()
+        html += f"""
+        <table width='100%' cellpadding='4' cellspacing='0' style='background-color:#f8f9fa; margin-top:5px; border:1px solid #ddd; font-size:11px;'>
+            <tr><td align='center' style='color:green'><b>Wyloty:</b> {tot_out}</td>
+                <td align='center' style='color:orange'><b>Przyloty:</b> {tot_in}</td></tr>
+        </table>
+        """
+
+        # 4. TABELA WYLOTÓW (Top 7) - Tłumaczona
+        if not out.empty:
+            top = out.sort_values('flights', ascending=False).head(7)
+            html += "<h4 style='margin-bottom:2px; margin-top:10px; border-bottom:1px solid #eee;'>Top 7 Wylotów</h4>"
+            html += "<table width='100%' cellspacing='0' cellpadding='2' style='font-size:11px;'>"
+            for i, (_, r) in enumerate(top.iterrows()):
+                bg = "#f9f9f9" if i % 2 == 0 else "#fff"
+                dest_pl = self._translate(r['destination_country'])
+                html += f"<tr style='background:{bg}'><td>{dest_pl}</td><td align='right'><b>{r['flights']}</b></td></tr>"
+            html += "</table>"
+
+        # 5. TABELA PRZYLOTÓW (Top 7) - Tłumaczona
+        if not inc.empty:
+            top = inc.sort_values('flights', ascending=False).head(7)
+            html += "<h4 style='margin-bottom:2px; margin-top:10px; border-bottom:1px solid #eee;'>Top 7 Przylotów</h4>"
+            html += "<table width='100%' cellspacing='0' cellpadding='2' style='font-size:11px;'>"
+            for i, (_, r) in enumerate(top.iterrows()):
+                bg = "#f9f9f9" if i % 2 == 0 else "#fff"
+                orig_pl = self._translate(r['origin_country'])
+                html += f"<tr style='background:{bg}'><td>{orig_pl}</td><td align='right'><b>{r['flights']}</b></td></tr>"
+            html += "</table>"
+
+        self.country_panel.setHtml(html)
+
 def build_modules(ctx: ApplicationContext) -> List[ModuleInfo]:
     """Register modules that are available in the GUI."""
 
@@ -650,10 +951,7 @@ def build_modules(ctx: ApplicationContext) -> List[ModuleInfo]:
         ModuleInfo(
             name="Statystyki popularności",
             description="Planowana zakładka do eksploracji statystyk przewozów i natężenia ruchu.",
-            factory=lambda ctx: PlaceholderModule(
-                "Statystyki popularności",
-                "Moduł w przygotowaniu. Pozwoli porównywać ruch pasażerski i liczbę połączeń w czasie.",
-            ),
+            factory=lambda ctx:PopularityStatsTab(ctx),
         ),
     ]
     return modules
