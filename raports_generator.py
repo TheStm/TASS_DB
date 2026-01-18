@@ -8,9 +8,7 @@ import scipy as sp
 
 matplotlib.use("Agg")
 
-# ==========================================
-# FUNCTION 1: Generate CSV Report
-# ==========================================
+
 def generate_country_connection_report_csv(uri, user, password, year="2017"):
     """
     Connects to Neo4j, aggregates flight connections between countries for a specific year,
@@ -18,7 +16,7 @@ def generate_country_connection_report_csv(uri, user, password, year="2017"):
     """
     driver = GraphDatabase.driver(uri, auth=(user, password))
 
-    # Query aggregates flights by origin and destination country
+
     query = """
     MATCH (f:Flight)-[:ON_DAY]->(d:Day)
     WHERE toString(d.date) STARTS WITH $year_str
@@ -53,9 +51,6 @@ def generate_country_connection_report_csv(uri, user, password, year="2017"):
     return output_csv
 
 
-# ==========================================
-# FUNCTION 2: Visualize Report (Heatmap)
-# ==========================================
 def visualize_country_connections_heatmap(input_csv, year="2017"):
     """
     Reads the country connection CSV report, filters for Europe, translates to Polish,
@@ -70,7 +65,6 @@ def visualize_country_connections_heatmap(input_csv, year="2017"):
         print(f"Error: Report file {input_csv} not found.")
         return
 
-    # 2. Define Europe Filter
     europe_filter = [
         "Albania", "Andorra", "Austria", "Belarus", "Belgium", "Bosnia and Herzegovina",
         "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland",
@@ -81,7 +75,7 @@ def visualize_country_connections_heatmap(input_csv, year="2017"):
         "Sweden", "Switzerland", "Ukraine", "United Kingdom", "Vatican City"
     ]
 
-    # 3. Filter Data
+
     df = df[df['origin_country'].isin(europe_filter) & df['destination_country'].isin(europe_filter)]
 
     if df.empty:
@@ -112,10 +106,10 @@ def visualize_country_connections_heatmap(input_csv, year="2017"):
     matrix = matrix.fillna(0)
     matrix = matrix.sort_index(axis=0).sort_index(axis=1)
 
-    # 6. Robust Scaling
+
     robust_max = np.percentile(matrix.values, 98)
 
-    # 7. Plotting
+
     plt.figure(figsize=(20, 18))
     sns.set(font_scale=1.0)
 
@@ -144,9 +138,6 @@ def visualize_country_connections_heatmap(input_csv, year="2017"):
     print(f"Visualization saved: {output_img}")
 
 
-# ==========================================
-# FUNCTION 1: Generate Monthly Report (CSV)
-# ==========================================
 def generate_monthly_flight_report(uri, user, password, year="2017"):
     """
     Queries Neo4j for flight data in a specific year.
@@ -154,8 +145,6 @@ def generate_monthly_flight_report(uri, user, password, year="2017"):
     """
     driver = GraphDatabase.driver(uri, auth=(user, password))
 
-    # We extract the month using substring(toString(d.date), 5, 2)
-    # Assumes date format "YYYY-MM-DD"
     query = """
     MATCH (f:Flight)-[:ON_DAY]->(d:Day)
     WHERE toString(d.date) STARTS WITH $year_str
@@ -192,9 +181,7 @@ def generate_monthly_flight_report(uri, user, password, year="2017"):
     return output_csv
 
 
-# ==========================================
-# FUNCTION 2: Print Top 5 Stats for a Country
-# ==========================================
+
 def print_country_stats(csv_file, country_name):
     """
     Reads the monthly report CSV and prints the Top 5 Destinations
@@ -208,27 +195,24 @@ def print_country_stats(csv_file, country_name):
         print(f" Error: File {csv_file} not found.")
         return
 
-    # 1. Top 5 Destinations (Where did planes fly TO from this country?)
-    # Filter: Origin is the specific country
+
     outgoing = df[df['origin_country'] == country_name]
 
     if outgoing.empty:
         print(f"   No outgoing flights found for {country_name}.")
     else:
-        # Group by destination and sum up flights (across all months)
         top_dest = outgoing.groupby('destination_country')['flights'].sum().sort_values(ascending=False).head(5)
         print("\n TOP 5 DESTINATIONS (Departing from " + country_name + "):")
         for rank, (dest, count) in enumerate(top_dest.items(), 1):
             print(f"   {rank}. {dest}: {count} flights")
 
-    # 2. Top 5 Incoming (Where did planes arrive FROM?)
-    # Filter: Destination is the specific country
+
     incoming = df[df['destination_country'] == country_name]
 
     if incoming.empty:
         print(f"\n   No incoming flights found for {country_name}.")
     else:
-        # Group by origin and sum up flights
+
         top_in = incoming.groupby('origin_country')['flights'].sum().sort_values(ascending=False).head(5)
         print("\n TOP 5 INCOMING SOURCES (Arriving in " + country_name + "):")
         for rank, (origin, count) in enumerate(top_in.items(), 1):
@@ -237,19 +221,10 @@ def print_country_stats(csv_file, country_name):
     print("-" * 50)
 
 
-# ==========================================
-# MAIN EXECUTION
-# ==========================================
+
 if __name__ == "__main__":
 
     URI = "bolt://localhost:7687"
     USER = "neo4j"
     PASSWORD = "password"
-
-    # You can now easily call this function
-    # generate_country_connection_report_csv(URI, USER, PASSWORD, year="2017")
-    # generate_monthly_flight_report(URI, USER, PASSWORD, year="2018")
-
-    # 2. Use the report to analyze
     visualize_country_connections_heatmap("reports/report_country_connections_2017.csv", "2017")
-    # print_country_stats("reports/monthly_flight_report_2018.csv", "Lebanon")
