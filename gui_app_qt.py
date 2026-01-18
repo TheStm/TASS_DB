@@ -1,5 +1,3 @@
-"""Desktop GUI for analyzing flight connections with modular tabs."""
-
 from __future__ import annotations
 
 import sys
@@ -22,6 +20,7 @@ from PySide6.QtWidgets import (
     QHBoxLayout,
     QLabel,
     QMainWindow,
+    QLineEdit,
     QMessageBox,
     QPushButton,
     QSizePolicy,
@@ -222,7 +221,7 @@ class MainWindow(QMainWindow):
     def _create_module_widget(self, module: ModuleInfo) -> QWidget:
         try:
             return module.factory(self._ctx)
-        except Exception as exc:  # pragma: no cover - GUI feedback
+        except Exception as exc:
             fallback = QWidget()
             layout = QVBoxLayout(fallback)
             label = QLabel(
@@ -246,7 +245,7 @@ class MainWindow(QMainWindow):
         if index != -1:
             self._tabs.setCurrentIndex(index)
 
-    def closeEvent(self, event: QCloseEvent) -> None:  # pragma: no cover - GUI lifecycle
+    def closeEvent(self, event: QCloseEvent) -> None:
         super().closeEvent(event)
 
 
@@ -262,7 +261,6 @@ class ShortestRouteTab(QWidget):
     def _build_ui(self) -> None:
         layout = QHBoxLayout(self)
 
-        # Left: map preview and summary
         left_container = QWidget()
         left_layout = QVBoxLayout(left_container)
         left_layout.setContentsMargins(0, 0, 10, 0)
@@ -286,7 +284,6 @@ class ShortestRouteTab(QWidget):
 
         layout.addWidget(left_container, stretch=2)
 
-        # Right: form controls
         right_container = QWidget()
         right_layout = QVBoxLayout(right_container)
         right_layout.setAlignment(Qt.AlignTop)
@@ -303,7 +300,6 @@ class ShortestRouteTab(QWidget):
         self.source_input = self._create_airport_combobox(airports, placeholder="Lotnisko startowe (np. EPWA)")
         self.target_input = self._create_airport_combobox(airports, placeholder="Lotnisko docelowe (np. KLAX)")
 
-        # Preselect common demo route if present
         self._set_airport_selection(self.source_input, "EPWA")
         self._set_airport_selection(self.target_input, "KLAX")
 
@@ -337,7 +333,6 @@ class ShortestRouteTab(QWidget):
         combo.setSizeAdjustPolicy(QComboBox.AdjustToContents)
         for airport in airports:
             combo.addItem(airport.label, airport.code)
-        # Use contains matching to search by code or name
         completer = combo.completer()
         if completer is not None:
             completer.setCaseSensitivity(Qt.CaseInsensitive)
@@ -481,12 +476,12 @@ class ShortestRouteTab(QWidget):
         self._map_file = tmp_file.name
         tmp_file.close()
 
-        self.map_widget.setUrl(QUrl.fromLocalFile(self._map_file))  # type: ignore[union-attr]
+        self.map_widget.setUrl(QUrl.fromLocalFile(self._map_file))
 
     def _clear_map(self) -> None:
         if QWebEngineView is None:
             return
-        self.map_widget.setHtml("<p>Brak danych do wyświetlenia.</p>")  # type: ignore[union-attr]
+        self.map_widget.setHtml("<p>Brak danych do wyświetlenia.</p>")
 
 
 class HubAnalysisTab(QWidget):
@@ -646,7 +641,6 @@ class PopularityStatsTab(QWidget):
         super().__init__(parent)
         self._ctx = ctx
 
-        # Słownik tłumaczeń (English -> Polish)
         self.pl_names = {
             "United Kingdom": "Wielka Brytania", "United States": "USA", "Germany": "Niemcy",
             "France": "Francja", "Spain": "Hiszpania", "Italy": "Włochy", "Poland": "Polska",
@@ -663,7 +657,7 @@ class PopularityStatsTab(QWidget):
             "Cyprus": "Cypr", "Malta": "Malta", "Iceland": "Islandia"
         }
 
-        # Konfiguracja plików
+
         self.annual_sources = {
             "2017": "reports/report_country_connections_2017.csv",
             "2018": "reports/report_country_connections_2018.csv"
@@ -704,7 +698,6 @@ class PopularityStatsTab(QWidget):
         main_layout.setContentsMargins(0, 0, 0, 0)
         main_layout.setSpacing(0)
 
-        # HEADER
         controls_frame = QFrame()
         controls_frame.setStyleSheet("background-color: #f0f0f0; border-bottom: 1px solid #ccc;")
         controls_frame.setFixedHeight(60)
@@ -727,7 +720,6 @@ class PopularityStatsTab(QWidget):
         controls_layout.addStretch(1)
         main_layout.addWidget(controls_frame, 0)
 
-        # SPLITTER
         splitter = QSplitter(Qt.Horizontal)
         self.global_panel = QTextEdit()
         self.global_panel.setReadOnly(True)
@@ -753,20 +745,16 @@ class PopularityStatsTab(QWidget):
         return c
 
     def _load_data_for_year(self, year: str) -> None:
-        # 1. Wczytaj dane roczne
         try:
             self.current_annual_df = pd.read_csv(self.annual_sources.get(year, ""))
         except:
             self.current_annual_df = pd.DataFrame()
 
-        # 2. Wczytaj dane miesięczne i FILTRUJ MIESIĄCE
         try:
             self.current_monthly_df = pd.read_csv(self.monthly_sources.get(year, ""))
             if 'month' in self.current_monthly_df.columns:
-                # Formatowanie miesiąca do "01", "02" etc.
                 self.current_monthly_df['month'] = self.current_monthly_df['month'].astype(str).str.zfill(2)
 
-                # --- FILTRACJA: TYLKO Marzec (03), Czerwiec (06), Wrzesień (09), Grudzień (12) ---
                 allowed_months = ['03', '06', '09', '12']
                 self.current_monthly_df = self.current_monthly_df[
                     self.current_monthly_df['month'].isin(allowed_months)
@@ -774,11 +762,9 @@ class PopularityStatsTab(QWidget):
         except:
             self.current_monthly_df = pd.DataFrame()
 
-        # Odśwież UI
         self._populate_countries()
         self._update_global_stats()
 
-        # Pobierz aktualnie wybrany kraj (jego angielską nazwę "pod spodem")
         idx = self.country_combo.currentIndex()
         if idx >= 0:
             english_name = self.country_combo.itemData(idx)
@@ -787,16 +773,13 @@ class PopularityStatsTab(QWidget):
     def _populate_countries(self) -> None:
         if self.current_annual_df.empty: return
 
-        # Pobierz unikalne kraje (nazwy angielskie z CSV)
         countries_en = set(self.current_annual_df['origin_country'].unique()) | \
                        set(self.current_annual_df['destination_country'].unique())
 
-        # Sortuj według polskich nazw
         sorted_list = sorted(list(countries_en), key=lambda x: self._translate(x))
 
         self.country_combo.blockSignals(True)
         self.country_combo.clear()
-        # Dodajemy: Tekst = Polska nazwa, Data = Angielska nazwa
         for country in sorted_list:
             self.country_combo.addItem(self._translate(country), country)
 
@@ -807,7 +790,6 @@ class PopularityStatsTab(QWidget):
         self._load_data_for_year(y)
 
     def _on_country_changed(self, index):
-        # Pobieramy ukrytą angielską nazwę do filtrowania danych
         english_name = self.country_combo.itemData(self.country_combo.currentIndex())
         if english_name:
             self._update_country_stats(english_name)
@@ -816,14 +798,12 @@ class PopularityStatsTab(QWidget):
         if self.current_annual_df.empty: return
         df = self.current_annual_df
 
-        # 1. TOP 5 DESTYNACJI
         top_dest = df.groupby('destination_country')['flights'].sum().sort_values(ascending=False).head(5)
 
         html = f"<h3>Top 5 Destynacji</h3><ol>"
         for c, v in top_dest.items(): html += f"<li>{self._translate(c)}: <b>{v}</b></li>"
         html += "</ol>"
 
-        # 2. TOP 5 TRAS (Przywrócone)
         inter_df = df[df['origin_country'] != df['destination_country']]
         top_routes = inter_df.sort_values(by='flights', ascending=False).head(5)
 
@@ -834,7 +814,6 @@ class PopularityStatsTab(QWidget):
             html += f"<li>{orig} &rarr; {dest} ({row['flights']})</li>"
         html += "</ul>"
 
-        # 3. NORMALIZACJA (Loty / Osobę)
         if not self.population_df.empty:
             try:
                 inc = df.groupby('destination_country')['flights'].sum().reset_index()
@@ -855,19 +834,14 @@ class PopularityStatsTab(QWidget):
 
     def _generate_seasonality_chart(self, country: str) -> Optional[str]:
         if self.current_monthly_df.empty: return None
-        # Filtrujemy po angielskiej nazwie
         data = self.current_monthly_df[self.current_monthly_df['origin_country'] == country]
         if data.empty: return None
 
-        # Grupuj po miesiącach (powinny zostać tylko 03, 06, 09, 12)
         grp = data.groupby('month')['flights'].sum().reset_index().sort_values('month')
 
-        # Mały rozmiar wykresu
         plt.figure(figsize=(4.5, 2.2))
 
         plt.plot(grp['month'], grp['flights'], marker='o', color='#2980b9', linewidth=2, markersize=5)
-        # Opcjonalne: jeśli chcesz tylko punkty bez linii (bo są dziury w miesiącach), usuń linestyle
-        # plt.plot(grp['month'], grp['flights'], 'o', color='#2980b9')
 
         pl_name = self._translate(country)
         plt.title(f"Sezonowość (kwartały): {pl_name}", fontsize=9)
@@ -892,17 +866,14 @@ class PopularityStatsTab(QWidget):
         out = df[df['origin_country'] == country]
         inc = df[df['destination_country'] == country]
 
-        # 1. TYTUŁ
         html = f"<h2 style='margin:0; text-align:center; color:#2c3e50;'>{pl_country}</h2>"
 
-        # 2. WYKRES SEZONOWOŚCI (Na górze)
         chart = self._generate_seasonality_chart(country)
         if chart:
             html += f"<div style='text-align:center; margin-top:5px;'><img src='{chart}' width='400'></div>"
         else:
             html += "<p style='color:gray; text-align:center; font-size:10px;'>Brak danych dla wybranych miesięcy.</p>"
 
-        # 3. STATYSTYKI OGÓLNE
         tot_out = out['flights'].sum()
         tot_in = inc['flights'].sum()
         html += f"""
@@ -912,7 +883,6 @@ class PopularityStatsTab(QWidget):
         </table>
         """
 
-        # 4. TABELA WYLOTÓW (Top 7) - Tłumaczona
         if not out.empty:
             top = out.sort_values('flights', ascending=False).head(7)
             html += "<h4 style='margin-bottom:2px; margin-top:10px; border-bottom:1px solid #eee;'>Top 7 Wylotów</h4>"
@@ -923,7 +893,6 @@ class PopularityStatsTab(QWidget):
                 html += f"<tr style='background:{bg}'><td>{dest_pl}</td><td align='right'><b>{r['flights']}</b></td></tr>"
             html += "</table>"
 
-        # 5. TABELA PRZYLOTÓW (Top 7) - Tłumaczona
         if not inc.empty:
             top = inc.sort_values('flights', ascending=False).head(7)
             html += "<h4 style='margin-bottom:2px; margin-top:10px; border-bottom:1px solid #eee;'>Top 7 Przylotów</h4>"
@@ -965,7 +934,7 @@ def create_context() -> ApplicationContext:
     return ApplicationContext(data_repo)
 
 
-def main() -> None:  # pragma: no cover - GUI bootstrap
+def main() -> None:
     app = QApplication(sys.argv)
     ctx = create_context()
     modules = build_modules(ctx)
@@ -974,5 +943,5 @@ def main() -> None:  # pragma: no cover - GUI bootstrap
     sys.exit(app.exec())
 
 
-if __name__ == "__main__":  # pragma: no cover
+if __name__ == "__main__":
     main()

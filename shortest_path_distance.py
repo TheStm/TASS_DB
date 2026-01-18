@@ -20,7 +20,6 @@ NEO4J_SUPPRESS_WARNINGS = os.getenv("NEO4J_SUPPRESS_WARNINGS", "1") == "1"
 if NEO4J_SUPPRESS_WARNINGS:
     logging.getLogger("neo4j").setLevel(logging.ERROR)
 
-# Cypher snippets reused across calls
 _GRAPH_EXISTS = "CALL gds.graph.exists($graph_name) YIELD exists"
 _DROP_GRAPH = "CALL gds.graph.drop($graph_name, false)"
 _PROJECT_GRAPH = """
