@@ -1,4 +1,10 @@
-neo4j
-pandas
-folium
-PySide6>=6.7
+folium==0.20.0
+matplotlib==3.10.8
+neo4j==6.1.0
+numpy==2.4.1
+pandas==2.3.3
+pyside6==6.10.1
+pyside6_addons==6.10.1
+pyside6_essentials==6.10.1
+scipy==1.17.0
+seaborn==0.13.2

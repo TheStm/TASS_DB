@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 import scipy as sp
-# Use non-interactive backend for saving files
+
 matplotlib.use("Agg")
 
 # ==========================================
@@ -37,19 +37,19 @@ def generate_country_connection_report_csv(uri, user, password, year="2017"):
             data = [r.data() for r in result]
             df = pd.DataFrame(data)
     except Exception as e:
-        print(f"❌ Database Error: {e}")
+        print(f"Database Error: {e}")
         return None
     finally:
         driver.close()
 
     if df.empty:
-        print("❌ Error: No flight data found for this year.")
+        print("Error: No flight data found for this year.")
         return None
 
     # Save with a descriptive filename
     output_csv = f"reports/report_country_connections_{year}.csv"
     df.to_csv(output_csv, index=False)
-    print(f"✅ Report saved to: {output_csv}")
+    print(f"Report saved to: {output_csv}")
     return output_csv
 
 
@@ -67,7 +67,7 @@ def visualize_country_connections_heatmap(input_csv, year="2017"):
     try:
         df = pd.read_csv(input_csv)
     except FileNotFoundError:
-        print(f"❌ Error: Report file {input_csv} not found.")
+        print(f"Error: Report file {input_csv} not found.")
         return
 
     # 2. Define Europe Filter
@@ -85,7 +85,7 @@ def visualize_country_connections_heatmap(input_csv, year="2017"):
     df = df[df['origin_country'].isin(europe_filter) & df['destination_country'].isin(europe_filter)]
 
     if df.empty:
-        print("❌ Error: No European connections found in the report.")
+        print("Error: No European connections found in the report.")
         return
 
     # 4. Polish Translation
