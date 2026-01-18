@@ -22,7 +22,7 @@ DATA_DIR = Path(os.getenv("DATA_DIR", "data"))
 BATCH_SIZE = max(1, int(os.getenv("BATCH_SIZE", "4000")))
 MAX_CONNECT_ATTEMPTS = max(1, int(os.getenv("NEO4J_CONNECT_RETRIES", "15")))
 CONNECT_DELAY = float(os.getenv("NEO4J_CONNECT_DELAY", "2"))
-AIRPORTS_METADATA = Path(os.getenv("AIRPORTS_METADATA", "airports_mapping.csv"))
+AIRPORTS_METADATA = Path(os.getenv("AIRPORTS_METADATA", "airports_mapping1.csv"))
 CSV_POPULATION = Path(os.getenv("POPULATION_CSV", "population.csv"))
 
 AIRPORT_METADATA = {}
