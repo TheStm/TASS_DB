@@ -8,7 +8,9 @@ import scipy as sp
 
 matplotlib.use("Agg")
 
-
+# ==========================================
+# FUNCTION 1: Generate Annual Report (CSV)
+# ==========================================
 def generate_country_connection_report_csv(uri, user, password, year="2017"):
     """
     Connects to Neo4j, aggregates flight connections between countries for a specific year,
@@ -44,13 +46,14 @@ def generate_country_connection_report_csv(uri, user, password, year="2017"):
         print("Error: No flight data found for this year.")
         return None
 
-    # Save with a descriptive filename
     output_csv = f"reports/report_country_connections_{year}.csv"
     df.to_csv(output_csv, index=False)
     print(f"Report saved to: {output_csv}")
     return output_csv
 
-
+# ==========================================
+# FUNCTION 2: Visualize Report (Heatmap)
+# ==========================================
 def visualize_country_connections_heatmap(input_csv, year="2017"):
     """
     Reads the country connection CSV report, filters for Europe, translates to Polish,
@@ -58,7 +61,6 @@ def visualize_country_connections_heatmap(input_csv, year="2017"):
     """
     print(f"--- [Step 2] Visualizing Country Connections for: {year} ---")
 
-    # 1. Load Data
     try:
         df = pd.read_csv(input_csv)
     except FileNotFoundError:
@@ -82,7 +84,6 @@ def visualize_country_connections_heatmap(input_csv, year="2017"):
         print("Error: No European connections found in the report.")
         return
 
-    # 4. Polish Translation
     pl_names = {
         "United Kingdom": "Wielka Brytania", "Germany": "Niemcy", "France": "Francja",
         "Spain": "Hiszpania", "Italy": "Włochy", "Poland": "Polska", "Ireland": "Irlandia",
@@ -101,7 +102,6 @@ def visualize_country_connections_heatmap(input_csv, year="2017"):
     df['origin_country'] = df['origin_country'].map(pl_names).fillna(df['origin_country'])
     df['destination_country'] = df['destination_country'].map(pl_names).fillna(df['destination_country'])
 
-    # 5. Create Matrix
     matrix = df.pivot(index='origin_country', columns='destination_country', values='flights')
     matrix = matrix.fillna(0)
     matrix = matrix.sort_index(axis=0).sort_index(axis=1)
@@ -138,6 +138,9 @@ def visualize_country_connections_heatmap(input_csv, year="2017"):
     print(f"Visualization saved: {output_img}")
 
 
+# ==========================================
+# FUNCTION 3: Generate Monthly Report (CSV)
+# ==========================================
 def generate_monthly_flight_report(uri, user, password, year="2017"):
     """
     Queries Neo4j for flight data in a specific year.
@@ -181,7 +184,9 @@ def generate_monthly_flight_report(uri, user, password, year="2017"):
     return output_csv
 
 
-
+# ==========================================
+# FUNCTION 4: Print Top 5 Stats for a Country
+# ==========================================
 def print_country_stats(csv_file, country_name):
     """
     Reads the monthly report CSV and prints the Top 5 Destinations
@@ -194,7 +199,6 @@ def print_country_stats(csv_file, country_name):
     except FileNotFoundError:
         print(f" Error: File {csv_file} not found.")
         return
-
 
     outgoing = df[df['origin_country'] == country_name]
 
@@ -227,4 +231,11 @@ if __name__ == "__main__":
     URI = "bolt://localhost:7687"
     USER = "neo4j"
     PASSWORD = "password"
+
+    # Functions - generate reports
+    # generate_country_connection_report_csv(URI, USER, PASSWORD, year="2017")
+    # generate_monthly_flight_report(URI, USER, PASSWORD, year="2018")
+
+    # visualize results
     visualize_country_connections_heatmap("reports/report_country_connections_2017.csv", "2017")
+    # print_country_stats("reports/monthly_flight_report_2018.csv", "Lebanon")

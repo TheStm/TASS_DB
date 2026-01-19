@@ -677,7 +677,6 @@ class PopularityStatsTab(QWidget):
         self._load_data_for_year("2017")
 
     def _translate(self, name: str) -> str:
-        """Tłumaczy nazwę kraju na polski."""
         return self.pl_names.get(name, name)
 
     def _load_population_data(self):
@@ -804,6 +803,7 @@ class PopularityStatsTab(QWidget):
         for c, v in top_dest.items(): html += f"<li>{self._translate(c)}: <b>{v}</b></li>"
         html += "</ol>"
 
+        # TOP 5 TRAS
         inter_df = df[df['origin_country'] != df['destination_country']]
         top_routes = inter_df.sort_values(by='flights', ascending=False).head(5)
 
@@ -837,6 +837,7 @@ class PopularityStatsTab(QWidget):
         data = self.current_monthly_df[self.current_monthly_df['origin_country'] == country]
         if data.empty: return None
 
+        # Grupujemy po miesiącach tylko 03, 06, 09, 12
         grp = data.groupby('month')['flights'].sum().reset_index().sort_values('month')
 
         plt.figure(figsize=(4.5, 2.2))
@@ -868,6 +869,7 @@ class PopularityStatsTab(QWidget):
 
         html = f"<h2 style='margin:0; text-align:center; color:#2c3e50;'>{pl_country}</h2>"
 
+        # WYKRES SEZONOWOŚCI
         chart = self._generate_seasonality_chart(country)
         if chart:
             html += f"<div style='text-align:center; margin-top:5px;'><img src='{chart}' width='400'></div>"
@@ -883,6 +885,7 @@ class PopularityStatsTab(QWidget):
         </table>
         """
 
+        # TABELA WYLOTÓW (Top 7)
         if not out.empty:
             top = out.sort_values('flights', ascending=False).head(7)
             html += "<h4 style='margin-bottom:2px; margin-top:10px; border-bottom:1px solid #eee;'>Top 7 Wylotów</h4>"
@@ -893,6 +896,7 @@ class PopularityStatsTab(QWidget):
                 html += f"<tr style='background:{bg}'><td>{dest_pl}</td><td align='right'><b>{r['flights']}</b></td></tr>"
             html += "</table>"
 
+        # TABELA PRZYLOTÓW (Top 7)
         if not inc.empty:
             top = inc.sort_values('flights', ascending=False).head(7)
             html += "<h4 style='margin-bottom:2px; margin-top:10px; border-bottom:1px solid #eee;'>Top 7 Przylotów</h4>"
